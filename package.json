@@ -1,0 +1,25 @@
+{
+  "name": "duelyst-subreddit",
+  "version": "1.0.0",
+  "description": "Stylesheet for the Duelyst subreddit.",
+  "scripts": {
+    "css": "lessc -x src/main.less output/main.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andolf/duelyst-subreddit.git"
+  },
+  "keywords": [
+    "duelyst",
+    "css",
+    "less"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andolf/duelyst-subreddit/issues"
+  },
+  "homepage": "https://github.com/andolf/duelyst-subreddit#readme",
+  "devDependencies": {
+    "less": "^2.7.1"
+  }
+}
