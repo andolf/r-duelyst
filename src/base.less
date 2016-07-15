@@ -1553,7 +1553,7 @@ div .thing .tagline .author.submitter:before {
 }
 
 div .thing .tagline .author.submitter:before {
-  background: #4169e1;
+  background: @royal-blue;
   padding: 0 7px 0 10px;
   border-radius: 20px 0 0 20px;
   font-size: 10px;
@@ -1562,14 +1562,14 @@ div .thing .tagline .author.submitter:before {
 }
 
 div .thing .tagline .author.submitter {
-  background: #27408b !important;
+  background: @endeavour !important;
   padding: 0 10px 0 0;
   border-radius: 20px;
   transition: .3s
 }
 
 div .thing .tagline .author.submitter:hover {
-  background: #4169e1 !important;
+  background: @royal-blue !important;
   text-decoration: none
 }
 
@@ -1607,7 +1607,7 @@ body div .thing .tagline .author.moderator:hover {
 }
 
 div.thing .tagline .author.admin:before {
-  background-color: #fe506e !important;
+  background-color: @wild-watermelon !important;
   content: "Admin "
 }
 
@@ -1616,7 +1616,7 @@ body div .thing .tagline .author.admin {
 }
 
 body div .thing .tagline .author.admin:hover {
-  background: #fe506e !important;
+  background: @wild-watermelon !important;
   text-decoration: none
 }
 
@@ -2439,7 +2439,7 @@ div.leavemoderator {
 }
 
 .side .md h2 a {
-  color: #a4d11b
+  color: @bahia;
 }
 
 .side .md h2:after {
@@ -2519,10 +2519,10 @@ body.res .RESshortcutside:active {
   font-size: 10px;
   margin: 1px 8px;
   background-color: transparent;
-  color: #4169e1;
+  color: @royal-blue;
   vertical-align: middle;
   border-radius: 2px;
-  border: 1px solid #4169e1
+  border: 1px solid @royal-blue;
 }
 
 .sidecontentbox .collapse-button:hover {
@@ -2530,7 +2530,7 @@ body.res .RESshortcutside:active {
   color: #009884;
   vertical-align: middle;
   border-radius: 2px;
-  border: 1px solid #27408b
+  border: 1px solid @endeavour;
 }
 
 .side .sidecontentbox .content {
@@ -2552,94 +2552,6 @@ body.res .RESshortcutside:active {
   font-weight: 400
 }
 
-.flair-redflair[title]:hover {
-  background: #e14169
-}
-
-.flair-purpleflair[title]:hover {
-  background: #6941e1
-}
-
-.flair-greenflair[title]:hover {
-  background: green
-}
-
-.flair-orangeflair[title]:hover {
-  background: #e16941
-}
-
-.flair-blueflair[title]:hover {
-  background: #4169e1
-}
-
-.flair-blueflair[title],
-.flair-greenflair[title],
-.flair-orangeflair[title],
-.flair-purpleflair[title],
-.flair-redflair[title] {
-  color: #fff;
-  font-size: 10px;
-  padding: 0 10px 0 0;
-  -webkit-transition: .3s;
-  transition: .3s;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  border-radius: 20px
-}
-
-.flair-blueflair[title]:before,
-.flair-greenflair[title]:before,
-.flair-orangeflair[title]:before,
-.flair-purpleflair[title]:before,
-.flair-redflair[title]:before {
-  font-weight: Bold;
-  display: inline-block;
-  font-size: 10px;
-  padding: 4px 8px;
-  border-radius: 20px 0 0 20px;
-  margin-right: 8px
-}
-
-.flair-redflair[title] {
-  background: #9d2d49
-}
-
-.flair-purpleflair[title] {
-  background: #492d9d
-}
-
-.flair-greenflair[title] {
-  background: #005900
-}
-
-.flair-orangeflair[title] {
-  background: #9d492d
-}
-
-.flair-blueflair[title] {
-  background: #27408b
-}
-
-.flair-redflair[title]:before {
-  background: #e14169
-}
-
-.flair-purpleflair[title]:before {
-  background: #6941e1
-}
-
-.flair-greenflair[title]:before {
-  background: green
-}
-
-.flair-orangeflair[title]:before {
-  background: #e16941
-}
-
-.flair-blueflair[title]:before {
-  background: #4169e1
-}
-
 .titlebox form.toggle {
   background: 0 0
 }
@@ -2654,7 +2566,7 @@ body.res .RESshortcutside:active {
 }
 
 .linkflairlabel {
-  background: #4169e1;
+  background: @royal-blue;
   color: #fff;
   font-weight: 700;
   padding: 2px 10px;
@@ -2669,50 +2581,50 @@ body.res .RESshortcutside:active {
 .linkflair-purple .linkflairlabel,
 .linkflair-red .linkflairlabel {
   color: #fff;
-  font-weight: Bold;
+  font-weight: bold;
   border-radius: 20px;
   padding: 2px 10px;
   transition: .3s
 }
 
 .linkflair-red .linkflairlabel {
-  background: #fe506e
+  background: @wild-watermelon;
+
+  &:hover {
+    background: @medium-carmine;
+  }
 }
 
 .linkflair-purple .linkflairlabel {
-  background: #6941e1
+  background: @blue-violet;
+
+  &:hover {
+    background: @blue-gem;
+  }
 }
 
 .linkflair-orange .linkflairlabel {
-  background: #e16941
+  background: @sorbus;
+
+  &:hover {
+    background: @rock-spray;
+  }
 }
 
 .linkflair-green .linkflairlabel {
-  background: #228b22
+  background: @forest-green;
+
+  &:hover {
+    background: @crusoe;
+  }
 }
 
 .linkflair-blue .linkflairlabel {
-  background: #4169e1
-}
+  background: @royal-blue;
 
-.linkflair-red .linkflairlabel:hover {
-  background: #b1384d
-}
-
-.linkflair-purple .linkflairlabel:hover {
-  background: #492d9d
-}
-
-.linkflair-orange .linkflairlabel:hover {
-  background: #9d492d
-}
-
-.linkflair-green .linkflairlabel:hover {
-  background: #176117
-}
-
-.linkflair-blue .linkflairlabel:hover {
-  background: #2d499d
+  &:hover {
+    background: #2d499d
+  }
 }
 
 .flairselector.drop-choices.active {
@@ -3148,7 +3060,7 @@ form#image-upload.image-upload {
 .side .titlebox .md h4 a,
 .sidecontentbox a.helplink,
 button {
-  background: #4169e1
+  background: @royal-blue;
 }
 
 #progressIndicator a#NERStaticLink,
@@ -3167,7 +3079,7 @@ button {
 .loadFlat:hover,
 .submit-page .roundfield a,
 .thing .title {
-  color: #4169e1
+  color: @royal-blue;
 }
 
 #img-name:focus,
@@ -3176,7 +3088,7 @@ button {
 .roundfield input[type=url]:focus,
 .roundfield textarea:focus,
 .usertext-edit textarea:focus {
-  border-color: #4169e1
+  border-color: @royal-blue;
 }
 
 .RESDashboardToggle.remove:hover,
@@ -3200,7 +3112,7 @@ button:hover {
 .side .titlebox .md h4 a:active,
 .sidecontentbox a.helplink:active,
 button:active {
-  background: #27408b
+  background: @endeavour;
 }
 
 .morelink,
