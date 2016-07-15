@@ -2565,68 +2565,6 @@ body.res .RESshortcutside:active {
   color: transparent
 }
 
-.linkflairlabel {
-  background: @royal-blue;
-  color: #fff;
-  font-weight: 700;
-  padding: 2px 10px;
-  border-radius: 20px;
-  max-width: none;
-  border: 0
-}
-
-.linkflair-blue .linkflairlabel,
-.linkflair-green .linkflairlabel,
-.linkflair-orange .linkflairlabel,
-.linkflair-purple .linkflairlabel,
-.linkflair-red .linkflairlabel {
-  color: #fff;
-  font-weight: bold;
-  border-radius: 20px;
-  padding: 2px 10px;
-  transition: .3s
-}
-
-.linkflair-red .linkflairlabel {
-  background: @wild-watermelon;
-
-  &:hover {
-    background: @medium-carmine;
-  }
-}
-
-.linkflair-purple .linkflairlabel {
-  background: @blue-violet;
-
-  &:hover {
-    background: @blue-gem;
-  }
-}
-
-.linkflair-orange .linkflairlabel {
-  background: @sorbus;
-
-  &:hover {
-    background: @rock-spray;
-  }
-}
-
-.linkflair-green .linkflairlabel {
-  background: @forest-green;
-
-  &:hover {
-    background: @crusoe;
-  }
-}
-
-.linkflair-blue .linkflairlabel {
-  background: @royal-blue;
-
-  &:hover {
-    background: #2d499d
-  }
-}
-
 .flairselector.drop-choices.active {
   border-radius: 8px !important;
   padding: 20px !important
@@ -2876,12 +2814,12 @@ form#image-upload.image-upload {
   margin-top: 300px
 }
 
-.footer .col {
-  margin: 10px 0 30px
-}
-
 .footer {
-  border: 0 solid
+  border: 0;
+
+  .col {
+    margin: 10px 0 30px
+  }
 }
 
 .bottommenu,
@@ -2907,12 +2845,12 @@ form#image-upload.image-upload {
 
 .bottommenu {
   font-size: 10px;
-  color: #fff !important
-}
+  color: #fff !important;
 
-.bottommenu a {
-  text-decoration: none;
-  color: #999
+  a {
+    text-decoration: none;
+    color: #999
+  }
 }
 
 #mail.havemail:before {
@@ -3500,32 +3438,6 @@ ul.res-search-tabs {
 .side .md > h3:nth-of-type(4):hover + ul:before,
 .thing[data-author=duelystwikibot]:hover .usertext-body:before {
   display: none
-}
-
-.linkflairlabel[title=Abyssian] {
-  background: #d61ffb
-}
-
-.linkflairlabel[title=Magmar] {
-  background: #4db802
-}
-
-.linkflairlabel[title=Lyonar] {
-  background: #ffd802;
-  color: #000
-}
-
-.linkflairlabel[title=Songhai] {
-  background: #be0001
-}
-
-.linkflairlabel[title=Vanar] {
-  background: #00b9fd;
-  color: #000
-}
-
-.linkflairlabel[title=Vetruvian] {
-  background: #ff6000
 }
 
 .side .md > h3:nth-of-type(4) {
