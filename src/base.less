@@ -2820,27 +2820,29 @@ form#image-upload.image-upload {
   .col {
     margin: 10px 0 30px
   }
+
+  .flat-vert {
+    li a {
+      font-size: 11px;
+      color: #999 !important;
+
+      &:hover {
+        text-decoration: none !important;
+        color: #fff !important
+      }
+    }
+
+    .title {
+      font-size: 16px;
+      transition: color .25s ease, background-color .25s ease;
+      color: #fff
+    }
+  }
 }
 
 .bottommenu,
 .col {
   border: none !important
-}
-
-.footer .flat-vert li a {
-  font-size: 11px;
-  color: #999 !important
-}
-
-.footer .flat-vert li a:hover {
-  text-decoration: none !important;
-  color: #fff !important
-}
-
-.footer .flat-vert .title {
-  font-size: 16px;
-  transition: color .25s ease, background-color .25s ease;
-  color: #fff
 }
 
 .bottommenu {
@@ -3207,7 +3209,7 @@ span[class*=flair-card] {
   position: absolute;
   top: 260px;
   left: 17px;
-  width: calc(100% - 452px);
+  width: calc(~"100% - 452px");
   background: #12377f;
   border-radius: 5px
 }
@@ -3346,7 +3348,7 @@ a[href="#s"]:hover::after {
   padding-left: 0;
   position: absolute;
   top: 295px;
-  left: calc(100% - 317px);
+  left: calc(~"100% - 317px");
   width: 300px;
   border-radius: 5px;
   text-align: center;
@@ -3359,21 +3361,21 @@ a[href="#s"]:hover::after {
 }
 
 .side .md > ul:last-of-type li {
-  line-height: 42px
-}
+  line-height: 42px;
 
-.side .md > ul:last-of-type li a {
-  display: block;
-  color: #fff;
-  padding-left: 10px
-}
+  &:first-of-type a {
+    color: #fff
+  }
 
-.side .md > ul:last-of-type li a:hover {
-  background: #9e9e9e
-}
+  a {
+    display: block;
+    color: #fff;
+    padding-left: 10px;
 
-.side .md > ul:last-of-type li:first-of-type a {
-  color: #fff
+    &:hover {
+      background: #9e9e9e
+    }
+  }
 }
 
 .side a[href$="#noflair-icon"] {
