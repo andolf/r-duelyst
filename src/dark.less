@@ -1,4 +1,13 @@
 html[lang=dm] {
+  &::-moz-selection {
+    background: #666;
+    color: #fff
+  }
+
+  body {
+    background: #222
+  }
+
   .linkinfo .shortlink input {
     background: #444
   }
@@ -65,49 +74,53 @@ html[lang=dm] {
     color: #d1d1d1 !important
   }
 
-  .pretty-button.positive {
-    color: @olive !important;
-  }
+  .pretty-button {
+    &.positive {
+      color: @olive !important;
+    }
 
-  .pretty-button.neutral {
-    color: #ccc
-  }
+    &.neutral {
+      color: #ccc
+    }
 
-  .pretty-button.negative {
-    color: @pink !important;
+    &.negative {
+      color: @pink !important;
+    }
   }
 
   .nsfw-stamp {
     background: @pink;
   }
 
-  .combined-search-page .search-result .search-comments,
-  .combined-search-page .search-result .search-result-body,
-  .combined-search-page .search-result .search-result-footer .search-link,
-  .combined-search-page .search-result .search-result-header .search-title,
-  .combined-search-page .search-result .search-result-meta,
-  .combined-search-page .search-result .search-score,
-  .combined-search-page .search-result-group .search-header-label,
-  .combined-search-page .search-result-group .search-result-group-header {
-    color: #fff
-  }
+  .combined-search-page {
+    .search-result .search-comments,
+    .search-result .search-result-body,
+    .search-result .search-result-footer .search-link,
+    .search-result .search-result-header .search-title,
+    .search-result .search-result-meta,
+    .search-result .search-score,
+    .search-result-group .search-header-label,
+    .search-result-group .search-result-group-header {
+      color: #fff
+    }
 
-  .combined-search-page .search-result .search-expando.collapsed::before {
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, #444 100%)
-  }
+    .search-result {
+      border-bottom: 1px solid #666;
 
-  .combined-search-page .search-result .search-expando-button {
-    color: @bahia;
-  }
+      .search-expando.collapsed:before {
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, #444 100%)
+      }
 
-  .combined-search-page .search-result {
-    border-bottom: 1px solid #666
-  }
+      .search-expando-button {
+        color: @bahia;
+      }
+    }
 
-  .combined-search-page .search-result-group .search-result-group-header {
-    background: #222;
-    border-bottom: 1px solid #666;
-    border-top: 1px solid #666
+    .search-result-group .search-result-group-header {
+      background: #222;
+      border-bottom: 1px solid #666;
+      border-top: 1px solid #666
+    }
   }
 
   .stickied a.title:link,
@@ -128,10 +141,6 @@ html[lang=dm] {
   body:not(.comments-page) .over18 .md p,
   body:not(.comments-page) .over18 .tagline {
     color: @pink !important;
-  }
-
-  body {
-    background: #222
   }
 
   div.content {
@@ -164,18 +173,44 @@ html[lang=dm] {
 
   .side {
     border: #4c4c4c;
-    background: #333
+    background: #333;
+
+    .usertext-body {
+      background-image: none;
+      padding: 0
+    }
+
+    .titlebox .md h3 a {
+      background: #444;
+
+      &:hover {
+        background: #666
+      }
+
+      &:active {
+        background: #222
+      }
+    }
+
+    .md {
+      h4 {
+        background: #323232
+      }
+
+      h2 + ul {
+        background: #222
+      }
+    }
+
+    .sidecontentbox a {
+      color: #ccc
+    }
   }
 
   .titlebox form.toggle,
   .toggle .option.active,
   div.leavemoderator {
     color: #ccc
-  }
-
-  .side .usertext-body {
-    background-image: none;
-    padding: 0
   }
 
   .icon-menu a {
@@ -185,18 +220,6 @@ html[lang=dm] {
   .sidecontentbox .title h1 {
     color: #fff;
     font-weight: 700
-  }
-
-  .side .titlebox .md h3 a {
-    background: #444
-  }
-
-  .side .titlebox .md h3 a:hover {
-    background: #666
-  }
-
-  .side .titlebox .md h3 a:active {
-    background: #222
   }
 
   .titlebox .users-online,
@@ -218,10 +241,6 @@ html[lang=dm] {
   .side .md h4 a,
   body.res #sr-header-area .sr-bar a.RESShortcutsCurrentSub {
     color: #fff !important
-  }
-
-  .side .md h4 {
-    background: #323232
   }
 
   .md hr,
@@ -261,41 +280,43 @@ html[lang=dm] {
     background: #323232
   }
 
-  .commentarea > .usertext {
-    background-color: #292929
-  }
+  .commentarea {
+    > .usertext {
+      background-color: #292929
+    }
 
-  .commentarea .child .thing.comment,
-  .commentarea .child .thing.comment .comment,
-  .commentarea .child .thing.comment .comment .comment,
-  .commentarea .child .thing.comment .comment .comment .comment,
-  .commentarea .child .thing.comment .comment .comment .comment .comment,
-  .commentarea .child .thing.comment .comment .comment .comment .comment .comment,
-  .commentarea .child .thing.comment .comment .comment .comment .comment .comment .comment,
-  .commentarea .child .thing.comment .comment .comment .comment .comment .comment .comment .comment,
-  .commentarea .child .thing.comment .comment .comment .comment .comment .comment .comment .comment .comment,
-  .commentarea .child .thing.comment .comment .comment .comment .comment .comment .comment .comment .comment .comment,
-  .commentarea .child .thing.comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment,
-  .commentarea .thing {
-    border: 1px solid #333 !important
-  }
+    .child .thing.comment,
+    .child .thing.comment .comment,
+    .child .thing.comment .comment .comment,
+    .child .thing.comment .comment .comment .comment,
+    .child .thing.comment .comment .comment .comment .comment,
+    .child .thing.comment .comment .comment .comment .comment .comment,
+    .child .thing.comment .comment .comment .comment .comment .comment .comment,
+    .child .thing.comment .comment .comment .comment .comment .comment .comment .comment,
+    .child .thing.comment .comment .comment .comment .comment .comment .comment .comment .comment,
+    .child .thing.comment .comment .comment .comment .comment .comment .comment .comment .comment .comment,
+    .child .thing.comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment,
+    .thing {
+      border: 1px solid #333 !important
+    }
 
-  .commentarea .child .thing.comment,
-  .commentarea .child .thing.comment .comment .comment,
-  .commentarea .child .thing.comment .comment .comment .comment .comment,
-  .commentarea .child .thing.comment .comment .comment .comment .comment .comment .comment,
-  .commentarea .child .thing.comment .comment .comment .comment .comment .comment .comment .comment .comment,
-  .commentarea .child .thing.comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment {
-    background: #222 !important
-  }
+    .child .thing.comment,
+    .child .thing.comment .comment .comment,
+    .child .thing.comment .comment .comment .comment .comment,
+    .child .thing.comment .comment .comment .comment .comment .comment .comment,
+    .child .thing.comment .comment .comment .comment .comment .comment .comment .comment .comment,
+    .child .thing.comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment {
+      background: #222 !important
+    }
 
-  .commentarea .child .thing.comment .comment,
-  .commentarea .child .thing.comment .comment .comment .comment,
-  .commentarea .child .thing.comment .comment .comment .comment .comment .comment,
-  .commentarea .child .thing.comment .comment .comment .comment .comment .comment .comment .comment,
-  .commentarea .child .thing.comment .comment .comment .comment .comment .comment .comment .comment .comment .comment,
-  .commentarea .thing {
-    background: #292929 !important
+    .child .thing.comment .comment,
+    .child .thing.comment .comment .comment .comment,
+    .child .thing.comment .comment .comment .comment .comment .comment,
+    .child .thing.comment .comment .comment .comment .comment .comment .comment .comment,
+    .child .thing.comment .comment .comment .comment .comment .comment .comment .comment .comment .comment,
+    .thing {
+      background: #292929 !important
+    }
   }
 
   button {
@@ -366,15 +387,22 @@ html[lang=dm] {
     background-color: #333
   }
 
-  .md code {
-    background-color: #222;
-    border: 1px solid #666 !important
-  }
+  .md {
+    code {
+      background-color: #222;
+      border: 1px solid #666 !important
+    }
 
-  .md pre {
-    padding: 0;
-    background-color: transparent !important;
-    border: none
+    pre {
+      padding: 0;
+      background-color: transparent !important;
+      border: none
+    }
+
+    table,
+    ul {
+      color: #fff !important
+    }
   }
 
   .wiki-page div.content {
@@ -408,18 +436,8 @@ html[lang=dm] {
     color: #999 !important
   }
 
-  .md table,
-  .md ul {
-    color: #fff !important
-  }
-
   .gold-accent.comment-visits-box,
   .side .titlebox {
-    color: #fff
-  }
-
-  html[lang=dm]::-moz-selection {
-    background: #666;
     color: #fff
   }
 
@@ -513,14 +531,6 @@ html[lang=dm] {
 
   .tabmenu {
     background: #333
-  }
-
-  .side .md h2 + ul {
-    background: #222
-  }
-
-  .side .sidecontentbox a {
-    color: #ccc
   }
 
   .flair {
