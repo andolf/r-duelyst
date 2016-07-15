@@ -1,25 +1,3 @@
-
-
-.flair-redflair[title]:hover {
-  background: @cerise;
-}
-
-.flair-purpleflair[title]:hover {
-  background: @blue-violet;
-}
-
-.flair-greenflair[title]:hover {
-  background: green
-}
-
-.flair-orangeflair[title]:hover {
-  background: @sorbus;
-}
-
-.flair-blueflair[title]:hover {
-  background: @royal-blue;
-}
-
 .flair-blueflair[title],
 .flair-greenflair[title],
 .flair-orangeflair[title],
@@ -40,7 +18,7 @@
 .flair-orangeflair[title]:before,
 .flair-purpleflair[title]:before,
 .flair-redflair[title]:before {
-  font-weight: Bold;
+  font-weight: bold;
   display: inline-block;
   font-size: 10px;
   padding: 4px 8px;
@@ -50,42 +28,47 @@
 
 .flair-redflair[title] {
   background: @lipstick;
+
+  &:hover,
+  &:before {
+    background: @cerise;
+  }
 }
 
 .flair-purpleflair[title] {
   background: @blue-gem;
+
+  &:hover,
+  &:before {
+    background: @blue-violet;
+  }
 }
 
 .flair-greenflair[title] {
-  background: #005900
+  background: #005900;
+
+  &:hover,
+  &:before {
+    background: green;
+  }
 }
 
 .flair-orangeflair[title] {
   background: @rock-spray;
+
+  &:hover,
+  &:before {
+    background: @sorbus;
+  }
 }
 
 .flair-blueflair[title] {
   background: @endeavour;
-}
 
-.flair-redflair[title]:before {
-  background: @cerise;
-}
-
-.flair-purpleflair[title]:before {
-  background: @blue-violet;
-}
-
-.flair-greenflair[title]:before {
-  background: green
-}
-
-.flair-orangeflair[title]:before {
-  background: @sorbus;
-}
-
-.flair-blueflair[title]:before {
-  background: @royal-blue;
+  &:hover,
+  &:before {
+    background: @royal-blue;
+  }
 }
 
 .flair-card-1-0 {
