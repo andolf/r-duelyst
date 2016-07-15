@@ -65,16 +65,18 @@ html[lang=dm] {
     color: #d1d1d1 !important
   }
 
-  .pretty-button.positive {
-    color: @olive !important;
-  }
+  .pretty-button {
+    &.positive {
+      color: @olive !important;
+    }
 
-  .pretty-button.neutral {
-    color: #ccc
-  }
+    &.neutral {
+      color: #ccc
+    }
 
-  .pretty-button.negative {
-    color: @pink !important;
+    &.negative {
+      color: @pink !important;
+    }
   }
 
   .nsfw-stamp {
