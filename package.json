@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Stylesheet for the Duelyst subreddit.",
   "scripts": {
-    "css": "lessc src/main.less output/main.css --clean-css='--s1 --advanced --compatibility=ie8'"
+    "css": "lessc src/main.less output/main.css --autoprefix --clean-css='--s1 --advanced --compatibility=ie8'"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,7 @@
   "homepage": "https://github.com/andolf/duelyst-subreddit#readme",
   "devDependencies": {
     "less": "^2.7.1",
+    "less-plugin-autoprefix": "^1.5.1",
     "less-plugin-clean-css": "^1.5.1"
   }
 }

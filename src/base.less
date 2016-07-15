@@ -3240,55 +3240,52 @@ span[class*=flair-card] {
   width: 100px;
   min-width: 0;
   font-size: 20px;
-  -webkit-display: flex;
-  -webkit-justify-content: center;
-  -webkit-align-items: strech;
   color: #eee;
   text-transform: uppercase;
   letter-spacing: .5px;
-}
 
-.side .md > ol:last-of-type li:first-child strong {
-  text-shadow: 0 0 5px rgba(255, 199, 1, .25);
-  padding: 8px;
-  transform: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  -webkit-display: flex;
-  -webkit-justify-content: center;
-  -webkit-align-items: center
+  strong {
+    text-shadow: 0 0 5px rgba(255, 199, 1, .25);
+    padding: 8px;
+    transform: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-display: flex;
+    -webkit-justify-content: center;
+    -webkit-align-items: center
+  }
 }
 
 .side .md > ol:last-of-type li {
   transform: none;
-  list-style: none
-}
+  list-style: none;
 
-.side .md > ol:last-of-type li a {
-  min-height: 16px;
-  position: relative;
-  display: block;
-  margin: 12px 8px;
-  padding-left: 12px;
-  transform: none;
-  color: #eee;
-  text-shadow: 1px 1px 0 #000;
-  font-size: 14.5px !important;
-  font-weight: 400;
-  text-decoration: underline
-}
+  a {
+    min-height: 16px;
+    position: relative;
+    display: block;
+    margin: 12px 8px;
+    padding-left: 12px;
+    transform: none;
+    color: #eee;
+    text-shadow: 1px 1px 0 #000;
+    font-size: 14px !important;
+    font-weight: 400;
+    text-decoration: underline;
 
-.side .md > ol:last-of-type li a::before {
-  content: "";
-  position: absolute;
-  width: 4px;
-  opacity: .85;
-  height: 26px;
-  display: block;
-  left: 0;
-  top: -4px;
-  border-radius: 83px
+    &:before {
+      content: "";
+      position: absolute;
+      width: 4px;
+      opacity: .85;
+      height: 26px;
+      display: block;
+      left: 0;
+      top: -4px;
+      border-radius: 83px;
+    }
+  }
 }
 
 .md p > a[href="#s"],
@@ -3352,28 +3349,28 @@ a[href="#s"]:hover::after {
   width: 300px;
   border-radius: 5px;
   text-align: center;
-  font-size: 16px
-}
+  font-size: 16px;
 
-.side .md > ul:last-of-type:hover {
-  height: auto;
-  background-color: #1e2636
-}
-
-.side .md > ul:last-of-type li {
-  line-height: 42px;
-
-  &:first-of-type a {
-    color: #fff
+  &:hover {
+    height: auto;
+    background-color: #1e2636
   }
 
-  a {
-    display: block;
-    color: #fff;
-    padding-left: 10px;
+  li {
+    line-height: 42px;
 
-    &:hover {
-      background: #9e9e9e
+    &:first-of-type a {
+      color: #fff
+    }
+
+    a {
+      display: block;
+      color: #fff;
+      padding-left: 10px;
+
+      &:hover {
+        background: #9e9e9e
+      }
     }
   }
 }
@@ -3407,29 +3404,29 @@ a[href="#s"]:hover::after {
 }
 
 .side a[href$="#abyssian-icon"] {
-  background: #d61ffb
+  background: @abyssian;
 }
 
 .side a[href$="#magmar-icon"] {
-  background: #4db802
+  background: @magmar;
 }
 
 .side a[href$="#lyonar-icon"] {
-  background: #ffd802;
+  background: @lyonar;
   color: #000 !important
 }
 
 .side a[href$="#songhai-icon"] {
-  background: #be0001
+  background: @songhai;
 }
 
 .side a[href$="#vanar-icon"] {
-  background: #00b9fd;
+  background: @vanar;
   color: #000 !important
 }
 
 .side a[href$="#vetruvian-icon"] {
-  background: #ff6000
+  background: @vetruvian;
 }
 
 .search-page #search,
@@ -3443,37 +3440,39 @@ ul.res-search-tabs {
 }
 
 .side .md > h3:nth-of-type(4) {
-  margin-bottom: 0
-}
+  margin-bottom: 0;
 
-.side .md > h3:nth-of-type(4):hover + ul {
-  height: auto
+  &:hover + ul {
+    height: auto
+  }
 }
 
 .usertext-body table > tbody > tr:nth-of-type(even) {
   background: #eee
 }
 
-.thing[data-author=duelystwikibot] form {
-  height: 25px;
-  overflow: hidden
-}
+.thing[data-author=duelystwikibot] {
+  form {
+    height: 25px;
+    overflow: hidden
+  }
 
-.thing[data-author=duelystwikibot]:hover form {
-  height: auto
-}
+  &:hover form {
+    height: auto
+  }
 
-.thing[data-author=duelystwikibot] .usertext-body:before {
-  content: '[ HOVER TO SHOW ]';
-  font-size: 16px;
-  position: relative;
-  top: 5px
+  .usertext-body:before {
+    content: '[ HOVER TO SHOW ]';
+    font-size: 16px;
+    position: relative;
+    top: 5px
+  }
 }
 
 .subreddit-rules-page {
-  padding-top: 50px
-}
+  padding-top: 50px;
 
-.subreddit-rules-page:before {
-  top: 50px
+  &:before {
+    top: 50px
+  }
 }
