@@ -1497,7 +1497,40 @@ body:not(.submit-page) .tabmenu::after {
 }
 
 .titlebox {
-  text-align: center
+  text-align: center;
+  padding: 12px;
+
+  .fancy-toggle-button {
+    margin: 4px auto;
+    width: 100%;
+    transition: .3s;
+  }
+
+  .number,
+  .subscribers,
+  .users-online {
+    font-size: 12px;
+  }
+
+  .users-online,
+  .subscribers {
+    color: #999;
+    margin: 4px auto;
+  }
+
+  .users-online {
+    .number {
+      font-style: italic;
+    }
+  }
+
+  .redditname {
+    font-weight: 400;
+  }
+
+  .bottom {
+    display: none;
+  }
 }
 
 .submit-page .content h1,
@@ -1983,28 +2016,12 @@ button {
   border-radius: 3px !important
 }
 
-.titlebox h1.redditname {
-  width: 100%;
-  text-align: center
-}
-
-.titlebox .redditname {
-  height: 25px
-}
-
 .res .titlebox .fancy-toggle-button {
   display: inline-block;
   margin-top: 10px;
   margin-right: 5px;
   margin-left: 0;
   width: auto
-}
-
-.titlebox .fancy-toggle-button {
-  margin: 4px auto 0;
-  width: 100%;
-  display: inline-block;
-  transition: .3s
 }
 
 .flat-list {
@@ -2276,17 +2293,8 @@ body:not(.search-page) #search input[type=text]:focus {
   text-align: right !important
 }
 
-.titlebox {
-  padding: 12px
-}
-
 .side .titlebox .md h3 a {
   margin-left: 5px
-}
-
-.side md {
-  padding-left: 5px;
-  padding-right: 5px
 }
 
 .side #moderation_tools {
@@ -2310,10 +2318,6 @@ body:not(.search-page) #search input[type=text]:focus {
 
 .commentarea {
   padding: 0 10px 10px
-}
-
-.users-online {
-  color: #535353
 }
 
 .flair,
@@ -2372,41 +2376,9 @@ div.reddit-entry {
   opacity: .7
 }
 
-.users-online {
-  margin-bottom: 2em
-}
-
-.titlebox .number,
-.titlebox span.subscribers {
-  font-size: 12px;
-  position: relative
-}
-
-.titlebox .users-online,
-.titlebox span.subscribers {
-  color: #999;
-  position: relative;
-  top: 10px
-}
-
 div.leavemoderator {
   margin-left: 18px;
   background: 0 0
-}
-
-.titlebox .users-online {
-  font-size: 12px;
-  position: relative;
-  top: 15px
-}
-
-.titlebox .users-online .number {
-  font-style: italic
-}
-
-.titlebox .number,
-.titlebox .users-online {
-  cursor: text
 }
 
 .side .md .-blocks,
@@ -2418,10 +2390,6 @@ div.leavemoderator {
 .side .md table,
 .side .md ul {
   margin: 15px 0
-}
-
-.titlebox h1.redditname {
-  font-weight: 400
 }
 
 .side .md h1,
@@ -2517,10 +2485,6 @@ body.res .RESshortcutside:active {
   display: block
 }
 
-.titlebox .bottom {
-  display: none
-}
-
 .sidecontentbox .collapse-button {
   display: inline-block;
   width: 12px;
@@ -2561,15 +2525,6 @@ body.res .RESshortcutside:active {
 .entry .buttons li a,
 .entry .buttons li + li {
   font-weight: 400
-}
-
-.titlebox form.toggle {
-  background: 0 0
-}
-
-.titlebox .tagline {
-  text-align: center;
-  max-height: 50px
 }
 
 .side .tagline {
