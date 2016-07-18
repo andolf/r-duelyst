@@ -1508,98 +1508,101 @@ body:not(.submit-page) .tabmenu::after {
   transition: .25s ease
 }
 
-div .thing .tagline .author.admin,
-div .thing .tagline .author.admin:before,
-div .thing .tagline .author.moderator,
-div .thing .tagline .author.moderator:before,
-div .thing .tagline .author.submitter,
-div .thing .tagline .author.submitter:before {
-  font-weight: Bold;
-  line-height: 20px;
-  color: #fff;
-  font-size: 10px;
-  display: inline-block
-}
-
 #srList,
 #srList td a {
   color: #fff
 }
 
-.sidecontentbox a.helplink:hover {
-  text-decoration: none
-}
+.sidecontentbox a.helplink {
+  &:hover {
+    text-decoration: none;
+  }
 
-.sidecontentbox a.helplink:active {
-  background-color: #ae9df4
-}
-
-div .thing .tagline .author.submitter:before {
-  background: @royal-blue;
-  padding: 0 7px 0 10px;
-  border-radius: 20px 0 0 20px;
-  font-size: 10px;
-  content: "OP ";
-  margin-right: 7px
-}
-
-div .thing .tagline .author.submitter {
-  background: @endeavour !important;
-  padding: 0 10px 0 0;
-  border-radius: 20px;
-  transition: .3s
-}
-
-div .thing .tagline .author.submitter:hover {
-  background: @royal-blue !important;
-  text-decoration: none
-}
-
-div.thing .tagline .author.admin:before,
-div.thing .tagline .author.moderator:before {
-  padding: 0 7px 0 10px;
-  border-radius: 20px 0 0 20px;
-  font-size: 10px;
-  margin-right: 7px
-}
-
-body div .thing .tagline .author.admin,
-body div .thing .tagline .author.moderator {
-  padding: 0 10px 0 0;
-  border-radius: 20px;
-  transition: .3s
-}
-
-div.thing .tagline .author.moderator:before {
-  background: #282 !important;
-  content: "Mod "
-}
-
-body div .thing .tagline .author.moderator {
-  background: #1a4b17 !important
-}
-
-body div .thing .tagline .author.moderator:hover {
-  background: #282 !important;
-  text-decoration: none
+  &:active {
+    background-color: #ae9df4;
+  }
 }
 
 .tagline .moderator:after {
   content: "oderator - speaking officially."
 }
 
-div.thing .tagline .author.admin:before {
-  background-color: @wild-watermelon !important;
-  content: "Admin "
-}
+.thing .tagline .author {
+  &.admin,
+  &.admin:before,
+  &.moderator,
+  &.moderator:before,
+  &.submitter,
+  &.submitter:before {
+    font-weight: bold;
+    line-height: 20px;
+    color: #fff;
+    font-size: 10px;
+    display: inline-block;
+  }
 
-body div .thing .tagline .author.admin {
-  background: #c41959 !important
-}
+  &.submitter {
+    background: @endeavour !important;
+    padding: 0 10px 0 0;
+    border-radius: 20px;
+    transition: .3s;
 
-body div .thing .tagline .author.admin:hover {
-  background: @wild-watermelon !important;
-  text-decoration: none
+    &:before {
+      background: @royal-blue;
+      padding: 0 7px 0 10px;
+      border-radius: 20px 0 0 20px;
+      font-size: 10px;
+      content: "OP ";
+      margin-right: 7px
+    }
+
+    &:hover {
+      background: @royal-blue !important;
+      text-decoration: none
+    }
+  }
+
+  &.admin,
+  &.moderator {
+    padding: 0 10px 0 0;
+    border-radius: 20px;
+    transition: .3s;
+
+    &:before {
+      padding: 0 7px 0 10px;
+      border-radius: 20px 0 0 20px;
+      font-size: 10px;
+      margin-right: 7px;
+    }
+  }
+
+  &.moderator {
+    background: #1a4b17;
+
+    &:before {
+      background: #282;
+      content: "Mod ";
+    }
+
+    &:hover {
+      background: #282;
+      text-decoration: none;
+    }
+  }
+
+  &.admin {
+    background: #c41959;
+
+    &:before {
+      background: @wild-watermelon;
+      content: "Admin ";
+    }
+
+    &:hover {
+      background: @wild-watermelon;
+      text-decoration: none;
+    }
+  }
 }
 
 .tagline .admin:after {
