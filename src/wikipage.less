@@ -1,0 +1,81 @@
+.wiki-page {
+  div.content {
+    border: 0;
+    background: none;
+    margin-right: 335px;
+  }
+
+  .pageactions,
+  .wikititle {
+    background-color: #fff;
+    border-radius: 5px;
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+
+  .wikititle {
+    padding: 12px 16px 10px;
+    margin: 0;
+    color: #444;
+  }
+
+  .wiki-page-content {
+    margin: 16px 0;
+    padding: 16px;
+    border-radius: 2px;
+
+    .wiki {
+      > .toc > ul {
+        border: none;
+      }
+
+      &.md {
+        color: #4d5763;
+
+        h2 {
+          color: #444;
+        }
+
+        h4 {
+          padding: 15px 0;
+          font-weight: 700;
+        }
+
+        p {
+          font-size: 14px;
+          line-height: 1.4285714285714em;
+        }
+      }
+    }
+
+    hr {
+      border-style: solid;
+      border-color: #e5e5e5
+    }
+  }
+
+  .pageactions {
+    margin-left: 16px;
+    padding: 8px 16px;
+    border: none;
+
+    .wikiaction {
+      margin: 0;
+      background-color: transparent;
+      border-radius: 0;
+      color: #b3b3b3;
+    }
+
+    .wikiaction-current {
+      color: #444;
+      font-weight: 700;
+    }
+
+    .wikiaction-current:hover,
+    .wikiaction:hover {
+      background: 0 0;
+      color: #666;
+      font-weight: 700;
+    }
+  }
+}
