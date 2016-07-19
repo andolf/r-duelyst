@@ -288,13 +288,13 @@ div#RESStyleSheetTipPane-header {
 }
 
 .link .domain {
-  visibility: hidden
-}
+  visibility: hidden;
 
-.link .domain a {
-  visibility: visible;
-  color: #b3b3b3;
-  transition: all .15s ease
+  a {
+    visibility: visible;
+    color: #b3b3b3;
+    transition: all .15s ease;
+  }
 }
 
 .sr-bar a.gold {
@@ -332,7 +332,6 @@ img.RESImage {
   border: 0
 }
 
-/*.nsfw-stamp{border:none!important;background:#D10023;padding:0 8px!important;border-radius:20px}*/
 .nsfw-stamp acronym {
   display: none;
 }
@@ -354,35 +353,34 @@ img.RESImage {
   line-height: 25px;
   background: rgba(0, 0, 0, .85);
   position: absolute;
-  z-index: 999
-}
+  z-index: 999;
 
-.action-form button {
-  margin-right: 10px
-}
+  button {
+    margin-right: 10px;
+  }
 
-.action-form ol {
-  margin-bottom: 15px
+  ol {
+    margin-bottom: 15px;
+  }
 }
 
 .pretty-button {
-  background: 0 0 !important;
+  background: none !important;
   font-weight: 700;
   padding: 1px 5px;
   border-radius: 20px;
-  font-size: 10px !important;
   border: none !important;
 
   &.negative {
-    color: #d10023
+    color: #d10023;
   }
 
   &.neutral {
-    color: #444
+    color: #444;
   }
 
   &.positive {
-    color: #2b8b27
+    color: #2b8b27;
   }
 
   &.pressed {
@@ -391,7 +389,7 @@ img.RESImage {
     &:after {
       font-size: 10px;
       content: "Action Done";
-      font-weight: 700
+      font-weight: 700;
     }
   }
 }
@@ -932,6 +930,7 @@ body:not(.search-page) .menuarea {
     a,
     a > mark {
       color: inherit;
+      line-height: inherit;
     }
 
     .search-result-meta,
@@ -955,66 +954,6 @@ body:not(.search-page) .menuarea {
   padding-right: 10px;
   padding-bottom: 10px;
   text-align: left
-}
-
-.search-page {
-  div.content {
-    width: 80%;
-    min-width: 1000px;
-    margin: 100px auto 300px
-  }
-
-  #noresults {
-    padding-bottom: 20px !important;
-    margin-left: 15px !important
-  }
-
-  .side {
-    display: none;
-  }
-
-  .menuarea {
-    font-size: 12px;
-    text-transform: uppercase;
-    border-bottom: none;
-    padding: 5px 10px;
-    margin: -45px 5px 5px;
-    font-weight: 700;
-    position: absolute;
-    top: 418px;
-  }
-
-  div#moresearchinfo {
-    background: rgba(0, 0, 0, .85);
-    position: absolute;
-    z-index: 9999;
-    padding-left: 22px;
-    padding-bottom: 20px;
-    color: #fff;
-    padding-right: 20px;
-    border-radius: 0 0 8px 8px;
-    top: 65px;
-  }
-
-  a#search_showmore {
-    font-size: 12px;
-    text-transform: uppercase;
-    position: absolute;
-    top: 100px;
-    color: #999;
-    font-weight: 700;
-    right: 13px;
-  }
-
-  .searchfacets {
-    font-size: 12px;
-    text-transform: uppercase;
-    border: none;
-    box-shadow: none;
-    background: #e0e0e0;
-    color: #434343;
-    padding-left: 20px;
-  }
 }
 
 .searchfacet a {
@@ -1177,32 +1116,6 @@ body.comments-page .link {
   transition: .25s ease
 }
 
-body.comments-page div.content {
-  background: 0 0 !important
-}
-
-body.comments-page .link {
-  background: #fff;
-  border: none;
-  border-radius: 5px 5px 0 0
-}
-
-body.comments-page .sitetable {
-  position: relative;
-  z-index: 2
-}
-
-.commentarea > .usertext {
-  background-color: #f8f8f8;
-  border-radius: 0 0 2px 2px;
-  overflow: visible;
-  padding-top: 165px;
-  padding-left: 29px;
-  margin-top: -160px;
-  margin-left: -10px;
-  margin-right: -10px
-}
-
 .res .commentarea > .usertext {
   position: relative;
   top: -110px;
@@ -1212,29 +1125,52 @@ body.comments-page .sitetable {
   clear: left
 }
 
-.commentarea .panestack-title {
-  margin: 16px 0 -16px 22px;
-  border-bottom: 0
-}
+.commentarea {
+  > .usertext {
+    background-color: #f8f8f8;
+    border-radius: 0 0 2px 2px;
+    overflow: visible;
+    padding-top: 165px;
+    padding-left: 29px;
+    margin-top: -160px;
+    margin-left: -10px;
+    margin-right: -10px;
+  }
 
-.commentarea span.title {
-  text-transform: uppercase !important;
-  font-weight: 700;
-  font-size: 13px;
-  position: relative;
-  z-index: 1
-}
+  .panestack-title {
+    margin: 16px 0 -16px 22px;
+    border-bottom: 0;
 
-.commentarea .panestack-title .title {
-  color: #4d5763
-}
+    .title {
+      color: #4d5763;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 13px;
+    }
+  }
 
-.commentarea .menuarea {
-  margin-left: 22px !important;
-  text-transform: uppercase;
-  font-size: 12px;
-  position: relative;
-  z-index: 1
+  .menuarea {
+    margin-left: 22px;
+    text-transform: uppercase;
+    font-size: 12px;
+  }
+
+  .thing {
+    border-radius: 2px;
+    background-color: #fff;
+    margin: 0 0 8px;
+    padding: 16px 16px 1px;
+
+    &.collapsed {
+      padding: 10px 15px;
+    }
+  }
+
+  .child .thing {
+    box-shadow: none;
+    padding: 4px;
+    border: 1px solid #fff;
+  }
 }
 
 #srList,
@@ -1242,35 +1178,18 @@ body.comments-page .sitetable {
   position: absolute
 }
 
-.commentarea .thing {
-  border-radius: 2px;
-  background-color: #fff;
-  margin: 0 0 8px;
-  padding: 16px 16px 1px
-}
+.res .commentarea {
+  .thing {
+    padding: 15px 15px 0 !important;
+  }
 
-.res .commentarea .thing {
-  padding: 15px 15px 0 !important
-}
-
-.commentarea .thing.collapsed {
-  padding: 10px 15px !important
-}
-
-.res .commentarea .entry .flat-list {
-  padding-bottom: 8px
+  .entry .flat-list {
+    padding-bottom: 8px;
+  }
 }
 
 .comment .flat-list li a[onclick*=reply] {
   font-weight: 700
-}
-
-.commentarea .child .thing {
-  box-shadow: none;
-  padding: 4px;
-  margin-left: 2px !important;
-  margin-top: 15px;
-  border: 1px solid #fff !important
 }
 
 body.comments-page div.content {
@@ -1290,93 +1209,15 @@ div.sitetable.nestedlisting {
   box-shadow: 0 1px 5px rgba(0, 0, 0, .08)
 }
 
-.wiki-page div.content {
-  border: 0;
-  background: 0 0;
-  margin-right: 335px !important
-}
-
 .wiki-page-content .md h1,
 .wiki-page-content .md h6 {
   text-transform: none !important
-}
-
-.wiki-page .pageactions,
-.wiki-page .wikititle {
-  background-color: #fff;
-  border-radius: 5px;
-  font-size: 12px;
-  text-transform: uppercase
-}
-
-.wiki-page .wikititle {
-  padding: 12px 16px 10px;
-  margin: 0;
-  color: #444
-}
-
-.wiki-page .wiki-page-content .md.wiki h4 {
-  padding: 15px 0;
-  font-weight: 700
-}
-
-.wiki-page .pageactions {
-  margin-left: 16px;
-  padding: 8px 16px;
-  border: none
-}
-
-.wiki-page .pageactions .wikiaction {
-  margin: 0;
-  background-color: transparent;
-  border-radius: 0;
-  color: #b3b3b3
-}
-
-.wiki-page .pageactions .wikiaction-current {
-  color: #444;
-  font-weight: 700
-}
-
-.wiki-page .pageactions .wikiaction-current:hover,
-.wiki-page .pageactions .wikiaction:hover {
-  background: 0 0;
-  color: #666;
-  font-weight: 700
 }
 
 .formtabs-content .infobar,
 .wiki-page .wiki-page-content {
   background-color: #fff;
   box-shadow: 0 1px 5px rgba(0, 0, 0, .08)
-}
-
-.wiki-page .wiki-page-content {
-  margin: 16px 0;
-  padding: 16px;
-  border-radius: 2px
-}
-
-.wiki-page .wiki-page-content .wiki > .toc > ul {
-  border: none
-}
-
-.wiki-page .wiki-page-content .wiki.md {
-  color: #4d5763
-}
-
-.wiki-page .wiki-page-content .wiki.md h2 {
-  color: #444
-}
-
-.wiki-page .wiki-page-content .wiki.md p {
-  font-size: 14px;
-  line-height: 1.4285714285714em
-}
-
-.wiki-page .wiki-page-content hr {
-  border-style: solid;
-  border-color: #e5e5e5
 }
 
 .roundfield,
