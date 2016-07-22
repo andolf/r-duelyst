@@ -2,9 +2,15 @@ body {
   background: #e6e6e8
 }
 
-.flair,
+h2 {
+  color: #252525;
+  font-size: 18px;
+  font-weight: 400
+}
+
 button {
-  white-space: nowrap
+  white-space: nowrap;
+  background: @royal-blue;
 }
 
 span.pagename.redditname a {
@@ -55,8 +61,6 @@ button[disabled] {
 
 .RESDropdownList li,
 .action-form,
-.deepthread,
-.loadFlat,
 .pretty-button,
 .pretty-button.pressed:after,
 .usertext .help-toggle,
@@ -107,10 +111,6 @@ ul.report-reasons {
   }
 }
 
-.commentarea span.score,
-.deepthread,
-.deepthread::after,
-.loadFlat,
 .usertext .help-toggle:hover,
 .usertext a.reddiquette:hover {
   font-weight: 700
@@ -129,16 +129,29 @@ ul.report-reasons {
   margin-left: 15px;
   background-size: contain !important;
   background-repeat: no-repeat !important;
-  z-index: 1
+  z-index: 1;
+
+  &.default-header:hover,
+  &:hover {
+    opacity: 0.7;
+  }
 }
 
 .deepthread {
+  font-weight: 700;
   font-size: 9px;
+  text-transform: uppercase;
 
   &:after {
     background-image: none;
     content: ">";
-    font-size: 12px
+    font-size: 12px;
+    font-weight: 700;
+    color: #fff;
+  }
+
+  a {
+    color: @royal-blue;
   }
 }
 
@@ -148,20 +161,28 @@ ul.report-reasons {
   border-radius: 3px
 }
 
-.side #search_showmore {
-  color: #bbb
+.search-expando-button-label {
+  &-collapsed,
+  &-expanded {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 10px;
+  }
 }
 
-.search-expando-button-label-collapsed,
-.search-expando-button-label-expanded {
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 10px
-}
+.sr-bar {
+  .separator {
+    color: transparent;
+    font-size: 8px;
+  }
 
-.sr-bar .separator {
-  color: transparent;
-  font-size: 8px
+  a {
+    color: #fff;
+
+    &.gold {
+      color: gold;
+    }
+  }
 }
 
 .BEFoot button {
@@ -196,7 +217,13 @@ a {
   z-index: 1;
   font-size: 10px;
   margin-left: 10px;
-  transition: .2s
+  transition: .2s;
+  text-transform: uppercase;
+  font-weight: 700;
+
+  &:hover {
+    color: @royal-blue;
+  }
 }
 
 .link.last-clicked {
@@ -295,10 +322,6 @@ div#RESStyleSheetTipPane-header {
     color: #b3b3b3;
     transition: all .15s ease;
   }
-}
-
-.sr-bar a.gold {
-  color: gold
 }
 
 .icon-menu a {
@@ -400,8 +423,8 @@ ul.report-reasons {
 }
 
 .content .entry .buttons li.reported-stamp,
-body .content .over18 .entry .buttons li.reported-stamp,
-body .content .stickied .entry .buttons li.reported-stamp {
+.content .over18 .entry .buttons li.reported-stamp,
+.content .stickied .entry .buttons li.reported-stamp {
   border: none !important;
   background: #666 !important;
   color: #fff !important;
@@ -410,10 +433,6 @@ body .content .stickied .entry .buttons li.reported-stamp {
   padding: 1px 8px;
   border-radius: 20px;
   font-size: 9px !important
-}
-
-.commentarea .nestedlisting {
-  margin: 0 -10px
 }
 
 .res-commentBoxes .nestedlisting > .comment {
@@ -754,11 +773,6 @@ body.res #header-bottom-right #mail.havemail {
   }
 }
 
-.message-count {
-  left: 2px;
-  background-color: #ff9400
-}
-
 #header-bottom-right {
   background: 0 0;
   top: 217px !important;
@@ -776,11 +790,11 @@ body.res #header-bottom-right #mail.havemail {
 }
 
 .res #header-bottom-right #modmail {
-  top: -4px !important
+  top: -4px !important;
 }
 
 .separator {
-  visibility: hidden
+  visibility: hidden;
 }
 
 .gearIcon {
@@ -818,21 +832,21 @@ body.res #header-bottom-right #mail.havemail {
   top: -15px !important;
 
   &:hover {
-    background-color: rgba(255, 255, 255, .3)
+    background-color: rgba(255, 255, 255, 0.3);
   }
 }
 
 .livePreview,
 .livePreview .md {
-  text-transform: none
+  text-transform: none;
 }
 
 .RESDialogSmall.livePreview {
-  margin: 15px 0
+  margin: 15px 0;
 }
 
 .new-comment .usertext-body {
-  border: none !important
+  border: none !important;
 }
 
 .organic-listing {
@@ -1014,25 +1028,6 @@ body:not(.search-page) .menuarea {
   margin-left: 10px
 }
 
-.commentarea .comment a.expand {
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 4px 4px 0;
-  height: 100%;
-  opacity: .5;
-  box-sizing: border-box;
-  transition: .2s;
-
-  &:hover {
-    opacity: 1;
-    color: #fff;
-    border-radius: 4px;
-    text-decoration: none;
-    font-weight: 700
-  }
-}
-
 .res .commentarea .comment a.expand:hover {
   border-radius: 4px 0 0 4px
 }
@@ -1073,29 +1068,34 @@ body:not(.search-page) .menuarea {
   border-radius: 3px
 }
 
-.res .comments-page .side {
-  margin: 275px 16px 100px
+.res {
+  .comments-page .side {
+    margin: 275px 16px 100px
+  }
+
+  .content .RESBigEditorPop {
+    line-height: inherit;
+    font-size: 11px;
+    box-shadow: none;
+    color: #666;
+    border: none;
+    padding: 0;
+    margin-top: 3px;
+    background-color: transparent;
+    background-image: none;
+    margin-left: -12px
+  }
+
+  .commentarea > .usertext {
+    position: relative;
+    top: -110px;
+    margin-bottom: -90px;
+    margin-top: -160px;
+    padding-top: 136px;
+    clear: left
+  }
 }
 
-.comments-page .side {
-  margin: 260px 16px 100px
-}
-
-.res .content .RESBigEditorPop {
-  line-height: inherit;
-  font-size: 11px;
-  box-shadow: none;
-  color: #666;
-  border: none;
-  padding: 0;
-  margin-top: 3px;
-  background-color: transparent;
-  background-image: none;
-  margin-left: -12px
-}
-
-.commentarea .thing,
-.commentarea > .usertext,
 body.comments-page .link {
   box-shadow: 0 1px 5px rgba(0, 0, 0, .08)
 }
@@ -1116,16 +1116,32 @@ body.comments-page .link {
   transition: .25s ease
 }
 
-.res .commentarea > .usertext {
-  position: relative;
-  top: -110px;
-  margin-bottom: -90px;
-  margin-top: -160px;
-  padding-top: 136px;
-  clear: left
-}
-
 .commentarea {
+  padding: 0 10px 10px;
+
+  .nestedlisting {
+    margin: 0 -10px
+  }
+
+  .comment a.expand {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 4px 4px 0;
+    height: 100%;
+    opacity: .5;
+    box-sizing: border-box;
+    transition: .2s;
+
+    &:hover {
+      opacity: 1;
+      color: #fff;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: 700
+    }
+  }
+
   > .usertext {
     background-color: #f8f8f8;
     border-radius: 0 0 2px 2px;
@@ -1135,6 +1151,7 @@ body.comments-page .link {
     margin-top: -160px;
     margin-left: -10px;
     margin-right: -10px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.08);
   }
 
   .panestack-title {
@@ -1160,6 +1177,7 @@ body.comments-page .link {
     background-color: #fff;
     margin: 0 0 8px;
     padding: 16px 16px 1px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.08);
 
     &.collapsed {
       padding: 10px 15px;
@@ -1171,11 +1189,11 @@ body.comments-page .link {
     padding: 4px;
     border: 1px solid #fff;
   }
-}
 
-#srList,
-.linkinfo {
-  position: absolute
+  span.score {
+    font-weight: 700;
+    color: @royal-blue;
+  }
 }
 
 .res .commentarea {
@@ -1202,7 +1220,6 @@ div.sitetable.nestedlisting {
   z-index: auto
 }
 
-.linkinfo,
 .roundfield,
 .wiki-page .pageactions,
 .wiki-page .wikititle {
@@ -1220,8 +1237,7 @@ div.sitetable.nestedlisting {
   box-shadow: 0 1px 5px rgba(0, 0, 0, .08)
 }
 
-.roundfield,
-.sidecontentbox a.helplink {
+.roundfield {
   font-weight: 700;
   text-transform: uppercase
 }
@@ -1324,43 +1340,63 @@ body:not(.submit-page) .tabmenu::after {
   margin-top: 15px
 }
 
-.comments-page #noresults:after {
-  content: "."
-}
+.sidecontentbox {
+  padding: 15px;
 
-.sidecontentbox .title h1 {
-  color: #555;
-  font-weight: 700;
-  font-size: 14px;
-  display: inline-block
-}
-
-.sidecontentbox a.helplink {
-  margin-right: 30px;
-  margin-bottom: 20px;
-  margin-top: 10px;
-  width: 215px;
-  border: none;
-  border-radius: 4px;
-  color: #fff !important;
-  text-align: center;
-  font-size: 13px;
-  line-height: 30px;
-  transition: .25s ease
-}
-
-#srList,
-#srList td a {
-  color: #fff
-}
-
-.sidecontentbox a.helplink {
-  &:hover {
-    text-decoration: none;
+  .title h1 {
+    color: #555;
+    font-weight: 700;
+    font-size: 14px;
+    display: inline-block;
   }
 
-  &:active {
-    background-color: #ae9df4;
+  a.helplink {
+    margin-right: 30px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    width: 215px;
+    border: none;
+    border-radius: 4px;
+    color: #fff !important;
+    text-align: center;
+    font-size: 13px;
+    line-height: 30px;
+    transition: .25s ease;
+    background: @royal-blue;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    &:hover {
+      text-decoration: none;
+      background: #6687e7;
+    }
+
+    &:active {
+      background: @endeavour;
+    }
+  }
+
+  .collapse-button {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    line-height: 10px;
+    text-align: center;
+    font-size: 10px;
+    margin: 1px 8px;
+    background-color: transparent;
+    color: @royal-blue;
+    vertical-align: middle;
+    border-radius: 2px;
+    border: 1px solid @royal-blue;
+
+    &:hover {
+      background-color: transparent;
+      color: #009884;
+      vertical-align: middle;
+      border-radius: 2px;
+      border: 1px solid @endeavour;
+    }
   }
 }
 
@@ -1465,10 +1501,6 @@ body:not(.comments-page) div.content .entry {
   padding: 12px
 }
 
-.comments-page .link {
-  padding: 20px 10px
-}
-
 .commentarea .entry.RES-keyNav-activeElement div.noncollapsed,
 .entry.RES-keyNav-activeElement,
 .entry.RES-keyNav-activeElement .usertext-body,
@@ -1521,15 +1553,33 @@ body:not(.comments-page) div.content .entry {
   padding-top: 3px;
   padding-bottom: 3px;
   font-weight: 400;
-  font-size: 9px
+  font-size: 9px;
+  width: 100%;
+  z-index: 9999;
+
+  a {
+    font-size: 9px;
+    transition: .2s;
+
+    &:hover {
+      font-weight: 700;
+    }
+  }
+
+  .drop-choices.srdrop {
+    margin-top: 3px;
+    margin-left: 5px;
+    background: rgba(0, 0, 0, .85);
+    border: none;
+    line-height: 1.5em;
+    font-weight: 700;
+    border-radius: 0 0 10px 10px;
+    padding: 10px;
+  }
 }
 
-#sr-header-area a:hover,
 #srList {
-  font-weight: 700
-}
-
-#srList {
+  font-weight: 700;
   top: 24px !important;
   left: 20px !important;
   z-index: 9999;
@@ -1541,55 +1591,35 @@ body:not(.comments-page) div.content .entry {
   line-height: 2em;
   border-radius: 0 0 10px 10px;
   padding-bottom: 6px;
+  position: absolute;
 
   tr {
     border-bottom: none !important;
 
     &:hover {
-      background-color: rgba(80, 80, 80, .6) !important
+      background-color: rgba(80, 80, 80, .6) !important;
     }
+  }
+
+  &,
+  td a {
+    color: #fff;
   }
 }
 
-#sr-header-area .drop-choices.srdrop {
-  margin-top: 3px;
-  margin-left: 5px;
-  background: rgba(0, 0, 0, .85);
-  border: none;
-  line-height: 1.5em;
-  font-weight: 700;
-  border-radius: 0 0 10px 10px;
-  padding: 10px
-}
-
 body.res #sr-header-area .sr-bar a.RESShortcutsCurrentSub {
-  color: #fff !important
-}
-
-#sr-header-area a {
-  font-size: 9px;
-  transition: .2s
-}
-
-.sr-bar a {
-  color: #fff
+  color: #fff !important;
 }
 
 div.score {
   font-weight: 500;
-  color: #999
+  color: #999;
 }
 
 .md h1,
 .md p,
 .md ul {
   line-height: 20px
-}
-
-h2 {
-  color: #252525;
-  font-size: 18px;
-  font-weight: 400
 }
 
 .side div.score,
@@ -1602,6 +1632,8 @@ span.totalvotes {
 }
 
 .linkinfo {
+  box-shadow: 0 1px 5px rgba(0, 0, 0, .08);
+  position: absolute;
   border: none !important;
   background-color: #fff;
   top: 400px;
@@ -1653,29 +1685,30 @@ span.totalvotes {
   }
 }
 
-.comment .collapsed {
-  padding-left: 24px;
-  padding-bottom: 10px;
-  padding-top: 2px
-}
+.comment {
+  .collapsed {
+    padding-left: 24px;
+    padding-bottom: 10px;
+    padding-top: 2px
+  }
 
-.comment .midcol,
-.gadget .midcol {
-  width: 20px !important
+  .midcol {
+    width: 20px !important;
+  }
 }
 
 #header {
   border: none;
   height: 250px;
   transition: .3s;
-  -webkit-transition: .3s
-}
+  -webkit-transition: .3s;
 
-#header span.pagename.redditname a {
-  -webkit-animation-duration: 1.2s;
-  -webkit-animation-name: godown;
-  animation-duration: 1.2s;
-  animation-name: godown
+  span.pagename.redditname a {
+    -webkit-animation-duration: 1.2s;
+    -webkit-animation-name: godown;
+    animation-duration: 1.2s;
+    animation-name: godown
+  }
 }
 
 @keyframes godown {
@@ -1865,11 +1898,6 @@ body:not(.submit-page) .tabmenu::after {
   content: ""
 }
 
-#sr-header-area {
-  width: 100%;
-  z-index: 9999
-}
-
 div.content {
   border-radius: 4px;
   margin: 85px 335px 10px 16px;
@@ -1915,15 +1943,6 @@ body:not(.comments-page) > .content .link .midcol {
   font-size: 12px;
   margin-left: 1px;
   margin-top: -10px
-}
-
-.side {
-  border: 1px solid #e1e1e1;
-  border-radius: 12px;
-  padding: 0;
-  margin: 115px 16px 100px;
-  width: 300px;
-  background: #fff
 }
 
 .side:before {
@@ -2038,13 +2057,13 @@ body:not(.search-page) #search input[type=text]:focus {
   font-size: 14px !important;
   border-radius: 3.5px;
   padding: 3px;
-  text-transform: uppercase
-}
+  text-transform: uppercase;
 
-.morelink a,
-.morelink a:hover,
-.morelink a:visited {
-  color: #fff
+  a,
+  a:hover,
+  a:visited {
+    color: #fff
+  }
 }
 
 .disabled .morelink,
@@ -2055,51 +2074,16 @@ body:not(.search-page) #search input[type=text]:focus {
   width: 300px
 }
 
-.side .submit-link,
-.side .submit-text {
-  width: 150px !important;
-  position: relative !important
-}
-
-.side .submit-link {
-  display: block !important;
-  margin-left: 0 !important;
-  text-indent: 0 !important;
-  background-position: -4px 0 !important;
-  margin-top: -5px
-}
-
-.side .submit-text {
-  float: right !important;
-  margin-top: -47px !important;
-  text-align: right !important
-}
-
-.side .titlebox .md h3 a {
-  margin-left: 5px
-}
-
-.side #moderation_tools {
-  padding-left: 15px;
-  margin-bottom: 15px
-}
-
-.sidecontentbox {
-  padding: 15px
-}
-
 .infobar {
   background: #f2f2f2;
-  border: 1px solid #ebebeb
+  border: 1px solid #ebebeb;
 }
 
 .message-count {
+  left: 2px;
+  background-color: #ff9400;
   position: relative;
   top: -2px
-}
-
-.commentarea {
-  padding: 0 10px 10px
 }
 
 .flair,
@@ -2112,7 +2096,11 @@ body:not(.search-page) #search input[type=text]:focus {
 .nextprev {
   margin: 10px !important;
   padding: 10px !important;
-  display: block
+  display: block;
+
+  a {
+    font-weight: 400 !important
+  }
 }
 
 .titlebox .users-online:before,
@@ -2120,26 +2108,25 @@ body:not(.search-page) #search input[type=text]:focus {
   display: none
 }
 
-.next-suggestions a,
-.nextprev a {
-  font-weight: 400 !important
-}
+.link {
+  .usertext .md {
+    border: 1px solid #e1e1e1
+  }
 
-.link .usertext .md {
-  border: 1px solid #e1e1e1
-}
+  .usertext-body .md {
+    border: none !important;
+    background: 0 0 !important
+  }
 
-.link .usertext-body .md {
-  border: none !important;
-  background: 0 0 !important
-}
+  .score {
+    &.likes {
+      color: #ff5f3f
+    }
 
-.link .score.likes {
-  color: #ff5f3f
-}
-
-.link .score.dislikes {
-  color: #2b9bdb
+    &.dislikes {
+      color: #2b9bdb
+    }
+  }
 }
 
 .score.unvoted {
@@ -2153,85 +2140,9 @@ div.reddit-entry {
   padding: 0 10px
 }
 
-#header-img.default-header:hover,
-#header-img:hover {
-  opacity: .7
-}
-
 div.leavemoderator {
   margin-left: 18px;
   background: 0 0
-}
-
-.side .md .-blocks,
-.side .md .-lists,
-.side .md blockquote,
-.side .md ol,
-.side .md p,
-.side .md pre,
-.side .md table,
-.side .md ul {
-  margin: 15px 0
-}
-
-.side .md h1,
-.side .md h2 {
-  font-weight: 700;
-  text-align: center
-}
-
-.side .md h1 {
-  position: relative;
-  margin: 0 20px 20px;
-  padding: 5px 0;
-  font-size: 18px;
-  text-decoration: none
-}
-
-.side .md h2 {
-  position: relative;
-  color: #fff;
-  height: 30px;
-  line-height: 30px;
-  margin: 0;
-  font-size: 13px !important;
-  background: #444;
-  border-radius: 5px 5px 0 0
-}
-
-.side .md h2 a {
-  color: @bahia;
-}
-
-.side .md h2:after {
-  top: 100%;
-  left: 5%;
-  border: solid transparent;
-  content: " ";
-  height: 0;
-  width: 0;
-  position: absolute;
-  pointer-events: none;
-  border-width: 7px;
-  margin-left: -7px
-}
-
-.side .md h2 + ul {
-  list-style-position: outside;
-  border-radius: 0 0 5px 5px;
-  background: #efefef;
-  border-top: 0;
-  padding: 10px 10px 10px 26px;
-  margin: 0 0 20px
-}
-
-.side .md h2 + ul li {
-  margin-bottom: 10px;
-  font-size: 95%
-}
-
-.side .usertext {
-  margin-top: 20px
 }
 
 .RESDashboardToggle,
@@ -2267,36 +2178,8 @@ body.res .RESshortcutside:active {
   display: block
 }
 
-.sidecontentbox .collapse-button {
-  display: inline-block;
-  width: 12px;
-  height: 12px;
-  line-height: 10px;
-  text-align: center;
-  font-size: 10px;
-  margin: 1px 8px;
-  background-color: transparent;
-  color: @royal-blue;
-  vertical-align: middle;
-  border-radius: 2px;
-  border: 1px solid @royal-blue;
-}
-
-.sidecontentbox .collapse-button:hover {
-  background-color: transparent;
-  color: #009884;
-  vertical-align: middle;
-  border-radius: 2px;
-  border: 1px solid @endeavour;
-}
-
-.side .sidecontentbox .content {
-  border: none;
-  padding: 8px 0
-}
-
 .gadget .midcol {
-  width: 38px
+  width: 20px !important;
 }
 
 .content {
@@ -2309,42 +2192,33 @@ body.res .RESshortcutside:active {
   font-weight: 400
 }
 
-.side .tagline {
-  color: transparent
-}
+.flairselector {
+  &.drop-choices.active {
+    border-radius: 8px !important;
+    padding: 20px !important;
+  }
 
-.flairselector.drop-choices.active {
-  border-radius: 8px !important;
-  padding: 20px !important
-}
+  .flairselection {
+    margin-bottom: 17px
+  }
 
-.flairselector .flairselection {
-  margin-bottom: 17px
-}
+  .customizer {
+    display: inline-block;
+    vertical-align: middle;
+  }
 
-.flairselector .customizer {
-  display: inline-block;
-  vertical-align: middle
-}
+  h2 {
+    margin-bottom: 4px;
+    color: #555 !important;
+    text-align: left;
+    text-transform: uppercase !important;
+    font-weight: 700;
+    font-size: 12px !important;
+  }
 
-.side .flairselector {
-  position: fixed;
-  top: 150px !important;
-  left: 50% !important;
-  margin-left: -220px;
-  width: 400px !important;
-  border: none;
-  border-radius: 2px;
-  box-shadow: 0 0 16px rgba(0, 0, 0, .64)
-}
-
-.flairselector h2 {
-  margin-bottom: 4px;
-  color: #555 !important;
-  text-align: left;
-  text-transform: uppercase !important;
-  font-weight: 700;
-  font-size: 12px !important
+  form button {
+    font-size: 10px;
+  }
 }
 
 .bottommenu,
@@ -2357,98 +2231,80 @@ form#image-upload.image-upload {
   font-weight: 700
 }
 
-.flairselector form button {
-  font-size: 10px
-}
+.flairselector {
+  .drop-choices.active {
+    visibility: visible !important;
+    background-color: #fff;
+    border: 1px solid #d8d8d8;
+  }
 
-.side .flairselector:before {
-  display: block;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -2;
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, .75);
-  content: "";
-  cursor: default;
-  transition: all .25s ease;
-  pointer-events: none
-}
+  h2 {
+    padding: 5px;
+    background-color: #fff;
+    border-bottom: 1px solid #e5e5e5;
+  }
 
-.flairselector.drop-choices.active {
-  visibility: visible !important;
-  background-color: #fff;
-  border: 1px solid #d8d8d8
-}
+  ul {
+    overflow: visible;
+  }
 
-.flairselector h2 {
-  padding: 5px;
-  background-color: #fff;
-  border-bottom: 1px solid #e5e5e5
+  li {
+    padding: 3px 0;
+    width: 182px;
+
+    &:hover {
+      background-color: #efefef;
+    }
+
+    &.selected {
+      background-color: #e5ebf8;
+      border: none;
+    }
+  }
+
+  form {
+    border-top: 1px solid #e5e5e5;
+  }
 }
 
 .flairoptionpane {
-  text-align: left
-}
+  text-align: left;
 
-.flairoptionpane ul {
-  visibility: visible !important
-}
+  ul {
+    visibility: visible !important;
 
-.flairoptionpane ul a.title {
-  font-size: 100% !important
-}
-
-.flairselector li {
-  padding: 3px 0;
-  width: 182px
-}
-
-.flairselector li:hover {
-  background-color: #efefef
-}
-
-.flairselector form {
-  border-top: 1px solid #e5e5e5
+    a.title {
+      font-size: 100% !important
+    }
+  }
 }
 
 .flairsample-left {
   text-align: left !important
 }
 
-.flairselector ul {
-  overflow: visible
-}
-
-.flairselector li.selected {
-  background-color: #e5ebf8;
-  border: none
-}
-
 .login-form-side {
   border: none;
   padding: 16px;
-  margin-top: -10px
-}
+  margin-top: -10px;
 
-.login-form-side input[type=password],
-.login-form-side input[type=text] {
-  font-size: 11px;
-  box-sizing: border-box;
-  border: 1px solid #999;
-  width: 258px
-}
+  input[type=password],
+  input[type=text] {
+    font-size: 11px;
+    box-sizing: border-box;
+    border: 1px solid #999;
+    width: 258px;
+  }
 
-.login-form-side #remember-me * {
-  vertical-align: middle
-}
+  #remember-me * {
+    vertical-align: middle;
+  }
 
-.login-form-side .submit {
-  float: right;
-  margin-top: 5px;
-  margin-right: 5px
+  .submit {
+    float: right;
+    margin-top: 5px;
+    margin-right: 5px;
+  }
 }
 
 .thumbnail {
@@ -2467,7 +2323,7 @@ body:not(.comments-page) .thumbnail {
 .thumbnail.default,
 .thumbnail.nsfw,
 .thumbnail.self,
-body .stickied .thumbnail.self {
+.stickied .thumbnail.self {
   background-repeat: no-repeat !important;
   padding: 10px 0;
   border-radius: 15px
@@ -2744,10 +2600,7 @@ form#image-upload.image-upload {
 .commentarea .comment a.expand:hover,
 .fancy-toggle-button .remove,
 .panestack-title a.title-button,
-.panestack-title a.title-button.gold,
-.side .titlebox .md h4 a,
-.sidecontentbox a.helplink,
-button {
+.panestack-title a.title-button.gold {
   background: @royal-blue;
 }
 
@@ -2756,15 +2609,11 @@ button {
 .comment .flat-list li a[onclick*=reply],
 .commentNavSortType:hover,
 .commentarea .menuarea .toggle a:hover,
-.commentarea span.score,
-.deepthread a,
-.deepthread::after,
 .entry .buttons .may-blank,
 .error,
 .linefield .title,
 .link .domain a:hover,
 .link .entry .buttons li a:hover,
-.loadFlat:hover,
 .submit-page .roundfield a,
 .thing .title {
   color: @royal-blue;
@@ -2785,7 +2634,6 @@ button {
 .panestack-title a.title-button.gold:hover,
 .panestack-title a.title-button:hover,
 .side .titlebox .md h4 a:hover,
-.sidecontentbox a.helplink:hover,
 body.res .side .RESshortcutside.remove:hover,
 button:hover {
   background: #6687e7
@@ -2798,7 +2646,6 @@ button:hover {
 .panestack-title a.title-button.gold:active,
 .panestack-title a.title-button:active,
 .side .titlebox .md h4 a:active,
-.sidecontentbox a.helplink:active,
 button:active {
   background: @endeavour;
 }
@@ -2905,10 +2752,6 @@ button:active {
 .commentarea .thing .md table tbody tr td {
   padding: 10px 20px;
   border: none
-}
-
-.deepthread::after {
-  color: #fff
 }
 
 .res #RESShortcutsViewport {
@@ -3151,14 +2994,6 @@ ul.res-search-tabs {
 .side .md > h3:nth-of-type(4):hover + ul:before,
 .thing[data-author=duelystwikibot]:hover .usertext-body:before {
   display: none
-}
-
-.side .md > h3:nth-of-type(4) {
-  margin-bottom: 0;
-
-  &:hover + ul {
-    height: auto
-  }
 }
 
 .usertext-body table > tbody > tr:nth-of-type(even) {
