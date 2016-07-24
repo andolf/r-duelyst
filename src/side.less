@@ -1,3 +1,5 @@
+// Sidebar (at the side obviously...)
+
 .side {
   border: 1px solid #e1e1e1;
   border-radius: 12px;
@@ -5,6 +7,12 @@
   margin: 115px 16px 100px;
   width: 300px;
   background: #fff;
+
+  &:before {
+    display: block;
+    background: url(%%biglogo%%) center no-repeat;
+    padding-top: 300px;
+  }
 
   .submit-link,
   .submit-text {
@@ -27,9 +35,57 @@
   }
 
   .titlebox {
+    text-align: center;
+    padding: 12px;
+
+    .fancy-toggle-button {
+      margin: 4px auto;
+      width: 100%;
+      transition: .3s;
+    }
+
+    .number,
+    .subscribers,
+    .users-online {
+      font-size: 12px;
+    }
+
+    .users-online,
+    .subscribers {
+      color: #999;
+      margin: 4px auto;
+    }
+
+    .users-online {
+      &:before {
+        display: none;
+      }
+
+      .number {
+        font-style: italic;
+      }
+    }
+
+    .redditname {
+      font-weight: 400;
+    }
+
+    .bottom {
+      display: none;
+    }
+
     .md {
-      h3 a {
-        margin-left: 5px;
+      h3 a,
+      h4 a {
+        border-radius: 4px;
+        padding: 8px 0;
+        border: none;
+        color: #fff;
+        font-weight: 700;
+        text-align: center;
+        font-size: 12px;
+        width: 100%;
+        display: block;
       }
 
       h4 a {
@@ -113,11 +169,52 @@
         height: auto;
       }
     }
+
+    > ul:last-of-type {
+      background-color: #101828;
+      height: 42px;
+      overflow: hidden;
+      padding-left: 0;
+      position: absolute;
+      top: 295px;
+      left: calc(~"100% - 317px");
+      width: 300px;
+      border-radius: 5px;
+      text-align: center;
+      font-size: 16px;
+
+      &:hover {
+        height: auto;
+        background-color: #1e2636
+      }
+
+      li {
+        line-height: 42px;
+
+        &:first-of-type a {
+          color: #fff
+        }
+
+        a {
+          display: block;
+          color: #fff;
+          padding-left: 10px;
+
+          &:hover {
+            background: #9e9e9e
+          }
+        }
+      }
+    }
   }
 
   #moderation_tools {
     padding-left: 15px;
     margin-bottom: 15px;
+  }
+
+  .md-container {
+    text-align: left;
   }
 
   .usertext {
@@ -162,5 +259,65 @@
 
   #search_showmore {
     color: #bbb;
+  }
+
+  #search {
+    top: 260px;
+    position: absolute;
+    z-index: 4;
+  }
+
+  a[href$="#noflair-icon"] {
+    border-top: 1px solid #eee
+  }
+
+  a[href$="#news-icon"] {
+    background: #17233a
+  }
+
+  a[href$="#event-icon"] {
+    background: #1f2e4c
+  }
+
+  a[href$="#guide-icon"] {
+    background: #26395f
+  }
+
+  a[href$="#gauntlet-icon"] {
+    background: #2d4471
+  }
+
+  a[href$="#vod-icon"] {
+    background: #344f83
+  }
+
+  a[href$="#artwork-icon"] {
+    background: #3c5a95
+  }
+
+  a[href$="#abyssian-icon"] {
+    background: @abyssian;
+  }
+
+  a[href$="#magmar-icon"] {
+    background: @magmar;
+  }
+
+  a[href$="#lyonar-icon"] {
+    background: @lyonar;
+    color: #444 !important;
+  }
+
+  a[href$="#songhai-icon"] {
+    background: @songhai;
+  }
+
+  a[href$="#vanar-icon"] {
+    background: @vanar;
+    color: #444 !important;
+  }
+
+  a[href$="#vetruvian-icon"] {
+    background: @vetruvian;
   }
 }
