@@ -1,0 +1,43 @@
+// Main tabmenu
+
+.tabmenu {
+  margin-top: 22px;
+
+  li {
+    margin: 0 !important;
+    height: 36px;
+    width: 102px;
+    background-color: transparent;
+
+    a {
+      padding: 0 20px !important;
+      border-left: none;
+      border-right: none;
+      display: inline-block;
+      line-height: 48px;
+      text-align: center;
+      text-transform: Uppercase;
+      transition: 150ms;
+      -webkit-transition: 150ms;
+      font-weight: 400;
+      color: #e5e5e5 !important;
+      text-shadow: 0 1px 8px rgba(0, 0, 0, .5);
+      background-color: transparent
+    }
+  }
+
+  li.selected a,
+  li:hover a {
+    color: #fff !important;
+    font-weight: 700 !important
+  }
+
+  li:hover a {
+    background-color: rgba(255, 255, 255, .08)
+  }
+
+  li.selected a {
+    background-color: rgba(255, 255, 255, .15);
+    border: none !important
+  }
+}
