@@ -140,16 +140,6 @@ div#RESStyleSheetTipPane-header {
   text-decoration: none !important
 }
 
-.roundfield input[type=text],
-.roundfield input[type=url],
-.roundfield textarea {
-  transition: .3s;
-  border: none;
-  border-bottom: 1px solid #ccc;
-  font-size: 20px;
-  height: 25px
-}
-
 .commentarea textarea:not(:focus):not(:hover) {
   background-color: #f8f8f8 !important
 }
@@ -184,27 +174,6 @@ div#RESStyleSheetTipPane-header {
       border-left: 1px solid #e1e1e1 !important;
       border-right: 1px solid #e1e1e1 !important;
       border-bottom: 3px solid;
-    }
-  }
-}
-
-#RESPrefsDropdown {
-  background-color: rgba(0, 0, 0, .85) !important;
-  border: none;
-  border-radius: 6px
-}
-
-.RESDropdownList {
-  li {
-    background-color: transparent;
-    color: #fff !important;
-    border: none !important;
-    transition: all .15s ease;
-
-    a:hover,
-    &:hover {
-      background-color: rgba(80, 80, 80, .6) !important;
-      color: #fff !important
     }
   }
 }
@@ -337,12 +306,13 @@ ul.report-reasons {
   font-size: 9px !important
 }
 
-.res-commentBoxes .nestedlisting > .comment {
-  margin: 0 0 8px !important
-}
-
-.res-commentBoxes .nestedlisting .comment {
-  overflow: visible !important
+.res-commentBoxes .nestedlisting {
+  > .comment {
+    margin: 0 0 8px !important
+  }
+  .comment {
+    overflow: visible !important
+  }
 }
 
 .menuarea,
@@ -354,8 +324,13 @@ ul.report-reasons {
   color: #fff
 }
 
-.flat-list li a.gold {
-  color: gold
+.flat-list {
+  list-style-type: none;
+  display: inline;
+
+  li a.gold {
+    color: gold
+  }
 }
 
 .tabpane-content {
@@ -394,12 +369,11 @@ ul.report-reasons {
   transition: .3s;
   display: block;
   font-size: 22px;
-  margin-bottom: 20px
-}
+  margin-bottom: 20px;
 
-#img-name:hover,
-.flairlist .flair-jump input[type=text]:hover {
-  border-color: #666
+  &:hover {
+    border-color: #666
+  }
 }
 
 .flairlisthome {
@@ -524,19 +498,9 @@ textarea {
   }
 }
 
-#header-bottom-right a.pref-lang {
-  background-position: 0 -128.67px !important;
-  display: inline-block;
-  text-indent: -9999px
-}
-
 #RESMainGearOverlay,
 .infobar.newsletterbar {
   display: none !important
-}
-
-.res #header-bottom-right .gearIcon {
-  background-position: 0 -152px !important
 }
 
 #header-bottom-right a.pref-lang,
@@ -580,15 +544,6 @@ textarea {
 #modmail.havemail,
 #modmail.nohavemail {
   margin-bottom: 0 !important
-}
-
-.res #modmail.havemail,
-.res #modmail.nohavemail {
-  margin-bottom: -6px !important
-}
-
-body.res #header-bottom-right #mail.havemail {
-  top: -1px !important
 }
 
 #header-bottom-right a.pref-lang.choice,
@@ -657,52 +612,12 @@ body.res #header-bottom-right #mail.havemail {
   }
 }
 
-#header-bottom-right {
-  background: 0 0;
-  top: 217px !important;
-  right: 20px;
-  padding: 0 !important;
-
-  .user,
-  .user .userkarma,
-  a {
-    color: #fff;
-    font-size: 11px;
-    font-weight: 700;
-    text-transform: uppercase
-  }
-}
-
-.res #header-bottom-right #modmail {
-  top: -4px !important;
-}
-
 .separator {
   visibility: hidden;
 }
 
 .gearIcon {
   background-repeat: no-repeat !important
-}
-
-.res #userbarToggle {
-  width: 11px;
-  height: 48px;
-  background-color: transparent;
-  border: none;
-  line-height: 47px;
-  color: #fff;
-  padding-left: 5px;
-  padding-right: 8px;
-  margin-left: -6px;
-  transition: all .2s ease 0s;
-  bottom: 2px;
-  border-radius: 0;
-  margin-bottom: -15px;
-
-  &:hover {
-    background-color: rgba(255, 255, 255, .1)
-  }
 }
 
 #userbarToggle.userbarShow {
@@ -735,105 +650,6 @@ body.res #header-bottom-right #mail.havemail {
 
 .organic-listing {
   border: 0
-}
-
-body:not(.search-page) .menuarea {
-  font-size: 12px;
-  font-weight: 700;
-  text-transform: uppercase;
-  margin-top: 20px !important
-}
-
-.combined-search-page {
-  .searchfacets {
-    margin: 0 !important;
-    max-width: none !important;
-
-    > h4.title {
-      color: #444
-    }
-  }
-
-  .search-result-group {
-    padding-left: 0;
-    padding-right: 0;
-    max-width: 100%;
-
-    .search-result-group-header {
-      color: inherit;
-      margin-bottom: 20px;
-      margin-top: 20px;
-      padding: 15px 30px;
-      text-transform: uppercase;
-      font-weight: 700;
-      background: #eee;
-      border-top: 1px solid #e1e1e1;
-      border-bottom: 1px solid #e1e1e1
-    }
-  }
-
-  .search-result {
-    margin-bottom: 25px;
-    margin-top: 10px;
-    padding: 0 30px 20px;
-    border-bottom: 1px solid #e1e1e1
-  }
-
-  .searchpane {
-    background: #444
-  }
-
-  #search input[type=text] {
-    max-width: none;
-    color: #fff !important
-  }
-
-  .search-icon {
-    background-size: 30px 30px;
-    height: 30px;
-    width: 30px
-  }
-
-  .search-submit-button {
-    background: 0 0;
-    border: none;
-    float: left;
-    margin-top: -45px;
-    margin-left: -25px
-  }
-
-  .search-result-subreddit .search-subscribe-button {
-    .add,
-    .remove {
-      width: auto;
-    }
-  }
-
-  .search-result {
-    .search-result-body {
-      font-size: 1em;
-      line-height: 1.25em;
-      color: #4f4f4f;
-      padding: 10px 0;
-      width: 800px
-    }
-
-    a,
-    a > mark {
-      color: inherit;
-      line-height: inherit;
-    }
-
-    .search-result-meta,
-    .search-score {
-      font-size: 10px;
-      line-height: 2em;
-      color: grey;
-      padding: 8px 0 0;
-      font-weight: 700;
-      text-transform: uppercase
-    }
-  }
 }
 
 #moresearchinfo {
@@ -873,30 +689,8 @@ body:not(.search-page) .menuarea {
   text-decoration: none
 }
 
-.search-page #search input[type=text] {
-  background: 0 0;
-  border: none;
-  font-size: 27px;
-  width: 100% !important;
-  position: relative;
-  top: 2px;
-  margin-left: 30px
-}
-
-.tagline .score {
-  font-weight: 700
-}
-
 .comment.noncollapsed .midcol {
   margin-left: 20px
-}
-
-.res .comment.noncollapsed .midcol {
-  margin-left: 10px
-}
-
-.res .commentarea .comment a.expand:hover {
-  border-radius: 4px 0 0 4px
 }
 
 .panestack-title a.title-button {
@@ -915,69 +709,10 @@ body:not(.search-page) .menuarea {
   }
 }
 
-.res {
-  .comments-page .side {
-    margin: 275px 16px 100px
-  }
-
-  .content .RESBigEditorPop {
-    line-height: inherit;
-    font-size: 11px;
-    box-shadow: none;
-    color: #666;
-    border: none;
-    padding: 0;
-    margin-top: 3px;
-    background-color: transparent;
-    background-image: none;
-    margin-left: -12px
-  }
-
-  .commentarea > .usertext {
-    position: relative;
-    top: -110px;
-    margin-bottom: -90px;
-    margin-top: -160px;
-    padding-top: 136px;
-    clear: left
-  }
-}
-
-.RESSubscriptionButton {
-  display: inline-block;
-  position: relative;
-  z-index: 1;
-  margin-left: 15px;
-  padding: 5px !important;
-  font-size: 9px;
-  text-transform: uppercase;
-  text-align: center;
-  cursor: pointer;
-  color: #fff !important;
-  border: 0 solid #ccc !important;
-  border-radius: 2px;
-  transition: .25s ease
-}
-
-.res .commentarea {
-  .thing {
-    padding: 15px 15px 0 !important;
-  }
-
-  .entry .flat-list {
-    padding-bottom: 8px;
-  }
-}
-
 div.child,
 div.sitetable.nestedlisting {
   box-shadow: none;
   z-index: auto
-}
-
-.wiki-page-content .md h1,
-.wiki-page-content .md h6 {
-  text-transform: none !important
 }
 
 .formtabs-content .infobar {
@@ -990,16 +725,6 @@ div.sitetable.nestedlisting {
   color: #000;
   background-color: #fff;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.08);
-}
-
-.roundfield .usertext-edit,
-.roundfield input[type=number],
-.roundfield input[type=password],
-.roundfield input[type=text],
-.roundfield input[type=url],
-.roundfield textarea,
-.submit-page .markdownEditor-wrapper {
-  width: 100%
 }
 
 .roundfield {
@@ -1020,6 +745,25 @@ div.sitetable.nestedlisting {
   input[type=text] {
     margin-bottom: 15px
   }
+
+  .usertext-edit,
+  input[type=number],
+  input[type=password],
+  input[type=text],
+  input[type=url],
+  textarea {
+    width: 100%;
+  }
+
+  input[type=text],
+  input[type=url],
+  textarea {
+    transition: .3s;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    font-size: 20px;
+    height: 25px
+  }
 }
 
 .content.submit .info-notice {
@@ -1028,160 +772,10 @@ div.sitetable.nestedlisting {
   border: none;
 }
 
-body:not(.submit-page) .tabmenu::after {
-  display: none
-}
-
 .formtabs-content {
   border-top: 0 solid !important;
   width: auto;
   margin-top: 15px
-}
-
-.sidecontentbox {
-  padding: 15px;
-
-  .title h1 {
-    color: #555;
-    font-weight: 700;
-    font-size: 14px;
-    display: inline-block;
-  }
-
-  a.helplink {
-    margin-right: 30px;
-    margin-bottom: 20px;
-    margin-top: 10px;
-    width: 215px;
-    border: none;
-    border-radius: 4px;
-    color: #fff !important;
-    text-align: center;
-    font-size: 13px;
-    line-height: 30px;
-    transition: .25s ease;
-    background: @royal-blue;
-    font-weight: 700;
-    text-transform: uppercase;
-
-    &:hover {
-      text-decoration: none;
-      background: #6687e7;
-    }
-
-    &:active {
-      background: @endeavour;
-    }
-  }
-
-  .collapse-button {
-    display: inline-block;
-    width: 12px;
-    height: 12px;
-    line-height: 10px;
-    text-align: center;
-    font-size: 10px;
-    margin: 1px 8px;
-    background-color: transparent;
-    color: @royal-blue;
-    vertical-align: middle;
-    border-radius: 2px;
-    border: 1px solid @royal-blue;
-
-    &:hover {
-      background-color: transparent;
-      color: #009884;
-      vertical-align: middle;
-      border-radius: 2px;
-      border: 1px solid @endeavour;
-    }
-  }
-}
-
-.thing .tagline .author {
-  &.admin,
-  &.admin:before,
-  &.moderator,
-  &.moderator:before,
-  &.submitter,
-  &.submitter:before {
-    font-weight: bold;
-    line-height: 20px;
-    color: #fff;
-    font-size: 10px;
-    display: inline-block;
-  }
-
-  &.submitter {
-    background: @endeavour !important;
-    padding: 0 10px 0 0;
-    border-radius: 20px;
-    transition: .3s;
-
-    &:before {
-      background: @royal-blue;
-      padding: 0 7px 0 10px;
-      border-radius: 20px 0 0 20px;
-      font-size: 10px;
-      content: "OP ";
-      margin-right: 7px
-    }
-
-    &:hover {
-      background: @royal-blue !important;
-      text-decoration: none
-    }
-  }
-
-  &.admin,
-  &.moderator {
-    padding: 0 10px 0 0;
-    border-radius: 20px;
-    transition: .3s;
-
-    &:before {
-      padding: 0 7px 0 10px;
-      border-radius: 20px 0 0 20px;
-      font-size: 10px;
-      margin-right: 7px;
-    }
-  }
-
-  &.moderator {
-    background: #1a4b17;
-
-    &:before {
-      background: #282;
-      content: "Mod ";
-    }
-
-    &:hover {
-      background: #282;
-      text-decoration: none;
-    }
-  }
-
-  &.admin {
-    background: #c41959;
-
-    &:before {
-      background: @wild-watermelon;
-      content: "Admin ";
-    }
-
-    &:hover {
-      background: @wild-watermelon;
-      text-decoration: none;
-    }
-  }
-}
-
-.tagline .moderator:after {
-  content: "oderator - speaking officially."
-}
-
-.tagline .admin:after {
-  content: "dmin - speaking officially"
 }
 
 a.author.admin:after,
@@ -1190,9 +784,15 @@ a.author.moderator:after {
   content: ""
 }
 
-body:not(.comments-page) div.content .entry {
-  border-bottom: 1px solid #e1e1e1;
-  padding: 12px
+body:not(.comments-page) { // TODO: Subject for removal in redesign
+  div.content .entry {
+    border-bottom: 1px solid #e1e1e1;
+    padding: 12px
+  }
+
+  .thumbnail {
+    margin: 10px 5px 10px 0 !important
+  }
 }
 
 .commentarea .entry.RES-keyNav-activeElement div.noncollapsed,
@@ -1258,60 +858,6 @@ span.totalvotes {
   font-weight: 500 !important;
   color: #444;
   padding: 0 16px
-}
-
-.linkinfo {
-  box-shadow: 0 1px 5px rgba(0, 0, 0, .08);
-  position: absolute;
-  border: none !important;
-  background-color: #fff;
-  top: 400px;
-  font-family: inherit !important;
-  padding: 0;
-  border-radius: 4px;
-  width: 300px;
-
-  .date,
-  .shortlink {
-    font-weight: 700;
-    text-transform: uppercase
-  }
-
-  .score .number {
-    font-size: 14px;
-    text-align: left
-  }
-
-  .totalvotes {
-    font-size: 100%
-  }
-
-  .date {
-    font-size: 11px;
-    color: #666;
-    text-align: left;
-    padding: 14px 16px 0;
-  }
-
-  .shortlink {
-    margin-top: 20px;
-    text-align: center;
-    font-size: 0;
-
-    input {
-      box-shadow: none !important;
-      font-family: monospace !important;
-      transition: all .15s ease 0s !important;
-      font-size: 13px;
-      color: #fff;
-      border: none;
-      width: 280px;
-      background: #444;
-      border-radius: 0 0 4px 4px;
-      padding: 10px;
-      text-align: center;
-    }
-  }
 }
 
 .comment {
@@ -1432,19 +978,6 @@ span.totalvotes {
   border-radius: 3px !important
 }
 
-.res .titlebox .fancy-toggle-button {
-  display: inline-block;
-  margin-top: 10px;
-  margin-right: 5px;
-  margin-left: 0;
-  width: auto
-}
-
-.flat-list {
-  list-style-type: none;
-  display: inline
-}
-
 .morelink .nub,
 .rank-spacer,
 .users-online:before,
@@ -1466,13 +999,14 @@ body > .content .link .rank {
 }
 
 body:not(.submit-page) .tabmenu::after {
-  position: absolute;
-  height: 49px;
-  content: '';
-  z-index: -1;
-  left: 0;
-  right: 0;
-  background: #666
+  //position: absolute;
+  //height: 49px;
+  //content: '';
+  //z-index: -1;
+  //left: 0;
+  //right: 0;
+  //background: #666;
+  display: none;
 }
 
 .side:before,
@@ -1507,55 +1041,6 @@ body:not(.comments-page) > .content .link .midcol {
   margin: 10px 0
 }
 
-.link {
-  margin-bottom: 0;
-
-  .tagline {
-    color: #666;
-    font-size: 12px;
-    margin-top: 3px;
-  }
-
-  .title {
-    font-weight: 400;
-
-    .domain {
-      color: #999;
-      font-size: 0;
-      font-weight: 400;
-
-      &:before {
-        font-size: 12px;
-      }
-
-      a {
-        font-size: 12px;
-        margin-left: 1px;
-        margin-top: -10px;
-      }
-    }
-  }
-
-  .usertext .md {
-    border: 1px solid #e1e1e1
-  }
-
-  .usertext-body .md {
-    border: none !important;
-    background: 0 0 !important
-  }
-
-  .score {
-    &.likes {
-      color: #ff5f3f
-    }
-
-    &.dislikes {
-      color: #2b9bdb
-    }
-  }
-}
-
 #searchexpando {
   border-radius: 0 0 4px 4px;
   text-align: center;
@@ -1572,27 +1057,36 @@ body:not(.comments-page) > .content .link .midcol {
   height: auto
 }
 
-body:not(.search-page) #search input[type=text] {
-  border-radius: 6px;
-  padding: 9px;
-  border: 1px solid #e1e1e1;
-  text-align: center;
-  transition: 0.3s;
+body:not(.search-page) {
+  #search input[type=text] {
+    border-radius: 6px;
+    padding: 9px;
+    border: 1px solid #e1e1e1;
+    text-align: center;
+    transition: 0.3s;
 
-  &:hover {
-    border: 1px solid #a0a0a0;
+    &:hover {
+      border: 1px solid #a0a0a0;
+    }
+
+    &:focus {
+      border-color: #aaa;
+      text-align: left;
+      outline: 0;
+      padding-left: 6px;
+      animation-name: search;
+      animation-duration: 0.4s;
+      animation-timing-function: ease;
+      animation-iteration-count: 1;
+      animation-play-state: running;
+    }
   }
 
-  &:focus {
-    border-color: #aaa;
-    text-align: left;
-    outline: 0;
-    padding-left: 6px;
-    animation-name: search;
-    animation-duration: 0.4s;
-    animation-timing-function: ease;
-    animation-iteration-count: 1;
-    animation-play-state: running;
+  .menuarea {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 20px !important
   }
 }
 
@@ -1862,10 +1356,6 @@ form#image-upload.image-upload {
   -webkit-transform: translateY(-50%)
 }
 
-body:not(.comments-page) .thumbnail {
-  margin: 10px 5px 10px 0 !important
-}
-
 .thumbnail.default,
 .thumbnail.nsfw,
 .thumbnail.self,
@@ -1891,23 +1381,6 @@ body:not(.comments-page) .over18 .entry .buttons li + li,
 body:not(.comments-page) .over18 .link .tagline,
 body:not(.comments-page) .over18 .tagline {
   color: #d10023 !important
-}
-
-.res #RESShortcutsEditContainer,
-.res #sr-more-link {
-  background: 0 0
-}
-
-#RESShortcutsAdd,
-#RESShortcutsLeft,
-#RESShortcutsRight,
-#RESShortcutsSort,
-#RESShortcutsTrash {
-  height: 25px;
-  line-height: 25px !important;
-  margin-right: 4px;
-  background: 0 0 !important;
-  color: #fff !important
 }
 
 .link .flat-list {
@@ -2293,91 +1766,6 @@ button:active {
 .commentarea .thing .md table tbody tr td {
   padding: 10px 20px;
   border: none
-}
-
-.res #RESShortcutsViewport {
-  margin-right: 70px
-}
-
-.side .md > ol:last-of-type {
-  display: flex;
-  padding: 10px 0 10px 100px;
-  margin: 0;
-  position: absolute;
-  top: 260px;
-  left: 17px;
-  width: calc(~"100% - 452px");
-  background: #12377f;
-  border-radius: 5px;
-
-  @media (max-width: 905px) {
-    display: none;
-  }
-
-  @media (max-width: 1280px) {
-    padding: 0 0 0 100px;
-  }
-
-  li {
-    transform: none;
-    list-style: none;
-
-    &:first-child {
-      position: absolute;
-      display: flex;
-      justify-content: center;
-      align-items: stretch;
-      flex-grow: 2;
-      left: 0;
-      width: 100px;
-      min-width: 0;
-      font-size: 20px;
-      -webkit-display: flex;
-      -webkit-justify-content: center;
-      -webkit-align-items: stretch;
-      color: #eee;
-      text-transform: uppercase;
-      letter-spacing: .5px;
-
-      strong {
-        text-shadow: 0 0 5px rgba(255, 199, 1, .25);
-        padding: 8px;
-        transform: none;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        -webkit-display: flex;
-        -webkit-justify-content: center;
-        -webkit-align-items: center
-      }
-    }
-
-    a {
-      min-height: 16px;
-      position: relative;
-      display: block;
-      margin: 12px 8px;
-      padding-left: 12px;
-      transform: none;
-      color: #eee;
-      text-shadow: 1px 1px 0 #000;
-      font-size: 14px !important;
-      font-weight: 400;
-      text-decoration: underline;
-
-      &:before {
-        content: "";
-        position: absolute;
-        width: 4px;
-        opacity: .85;
-        height: 26px;
-        display: block;
-        left: 0;
-        top: -4px;
-        border-radius: 83px;
-      }
-    }
-  }
 }
 
 .md p > a[href="#s"],

@@ -1,0 +1,89 @@
+.tagline .author {
+  &.admin,
+  &.admin:before,
+  &.moderator,
+  &.moderator:before,
+  &.submitter,
+  &.submitter:before {
+    font-weight: bold;
+    line-height: 20px;
+    color: #fff;
+    font-size: 10px;
+    display: inline-block;
+  }
+
+  &.submitter {
+    background: @endeavour !important;
+    padding: 0 10px 0 0;
+    border-radius: 20px;
+    transition: .3s;
+
+    &:before {
+      background: @royal-blue;
+      padding: 0 7px 0 10px;
+      border-radius: 20px 0 0 20px;
+      font-size: 10px;
+      content: "OP ";
+      margin-right: 7px
+    }
+
+    &:hover {
+      background: @royal-blue !important;
+      text-decoration: none
+    }
+  }
+
+  &.admin,
+  &.moderator {
+    padding: 0 10px 0 0;
+    border-radius: 20px;
+    transition: .3s;
+
+    &:before {
+      padding: 0 7px 0 10px;
+      border-radius: 20px 0 0 20px;
+      font-size: 10px;
+      margin-right: 7px;
+    }
+  }
+
+  &.moderator {
+    background: #1a4b17;
+
+    &:before {
+      background: #282;
+      content: "Mod ";
+    }
+
+    &:hover {
+      background: #282;
+      text-decoration: none;
+    }
+  }
+
+  &.admin {
+    background: #c41959;
+
+    &:before {
+      background: @wild-watermelon;
+      content: "Admin ";
+    }
+
+    &:hover {
+      background: @wild-watermelon;
+      text-decoration: none;
+    }
+  }
+
+  .score {
+    font-weight: 700;
+  }
+
+  .moderator:after {
+    content: "oderator - speaking officially."
+  }
+
+  .admin:after {
+    content: "dmin - speaking officially"
+  }
+}
