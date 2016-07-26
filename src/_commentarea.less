@@ -78,4 +78,14 @@
     font-weight: 700;
     color: @royal-blue;
   }
+
+  textarea {
+    &:not(:focus):not(:hover) {
+      background-color: #f8f8f8 !important;
+    }
+
+    &:hover {
+      border-bottom: 1px solid #999;
+    }
+  }
 }

@@ -45,4 +45,36 @@
       color: #2b9bdb
     }
   }
+
+  .flat-list {
+    display: block;
+    padding: 1px 0;
+    margin-top: 3px;
+  }
+
+  .entry .buttons li a:hover {
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.2s;
+  }
+
+  .domain {
+    visibility: hidden;
+
+    a {
+      visibility: visible;
+      color: #b3b3b3;
+      transition: all .15s ease;
+
+      &:hover {
+        font-weight: 700;
+        text-decoration: none;
+        transition: 0.2s;
+      }
+    }
+  }
+
+  &.last-clicked {
+    border: none;
+  }
 }

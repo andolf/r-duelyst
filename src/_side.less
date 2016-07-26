@@ -9,6 +9,7 @@
   background: #fff;
 
   &:before {
+    content: "";
     display: block;
     background: url(%%biglogo%%) center no-repeat;
     padding-top: 300px;
@@ -88,8 +89,32 @@
         display: block;
       }
 
+      h3 a {
+        background: #444;
+
+        &:hover {
+          background: #1c4aa7;
+          background: -webkit-linear-gradient(#441f45, #364282);
+          background: -o-linear-gradient(#441f45, #364282);
+          background: -moz-linear-gradient(#441f45, #364282);
+          background: linear-gradient(#441f45, #364282);
+        }
+
+        &:active {
+          background: #222;
+        }
+      }
+
       h4 a {
         background: @royal-blue;
+
+        &:hover {
+          background: #6687e7;
+        }
+
+        &:active {
+          background: @endeavour;
+        }
       }
     }
   }
@@ -167,6 +192,10 @@
 
       &:hover + ul {
         height: auto;
+
+        &:before {
+          display: none;
+        }
       }
     }
 

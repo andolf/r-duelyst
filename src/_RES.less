@@ -11,6 +11,9 @@ body.res {
 }
 
 .res {
+  h1.redditname {
+    overflow: visible;
+  }
   .titlebox .fancy-toggle-button {
     display: inline-block;
     margin-top: 10px;
@@ -141,8 +144,13 @@ body.res {
   border-radius: 6px
 }
 
+#RESMainGearOverlay {
+  display: none !important;
+}
+
 .RESDropdownList {
   li {
+    text-transform: uppercase;
     background-color: transparent;
     color: #fff !important;
     border: none !important;
@@ -154,4 +162,9 @@ body.res {
       color: #fff !important
     }
   }
+}
+
+div#RESStyleSheetTipPane,
+div#RESStyleSheetTipPane-header {
+  border: none !important
 }
