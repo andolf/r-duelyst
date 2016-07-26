@@ -6,59 +6,86 @@
 @flair-rows: 40;
 
 .flair {
-  background: url(%%sprite-flairs%%) -9999px no-repeat;
   border: 0;
-  padding: 0;
-  max-width: @flair-max-width;
-  text-overflow: ellipsis;
+  background: none;
+  vertical-align: bottom;
   overflow: hidden;
+  text-overflow: ellipsis;
   white-space: nowrap;
-  cursor: default;
-  margin-right: .8em;
-  margin-bottom: -.3em;
+
+  &:before {
+    content: '';
+    display: inline-block;
+    background: url(%%sprite-flairs%%) -9999px no-repeat;
+    max-width: @flair-max-width;
+    height: @flair-height;
+    min-width: 37px;
+    vertical-align: bottom;
+  }
 }
 
-.flair,
-.linkflairlabel {
+.flair:not(:empty):before {
+  margin-right: 5px;
 }
 
-.flair:not(:empty) {
-  padding-left: 4em;
-  line-height: 1.7
-}
-
-span[class*=flair-card] {
-  min-width: 37px;
-  height: 16px;
-  max-width: 126px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap
-}
-
-.flair-CounterplayShrunk,
-.flair-counterplay-games {
+.flair-CounterplayShrunk:before,
+.flair-counterplay-games:before {
   width: 144px;
   height: 37px;
   background-position: 0 0;
 }
 
-.flair-managlow {
+.flair-managlow:before {
   width: 91px;
   height: 16px;
   background-position: 0 -37px;
 }
 
-.flair-cult-of-67 {
+.flair-cult-of-67:before {
   width: 104px;
   height: 16px;
   background-position: 0 -53px;
 }
 
-.flair-eyos-clash-winner {
+.flair-eyos-clash-winner:before {
   width: 140px;
   height: 16px;
   background-position: 0 -69px;
+}
+
+.flair-mod {
+  &:before {
+    width: 70px;
+    height: 26px;
+  }
+}
+
+.flair-infiltrator {
+  .flair-mod;
+  &:before {
+    background-position: 0 -86px;
+  }
+}
+
+.flair-ashychan {
+  .flair-mod;
+  &:before {
+    background-position: 0 -112px;
+  }
+}
+
+.flair-the-frostweaver {
+  .flair-mod;
+  &:before {
+    background-position: 0 -138px;
+  }
+}
+
+.flair-krilz {
+  .flair-mod;
+  &:before {
+    background-position: 0 -164px;
+  }
 }
 
 .flair-blueflair[title],
@@ -135,7 +162,7 @@ span[class*=flair-card] {
 }
 
 .generate-flair-rows(@col, @rows, @i: 0) when (@i <= @rows) {
-  .flair-card-@{col}-@{i} {
+  .flair-card-@{col}-@{i}:before {
     background-position: -(@flair-max-width * @col) -(@flair-height * @i);
   }
   .generate-flair-rows(@col, @rows, @i + 1);
