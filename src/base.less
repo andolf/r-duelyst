@@ -1,5 +1,6 @@
 body {
-  background: #e6e6e8
+  background: #e6e6e8;
+  font-family: -apple-system, San Francisco Display, Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
 a {
@@ -35,6 +36,15 @@ button {
   &:hover {
     background: #6687e7;
   }
+
+  &:active {
+    background: @endeavour;
+  }
+}
+
+textarea {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  font-family: -apple-system, San Francisco Display, Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
 .choice.primary,
@@ -43,24 +53,19 @@ button {
 }
 
 #hsts_pixel,
-.action-form input:disabled,
 .listing-page .tabmenu li a[href*="/gilded"] {
   display: none
 }
 
-.RESDropdownList li,
-.action-form,
-.pretty-button,
-.pretty-button.pressed:after,
-.usertext .help-toggle,
-.usertext a.reddiquette,
-ul.report-reasons {
-  text-transform: uppercase
-}
+.usertext {
+  .help-toggle,
+  a.reddiquette {
+    text-transform: uppercase;
 
-.usertext .help-toggle:hover,
-.usertext a.reddiquette:hover {
-  font-weight: 700
+    &:hover {
+      font-weight: 700;
+    }
+  }
 }
 
 .deepthread {
@@ -122,15 +127,6 @@ ul.report-reasons {
   }
 }
 
-.link.last-clicked {
-  border: none
-}
-
-div#RESStyleSheetTipPane,
-div#RESStyleSheetTipPane-header {
-  border: none !important
-}
-
 .toc ul {
   background: #fff
 }
@@ -140,11 +136,6 @@ div#RESStyleSheetTipPane-header {
   text-decoration: none !important
 }
 
-.commentarea textarea:not(:focus):not(:hover) {
-  background-color: #f8f8f8 !important
-}
-
-.commentarea textarea:hover,
 .roundfield input[type=text]:hover,
 .roundfield input[type=url]:hover,
 .roundfield textarea:hover {
@@ -183,22 +174,8 @@ div#RESStyleSheetTipPane-header {
   border: none
 }
 
-.link .domain {
-  visibility: hidden;
-
-  a {
-    visibility: visible;
-    color: #b3b3b3;
-    transition: all .15s ease;
-  }
-}
-
 .icon-menu a {
   background: 0 0
-}
-
-textarea {
-  border: 1px solid rgba(0, 0, 0, .12)
 }
 
 a.madeVisible {
@@ -207,12 +184,6 @@ a.madeVisible {
 
 img.RESImage {
   border-radius: 12px
-}
-
-.action-form,
-.nsfw-stamp {
-  color: #fff;
-  font-weight: 700
 }
 
 .gold-accent {
@@ -225,6 +196,9 @@ img.RESImage {
 }
 
 .nsfw-stamp {
+  color: #fff;
+  font-weight: 700;
+
   acronym {
     display: none;
   }
@@ -239,6 +213,9 @@ img.RESImage {
 }
 
 .action-form {
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 700;
   border: none;
   max-width: 300px;
   padding: 20px;
@@ -256,6 +233,10 @@ img.RESImage {
   ol {
     margin-bottom: 15px;
   }
+
+  input:disabled {
+    display: none;
+  }
 }
 
 .pretty-button {
@@ -264,6 +245,7 @@ img.RESImage {
   padding: 1px 5px;
   border-radius: 20px;
   border: none !important;
+  text-transform: uppercase;
 
   &.negative {
     color: #d10023;
@@ -281,6 +263,7 @@ img.RESImage {
     font-size: 0 !important;
 
     &:after {
+      text-transform: uppercase;
       font-size: 10px;
       content: "Action Done";
       font-weight: 700;
@@ -290,20 +273,8 @@ img.RESImage {
 
 ul.report-reasons {
   background-color: transparent;
-  border: none
-}
-
-.content .entry .buttons li.reported-stamp,
-.content .over18 .entry .buttons li.reported-stamp,
-.content .stickied .entry .buttons li.reported-stamp {
-  border: none !important;
-  background: #666 !important;
-  color: #fff !important;
-  font-weight: 700;
-  text-transform: uppercase !important;
-  padding: 1px 8px;
-  border-radius: 20px;
-  font-size: 9px !important
+  border: none;
+  text-transform: uppercase;
 }
 
 .res-commentBoxes .nestedlisting {
@@ -315,13 +286,8 @@ ul.report-reasons {
   }
 }
 
-.menuarea,
-.res h1.redditname {
-  overflow: visible
-}
-
-.dropdown.srdrop .selected {
-  color: #fff
+.menuarea {
+  overflow: visible;
 }
 
 .flat-list {
@@ -343,7 +309,8 @@ ul.report-reasons {
   .title {
     text-transform: uppercase;
     font-weight: 700;
-    font-size: 13px
+    font-size: 13px;
+    color: @royal-blue;
   }
 }
 
@@ -407,7 +374,14 @@ ul.report-reasons {
 }
 
 #preview-table {
-  padding-left: 20px
+  padding-left: 20px;
+
+  > table {
+    border: .2em dashed #d3d3d3;
+    padding: 5px;
+    margin: 5px 5px 5px 25px;
+    width: 900px;
+  }
 }
 
 div#images {
@@ -449,9 +423,7 @@ ul#image-preview-list {
 #search input[type=text],
 .login-form-side input[type=password],
 .login-form-side input[type=text],
-.md textarea,
-body,
-textarea {
+.md textarea {
   font-family: -apple-system, San Francisco Display, Helvetica Neue, Helvetica, Arial, sans-serif
 }
 
@@ -459,75 +431,74 @@ textarea {
   display: none
 }
 
-#header-bottom-right a.pref-lang,
-#mail.havemail,
-#mail.nohavemail,
-#modmail.havemail,
-#modmail.nohavemail,
 .arrow.down,
 .arrow.downmod,
 .arrow.up,
 .arrow.upmod,
 .expando-button,
 .res #header-bottom-right .gearIcon,
-.stickied .thumbnail.self,
-.thumbnail.default,
-.thumbnail.nsfw,
-.thumbnail.self {
+.stickied .thumbnail.self {
   background: url(%%spritesheet%%) !important;
   background-size: 50px 502px !important
 }
 
 #mail {
   &.nohavemail {
+    .sprite-icon;
     background-position: 0 0;
   }
 
   &.havemail {
+    .sprite-icon;
     background-position: 0 -58.66px !important;
   }
 }
 
 #modmail {
   &.nohavemail {
+    .sprite-icon;
     background-position: 0 -82px !important;
   }
 
   &.havemail {
+    .sprite-icon;
     background-position: 0 -105.33px !important;
   }
 }
 
-#RESMainGearOverlay,
-.infobar.newsletterbar {
-  display: none !important
-}
-
-#header-bottom-right a.pref-lang,
-#mail.havemail,
-#mail.nohavemail,
-#modmail.havemail,
-#modmail.nohavemail,
 .res #header-bottom-right .gearIcon {
   width: 20px;
   height: 20px;
   vertical-align: middle !important
 }
 
-.stickied .thumbnail.self,
-.thumbnail.default,
-.thumbnail.nsfw,
-.thumbnail.self {
+.stickied .thumbnail.self {
+  background-position: 0 -265px !important;
   width: 75px;
   height: 50px;
-  background-size: 75px 753px !important
-}
-
-.stickied .thumbnail.self {
-  background-position: 0 -265px !important
+  background-size: 75px 753px !important;
 }
 
 .thumbnail {
+  border-radius: 5px;
+  margin-right: 15px !important;
+  position: relative;
+  top: 33px;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+
+  &.self,
+  &.default,
+  &.nsfw {
+    background: url(%%spritesheet%%) !important;
+    width: 75px;
+    height: 50px;
+    background-size: 75px 753px !important;
+    background-repeat: no-repeat !important;
+    padding: 10px 0;
+    border-radius: 15px;
+  }
+
   &.self {
     background-position: 0 -345px !important;
   }
@@ -646,6 +617,11 @@ textarea {
 
 .new-comment .usertext-body {
   border: none !important;
+
+  .md {
+    outline: 0 !important;
+    border: 0 !important;
+  }
 }
 
 .organic-listing {
@@ -685,12 +661,14 @@ textarea {
   display: none
 }
 
-.dropdown.lightdrop .selected {
-  text-decoration: none
-}
+.dropdown {
+  .lightdrop .selected {
+    text-decoration: none;
+  }
 
-.comment.noncollapsed .midcol {
-  margin-left: 20px
+  .srdrop .selected {
+    color: #fff;
+  }
 }
 
 .panestack-title a.title-button {
@@ -705,7 +683,16 @@ textarea {
     font-size: 9px;
     color: #fff;
     border: none;
-    border-radius: 3px
+    border-radius: 3px;
+    background: @royal-blue;
+
+    &:hover {
+      background: #6687e7;
+    }
+
+    &:active {
+      background: @endeavour;
+    }
   }
 }
 
@@ -713,18 +700,6 @@ div.child,
 div.sitetable.nestedlisting {
   box-shadow: none;
   z-index: auto
-}
-
-.formtabs-content .infobar {
-  font-size: 15px;
-  font-weight: 700;
-  border: none;
-  padding: 20px;
-  border-radius: 4px;
-  text-align: center;
-  color: #000;
-  background-color: #fff;
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.08);
 }
 
 .roundfield {
@@ -766,16 +741,22 @@ div.sitetable.nestedlisting {
   }
 }
 
-.content.submit .info-notice {
-  font-size: 12px;
-  background-color: #fff;
-  border: none;
-}
-
 .formtabs-content {
   border-top: 0 solid !important;
   width: auto;
-  margin-top: 15px
+  margin-top: 15px;
+
+  .infobar {
+    font-size: 15px;
+    font-weight: 700;
+    border: none;
+    padding: 20px;
+    border-radius: 4px;
+    text-align: center;
+    color: #000;
+    background-color: #fff;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.08);
+  }
 }
 
 a.author.admin:after,
@@ -804,8 +785,7 @@ body:not(.comments-page) { // TODO: Subject for removal in redesign
 
 .commentarea .entry.RES-keyNav-activeElement div.noncollapsed,
 .entry.RES-keyNav-activeElement .usertext-body,
-.entry.RES-keyNav-activeElement div.md,
-.new-comment .usertext-body .md {
+.entry.RES-keyNav-activeElement div.md {
   outline: 0 !important;
   border: 0 !important
 }
@@ -845,10 +825,12 @@ div.score {
   color: #999;
 }
 
-.md h1,
-.md p,
-.md ul {
-  line-height: 20px
+.md {
+  h1,
+  p,
+  ul {
+    line-height: 20px;
+  }
 }
 
 .side div.score,
@@ -861,13 +843,26 @@ span.totalvotes {
 }
 
 .comment {
-  .flat-list li a[onclick*=reply] {
-    font-weight: 700;
+  .flat-list li a {
+    &:hover {
+      font-weight: 700;
+      text-decoration: none;
+      transition: 0.2s;
+    }
+
+    &[onclick*=reply] {
+      font-weight: 700;
+    }
   }
+
   .collapsed {
     padding-left: 24px;
     padding-bottom: 10px;
     padding-top: 2px;
+  }
+
+  &.noncollapsed .midcol {
+    margin-left: 20px
   }
 
   .midcol {
@@ -943,22 +938,47 @@ span.totalvotes {
   padding-bottom: 5px
 }
 
-.entry .buttons .may-blank {
-  font-weight: 700
-}
+.fancy-toggle-button {
+  .add,
+  .remove {
+    padding: 5px 20px;
+    border-radius: 20px;
+    font-size: 9px !important;
+    border: none !important;
+    text-transform: uppercase;
+    transition: .2s;
+    background-image: none !important;
+  }
 
-.fancy-toggle-button .add,
-.fancy-toggle-button .remove {
-  padding: 5px 20px;
-  border-radius: 20px
+  .add {
+    background: #80d04b;
+
+    &:hover {
+      background: #a6de81;
+    }
+
+    &:active {
+      background: #599134;
+    }
+  }
+
+  .remove {
+    background: @royal-blue;
+
+    &:hover {
+      background: #6687e7;
+    }
+
+    &:active {
+      background: @endeavour;
+    }
+  }
 }
 
 .RESDashboardToggle,
 .RESDashboardToggle.remove,
 .RESshortcutside,
 .RESshortcutside.remove,
-.fancy-toggle-button .add,
-.fancy-toggle-button .remove,
 .res .fancy-toggle-button .add,
 .res .fancy-toggle-button .remove {
   font-size: 9px !important;
@@ -978,38 +998,31 @@ span.totalvotes {
   border-radius: 3px !important
 }
 
-.morelink .nub,
 .rank-spacer,
 .users-online:before,
 body > .content .link .rank {
   display: none
 }
 
-.entry .buttons li a,
-.entry .buttons li + li {
-  color: #666
+.entry .buttons {
+  .may-blank {
+    font-weight: 700;
+    color: @royal-blue;
+  }
+
+  li {
+    a,
+    + li {
+      font-weight: 400;
+      color: #666;
+    }
+  }
 }
 
-.comment .flat-list li a:hover,
-.link .domain a:hover,
-.link .entry .buttons li a:hover {
-  font-weight: 700;
-  text-decoration: none;
-  transition: .2s
-}
-
-body:not(.submit-page) .tabmenu::after {
-  //position: absolute;
-  //height: 49px;
-  //content: '';
-  //z-index: -1;
-  //left: 0;
-  //right: 0;
-  //background: #666;
+body:not(.submit-page) .tabmenu::after { // TODO: Subject of removal
   display: none;
 }
 
-.side:before,
 .titlebox .users-online .number:before {
   content: ""
 }
@@ -1024,11 +1037,6 @@ div.content {
   @media (max-width: 905px) {
     margin: 15px 335px 10px 16px;
   }
-}
-
-.midcol {
-  margin-left: 0;
-  position: relative;
 }
 
 .midcol-spacer,
@@ -1057,7 +1065,7 @@ body:not(.comments-page) > .content .link .midcol {
   height: auto
 }
 
-body:not(.search-page) {
+body:not(.search-page) { // TODO: Subject of removal
   #search input[type=text] {
     border-radius: 6px;
     padding: 9px;
@@ -1145,11 +1153,28 @@ body:not(.search-page) {
   border-radius: 3.5px;
   padding: 3px;
   text-transform: uppercase;
+  background: #444;
+
+  &:hover {
+    background: #1c4aa7;
+    background: -webkit-linear-gradient(#441f45, #364282);
+    background: -o-linear-gradient(#441f45, #364282);
+    background: -moz-linear-gradient(#441f45, #364282);
+    background: linear-gradient(#441f45, #364282);
+  }
+
+  &:active {
+    background: #222;
+  }
 
   a,
   a:hover,
   a:visited {
-    color: #fff
+    color: #fff;
+  }
+
+  .nub {
+    display: none;
   }
 }
 
@@ -1164,6 +1189,10 @@ body:not(.search-page) {
 .infobar {
   background: #f2f2f2;
   border: 1px solid #ebebeb;
+
+  &.newsletterbar {
+    display: none !important;
+  }
 }
 
 .message-count {
@@ -1201,35 +1230,46 @@ div.leavemoderator {
 }
 
 .RESDashboardToggle,
-.RESshortcutside,
-.fancy-toggle-button .add {
+.RESshortcutside {
   background: #80d04b
 }
 
 .RESDashboardToggle:hover,
-.fancy-toggle-button .add:hover,
 body.res .RESshortcutside:hover {
   background: #a6de81
 }
 
 .RESDashboardToggle:active,
-.fancy-toggle-button .add:active,
 body.res .RESshortcutside:active {
   background: #599134
 }
 
 .gadget .midcol {
-  width: 20px !important;
+  width: 20px;
 }
 
 .content {
   margin: 96px 16px 0;
-  padding: 0
-}
+  padding: 0;
 
-.entry .buttons li a,
-.entry .buttons li + li {
-  font-weight: 400
+  .entry .buttons li.reported-stamp,
+  .over18 .entry .buttons li.reported-stamp,
+  .stickied .entry .buttons li.reported-stamp {
+    border: none !important;
+    background: #666 !important;
+    color: #fff !important;
+    font-weight: 700;
+    text-transform: uppercase !important;
+    padding: 1px 8px;
+    border-radius: 20px;
+    font-size: 9px !important
+  }
+
+  &.submit .info-notice {
+    font-size: 12px;
+    background-color: #fff;
+    border: none;
+  }
 }
 
 .flairselector {
@@ -1261,9 +1301,6 @@ body.res .RESshortcutside:active {
   }
 }
 
-.bottommenu,
-.error,
-.flairselector form button,
 .footer .flat-vert .title,
 .footer .flat-vert li a,
 form#image-upload.image-upload {
@@ -1304,6 +1341,11 @@ form#image-upload.image-upload {
 
   form {
     border-top: 1px solid #e5e5e5;
+
+    button {
+      text-transform: uppercase;
+      font-weight: 700;
+    }
   }
 }
 
@@ -1347,18 +1389,6 @@ form#image-upload.image-upload {
   }
 }
 
-.thumbnail {
-  border-radius: 5px;
-  margin-right: 15px !important;
-  position: relative;
-  top: 33px;
-  transform: translateY(-50%);
-  -webkit-transform: translateY(-50%)
-}
-
-.thumbnail.default,
-.thumbnail.nsfw,
-.thumbnail.self,
 .stickied .thumbnail.self {
   background-repeat: no-repeat !important;
   padding: 10px 0;
@@ -1383,33 +1413,21 @@ body:not(.comments-page) .over18 .tagline {
   color: #d10023 !important
 }
 
-.link .flat-list {
-  display: block;
-  padding: 1px 0;
-  margin-top: 3px
-}
-
 li.searchfacet {
   width: 20em
 }
 
 .error {
-  font-size: 12px
+  font-size: 12px;
+  color: @royal-blue;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
 .pretty-form {
   font-size: larger;
   margin-left: 25px;
   padding: 20px 0;
-}
-
-#preview-table > table {
-  border-width: .2em;
-  border-style: dashed;
-  border-color: #d3d3d3;
-  padding: 5px;
-  margin: 5px 5px 5px 25px;
-  width: 900px
 }
 
 form#image-upload.image-upload {
@@ -1421,12 +1439,12 @@ form#image-upload.image-upload {
   color: #666
 }
 
-.debuginfo,
-.footer-parent {
-  background-color: #222
+.debuginfo {
+  background-color: #222;
 }
 
 .footer-parent {
+  background-color: #222;
   font-size: 14px;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -1459,7 +1477,6 @@ form#image-upload.image-upload {
   }
 }
 
-.bottommenu,
 .col {
   border: none !important
 }
@@ -1467,6 +1484,9 @@ form#image-upload.image-upload {
 .bottommenu {
   font-size: 10px;
   color: #fff !important;
+  border: none !important;
+  text-transform: uppercase;
+  font-weight: 700;
 
   a {
     text-decoration: none;
@@ -1474,47 +1494,49 @@ form#image-upload.image-upload {
   }
 }
 
-#mail.havemail:before {
-  position: fixed;
-  bottom: 24px;
-  z-index: 100;
-  padding: 45px 0 10px;
-  background-color: rgba(0, 0, 0, .85);
-  border-radius: 6px;
-  box-shadow: 0 1px 5px rgba(0, 0, 0, .5);
-  color: #fff;
-  width: 210px;
-  height: 15px;
-  left: 0;
-  right: 0;
-  content: "YOU HAVE NEW MESSAGES";
-  text-indent: 30px;
-  font-size: 11px;
-  line-height: 1;
-  -webkit-transform: translateY(112px);
-  transform: translateY(112px);
-  transition: background-color .25s ease, box-shadow .25s ease;
-  background-image: url(%%havemail%%);
-  background-position: 85px 8px;
-  margin: 0 auto;
-  background-size: 32px;
-  font-weight: 700;
-  background-repeat: no-repeat;
-  animation-name: toast;
-  animation-duration: 8s;
-  animation-iteration-count: 1;
-  animation-timing-function: ease;
-  -webkit-animation-name: toast;
-  -webkit-animation-duration: 8s;
-  -webkit-animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease
-}
+#mail.havemail {
+  &:before {
+    position: fixed;
+    bottom: 24px;
+    z-index: 100;
+    padding: 45px 0 10px;
+    background-color: rgba(0, 0, 0, .85);
+    border-radius: 6px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, .5);
+    color: #fff;
+    width: 210px;
+    height: 15px;
+    left: 0;
+    right: 0;
+    content: "YOU HAVE NEW MESSAGES";
+    text-indent: 30px;
+    font-size: 11px;
+    line-height: 1;
+    -webkit-transform: translateY(112px);
+    transform: translateY(112px);
+    transition: background-color .25s ease, box-shadow .25s ease;
+    background-image: url(%%havemail%%);
+    background-position: 85px 8px;
+    margin: 0 auto;
+    background-size: 32px;
+    font-weight: 700;
+    background-repeat: no-repeat;
+    animation-name: toast;
+    animation-duration: 8s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+    -webkit-animation-name: toast;
+    -webkit-animation-duration: 8s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease
+  }
 
-#mail.havemail:hover:before {
-  -webkit-animation-play-state: paused;
-  -moz-animation-play-state: paused;
-  -o-animation-play-state: paused;
-  animation-play-state: paused
+  &:hover:before {
+    -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -o-animation-play-state: paused;
+    animation-play-state: paused
+  }
 }
 
 @-webkit-keyframes toast {
@@ -1612,10 +1634,7 @@ form#image-upload.image-upload {
 .RESDashboardToggle.remove,
 .RESSubscriptionButton,
 .RESshortcutside.remove,
-.commentarea .comment a.expand:hover,
-.fancy-toggle-button .remove,
-.panestack-title a.title-button,
-.panestack-title a.title-button.gold {
+.commentarea .comment a.expand:hover {
   background: @royal-blue;
 }
 
@@ -1624,9 +1643,6 @@ form#image-upload.image-upload {
 .comment .flat-list li a[onclick*=reply],
 .commentNavSortType:hover,
 .commentarea .menuarea .toggle a:hover,
-.entry .buttons .may-blank,
-.error,
-.linefield .title,
 .link .domain a:hover,
 .link .entry .buttons li a:hover,
 .submit-page .roundfield a,
@@ -1645,45 +1661,19 @@ form#image-upload.image-upload {
 
 .RESDashboardToggle.remove:hover,
 .comments-page .RESSubscriptionButton:hover,
-.fancy-toggle-button .remove:hover,
-.panestack-title a.title-button.gold:hover,
-.panestack-title a.title-button:hover,
-.side .titlebox .md h4 a:hover,
 body.res .side .RESshortcutside.remove:hover {
-  background: #6687e7
+  background: #6687e7;
 }
 
 .RESDashboardToggle.remove:active,
 .RESshortcutside.remove:active,
-.comments-page .RESSubscriptionButton:active,
-.fancy-toggle-button .remove:active,
-.panestack-title a.title-button.gold:active,
-.panestack-title a.title-button:active,
-.side .titlebox .md h4 a:active,
-button:active {
+.comments-page .RESSubscriptionButton:active {
   background: @endeavour;
 }
 
-.morelink,
-.side .titlebox .md h3 a,
-.tabmenu,
 .thing .md table thead tr th,
 .wiki-page-content .md table thead tr th {
   background: #444
-}
-
-.morelink:hover,
-.side .titlebox .md h3 a:hover {
-  background: #1c4aa7;
-  background: -webkit-linear-gradient(#441f45, #364282);
-  background: -o-linear-gradient(#441f45, #364282);
-  background: -moz-linear-gradient(#441f45, #364282);
-  background: linear-gradient(#441f45, #364282)
-}
-
-.morelink:active,
-.side .titlebox .md h3 a:active {
-  background: #222
 }
 
 #siteTable .thing .md blockquote,
@@ -1818,14 +1808,8 @@ a[href="#s"]:hover::after {
   opacity: 1
 }
 
-.search-page #search,
 ul.res-search-tabs {
   display: inline-block
-}
-
-.side .md > h3:nth-of-type(4):hover + ul:before,
-.thing[data-author=duelystwikibot]:hover .usertext-body:before {
-  display: none
 }
 
 .usertext-body table > tbody > tr:nth-of-type(even) {
@@ -1838,8 +1822,13 @@ ul.res-search-tabs {
     overflow: hidden
   }
 
-  &:hover form {
-    height: auto
+  &:hover {
+    .usertext-body:before {
+      display: none;
+    }
+    form {
+      height: auto;
+    }
   }
 
   .usertext-body:before {
