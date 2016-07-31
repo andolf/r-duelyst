@@ -8,18 +8,35 @@ body.res {
   #header-bottom-right #mail.havemail {
     top: -1px !important
   }
+  .side .RESshortcutside.remove:hover {
+    background: #6687e7;
+  }
 }
 
 .res {
   h1.redditname {
     overflow: visible;
   }
+
   .titlebox .fancy-toggle-button {
     display: inline-block;
     margin-top: 10px;
     margin-right: 5px;
     margin-left: 0;
     width: auto
+  }
+
+  .fancy-toggle-button {
+    .add,
+    .remove {
+      font-size: 9px;
+      border: none;
+      text-transform: uppercase;
+      transition: 0.2s;
+      background-image: none;
+      padding: 5px 8px;
+      border-radius: @default-border-radius;
+    }
   }
 
   #RESShortcutsViewport {
@@ -160,7 +177,42 @@ body.res {
   }
 }
 
+.RESshortcutside,
+.RESDashboardToggle {
+  font-size: 9px;
+  border: none;
+  text-transform: uppercase;
+  transition: 0.2s;
+  padding: 5px 8px;
+  border-radius: @default-border-radius;
+  background: #80d04b;
+
+  &:hover {
+    background: #a6de81;
+  }
+
+  &:active {
+    background: #599134;
+  }
+
+  &.remove {
+    background: @royal-blue;
+
+    &:hover {
+      background: #6687e7;
+    }
+
+    &:active {
+      background: @endeavour;
+    }
+  }
+}
+
 div#RESStyleSheetTipPane,
 div#RESStyleSheetTipPane-header {
   border: none !important
+}
+
+.RESDialogSmall.livePreview {
+  margin: 15px 0;
 }

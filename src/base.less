@@ -1,6 +1,6 @@
 body {
   background: #e6e6e8;
-  font-family: -apple-system, San Francisco Display, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: -apple-system, "San Francisco Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 a {
@@ -34,7 +34,7 @@ button {
   }
 
   &:hover {
-    background: #6687e7;
+    background: @cornflower-blue;
   }
 
   &:active {
@@ -174,10 +174,6 @@ textarea {
   border: none
 }
 
-.icon-menu a {
-  background: 0 0
-}
-
 a.madeVisible {
   margin-top: 20px
 }
@@ -288,15 +284,6 @@ ul.report-reasons {
 
 .menuarea {
   overflow: visible;
-}
-
-.flat-list {
-  list-style-type: none;
-  display: inline;
-
-  li a.gold {
-    color: gold
-  }
 }
 
 .tabpane-content {
@@ -431,15 +418,9 @@ ul#image-preview-list {
   display: none
 }
 
-.arrow.down,
-.arrow.downmod,
-.arrow.up,
-.arrow.upmod,
-.expando-button,
-.res #header-bottom-right .gearIcon,
-.stickied .thumbnail.self {
-  background: url(%%spritesheet%%) !important;
-  background-size: 50px 502px !important
+.res #header-bottom-right .gearIcon {
+  background: url(%%spritesheet%%);
+  background-size: 50px 502px;
 }
 
 #mail {
@@ -472,46 +453,6 @@ ul#image-preview-list {
   vertical-align: middle !important
 }
 
-.stickied .thumbnail.self {
-  background-position: 0 -265px !important;
-  width: 75px;
-  height: 50px;
-  background-size: 75px 753px !important;
-}
-
-.thumbnail {
-  border-radius: 5px;
-  margin-right: 15px !important;
-  position: relative;
-  top: 33px;
-  transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
-
-  &.self,
-  &.default,
-  &.nsfw {
-    background: url(%%spritesheet%%) !important;
-    width: 75px;
-    height: 50px;
-    background-size: 75px 753px !important;
-    background-repeat: no-repeat !important;
-    padding: 10px 0;
-    border-radius: 15px;
-  }
-
-  &.self {
-    background-position: 0 -345px !important;
-  }
-
-  &.default {
-    background-position: 0 -426px !important;
-  }
-
-  &.nsfw {
-    background-position: 0 -506px !important;
-  }
-}
-
 #modmail.havemail,
 #modmail.nohavemail {
   margin-bottom: 0 !important
@@ -526,61 +467,6 @@ ul#image-preview-list {
   width: 20px !important;
   height: 20px !important;
   top: 0 !important
-}
-
-.arrow {
-  &.down,
-  &.downmod,
-  &.up,
-  &.upmod {
-    background-size: 37.5px 376.5px !important;
-    height: 20px;
-    width: 20px;
-    border-radius: 20px;
-    transition: 0.2s;
-  }
-
-  &.up {
-    background-position: 3px -685px !important
-  }
-
-  &.down {
-    background-position: 3px -699px !important
-  }
-
-  &.upmod {
-    background-position: 2.3px -666px !important;
-    background-color: #ff4500 !important;
-    margin-bottom: 5px;
-  }
-
-  &.downmod {
-    background-position: 3px -716px !important;
-    background-color: #2b9bdb !important;
-    margin-top: 5px;
-  }
-}
-
-.expando-button {
-  &,
-  &.expanded,
-  &.expanded:hover,
-  &:hover {
-    background-position: 0 -482px !important;
-    width: 20px !important;
-    height: 20px !important;
-    transition: 150ms
-  }
-
-  &.expanded {
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg)
-  }
-
-  &.expanded:hover,
-  &:hover {
-    opacity: .5
-  }
 }
 
 .separator {
@@ -609,10 +495,6 @@ ul#image-preview-list {
 .livePreview,
 .livePreview .md {
   text-transform: none;
-}
-
-.RESDialogSmall.livePreview {
-  margin: 15px 0;
 }
 
 .new-comment .usertext-body {
@@ -687,7 +569,7 @@ ul#image-preview-list {
     background: @royal-blue;
 
     &:hover {
-      background: #6687e7;
+      background: @cornflower-blue;
     }
 
     &:active {
@@ -765,17 +647,6 @@ a.author.moderator:after {
   content: ""
 }
 
-body:not(.comments-page) { // TODO: Subject for removal in redesign
-  div.content .entry {
-    border-bottom: 1px solid #e1e1e1;
-    padding: 12px
-  }
-
-  .thumbnail {
-    margin: 10px 5px 10px 0 !important
-  }
-}
-
 .commentarea .entry.RES-keyNav-activeElement div.noncollapsed,
 .entry.RES-keyNav-activeElement,
 .entry.RES-keyNav-activeElement .usertext-body,
@@ -820,16 +691,45 @@ body:not(.comments-page) { // TODO: Subject for removal in redesign
   }
 }
 
-div.score {
-  font-weight: 500;
-  color: #999;
-}
-
 .md {
   h1,
   p,
   ul {
     line-height: 20px;
+  }
+}
+
+.arrow {
+  &.down,
+  &.downmod,
+  &.up,
+  &.upmod {
+    background-image: url(%%spritesheet%%);
+    background-size: 38px 382px;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    transition: @default-transition-time;
+  }
+
+  &.up {
+    background-position: 2px -312px;
+  }
+
+  &.down {
+    background-position: 2px -328px;
+  }
+
+  &.upmod {
+    background-position: 2px -294px;
+    background-color: #ff4500;
+    margin-bottom: 5px;
+  }
+
+  &.downmod {
+    background-position: 2px -346px;
+    background-color: #2b9bdb;
+    margin-top: 5px;
   }
 }
 
@@ -840,34 +740,6 @@ span.totalvotes {
   font-weight: 500 !important;
   color: #444;
   padding: 0 16px
-}
-
-.comment {
-  .flat-list li a {
-    &:hover {
-      font-weight: 700;
-      text-decoration: none;
-      transition: 0.2s;
-    }
-
-    &[onclick*=reply] {
-      font-weight: 700;
-    }
-  }
-
-  .collapsed {
-    padding-left: 24px;
-    padding-bottom: 10px;
-    padding-top: 2px;
-  }
-
-  &.noncollapsed .midcol {
-    margin-left: 20px
-  }
-
-  .midcol {
-    width: 20px !important;
-  }
 }
 
 @keyframes godown {
@@ -930,24 +802,15 @@ span.totalvotes {
   display: none
 }
 
-.res .titlebox > div:first-of-type,
-.titlebox form.toggle {
-  font-weight: 400;
-  text-align: center;
-  padding-top: 5px;
-  padding-bottom: 5px
-}
-
 .fancy-toggle-button {
   .add,
   .remove {
     padding: 5px 20px;
     border-radius: 20px;
-    font-size: 9px !important;
-    border: none !important;
+    font-size: 9px;
+    border: none;
     text-transform: uppercase;
-    transition: .2s;
-    background-image: none !important;
+    transition: 0.2s;
   }
 
   .add {
@@ -975,78 +838,27 @@ span.totalvotes {
   }
 }
 
-.RESDashboardToggle,
-.RESDashboardToggle.remove,
-.RESshortcutside,
-.RESshortcutside.remove,
-.res .fancy-toggle-button .add,
-.res .fancy-toggle-button .remove {
-  font-size: 9px !important;
-  border: none !important;
-  text-transform: uppercase;
-  transition: .2s;
-  background-image: none !important
-}
-
-.RESDashboardToggle,
-.RESDashboardToggle.remove,
-.RESshortcutside,
-.RESshortcutside.remove,
-.res .fancy-toggle-button .add,
-.res .fancy-toggle-button .remove {
-  padding: 5px 8px !important;
-  border-radius: 3px !important
-}
-
 .rank-spacer,
 .users-online:before,
 body > .content .link .rank {
   display: none
 }
 
-.entry .buttons {
-  .may-blank {
-    font-weight: 700;
-    color: @royal-blue;
-  }
-
-  li {
-    a,
-    + li {
-      font-weight: 400;
-      color: #666;
-    }
-  }
-}
-
-body:not(.submit-page) .tabmenu::after { // TODO: Subject of removal
-  display: none;
-}
-
-.titlebox .users-online .number:before {
-  content: ""
-}
-
 div.content {
-  border-radius: 4px;
-  margin: 85px 335px 10px 16px;
-  border: 1px solid #e1e1e1;
+  border-radius: @default-border-radius;
+  margin: 85px 335px 10px @base-outer-margin;
+  box-shadow: @default-box-shadow;
   background-color: #fff;
   font-size: 12px;
 
   @media (max-width: 905px) {
-    margin: 15px 335px 10px 16px;
+    margin: 15px 345px 10px @base-outer-margin;
   }
 }
 
-.midcol-spacer,
-body > .content .link .midcol {
-  width: 40px !important
-}
-
-.midcol-spacer,
-body:not(.comments-page) > .content .link .midcol {
-  margin: 10px 0
+.midcol-spacer {
+  width: 40px;
+  margin: 10px 0;
 }
 
 #searchexpando {
@@ -1063,32 +875,6 @@ body:not(.comments-page) > .content .link .midcol {
   font-size: 11px;
   line-height: 2.5em;
   height: auto
-}
-
-body:not(.search-page) { // TODO: Subject of removal
-  #search input[type=text] {
-    border-radius: 6px;
-    padding: 9px;
-    border: 1px solid #e1e1e1;
-    text-align: center;
-    transition: 0.3s;
-
-    &:hover {
-      border: 1px solid #a0a0a0;
-    }
-
-    &:focus {
-      border-color: #aaa;
-      text-align: left;
-      outline: 0;
-      padding-left: 6px;
-      animation-name: search;
-      animation-duration: 0.4s;
-      animation-timing-function: ease;
-      animation-iteration-count: 1;
-      animation-play-state: running;
-    }
-  }
 }
 
 @-webkit-keyframes search {
@@ -1204,41 +990,6 @@ body:not(.search-page) { // TODO: Subject of removal
   a {
     font-weight: 400 !important
   }
-}
-
-.score.unvoted {
-  color: #666
-}
-
-div.midcol.dislikes,
-div.midcol.likes,
-div.midcol.unvoted,
-div.reddit-entry {
-  padding: 0 10px
-}
-
-div.leavemoderator {
-  margin-left: 18px;
-  background: 0 0
-}
-
-.RESDashboardToggle,
-.RESshortcutside {
-  background: #80d04b
-}
-
-.RESDashboardToggle:hover,
-body.res .RESshortcutside:hover {
-  background: #a6de81
-}
-
-.RESDashboardToggle:active,
-body.res .RESshortcutside:active {
-  background: #599134
-}
-
-.gadget .midcol {
-  width: 20px;
 }
 
 .content {
@@ -1382,27 +1133,13 @@ form#image-upload.image-upload {
   }
 }
 
-.stickied .thumbnail.self {
-  background-repeat: no-repeat !important;
-  padding: 10px 0;
-  border-radius: 15px
-}
-
 .stickied a.title:link,
-.stickied a.title:visited,
-body:not(.comments-page) .stickied .entry .buttons li a,
-body:not(.comments-page) .stickied .entry .buttons li + li,
-body:not(.comments-page) .stickied .link .tagline,
-body:not(.comments-page) .stickied .tagline {
+.stickied a.title:visited {
   color: #2b8b27 !important
 }
 
 .over18 a.title:link,
-.over18 a.title:visited,
-body:not(.comments-page) .over18 .entry .buttons li a,
-body:not(.comments-page) .over18 .entry .buttons li + li,
-body:not(.comments-page) .over18 .link .tagline,
-body:not(.comments-page) .over18 .tagline {
+.over18 a.title:visited {
   color: #d10023 !important
 }
 
@@ -1624,19 +1361,11 @@ form#image-upload.image-upload {
   }
 }
 
-.RESDashboardToggle.remove,
-.RESshortcutside.remove,
-.commentarea .comment a.expand:hover {
-  background: @royal-blue;
-}
-
 #progressIndicator a#NERStaticLink,
 .comment .flat-list li a:hover,
-.comment .flat-list li a[onclick*=reply],
 .commentNavSortType:hover,
 .commentarea .menuarea .toggle a:hover,
 .link .domain a:hover,
-.link .entry .buttons li a:hover,
 .submit-page .roundfield a,
 .thing .title {
   color: @royal-blue;
@@ -1649,16 +1378,6 @@ form#image-upload.image-upload {
 .roundfield textarea:focus,
 .usertext-edit textarea:focus {
   border-color: @royal-blue;
-}
-
-.RESDashboardToggle.remove:hover,
-body.res .side .RESshortcutside.remove:hover {
-  background: #6687e7;
-}
-
-.RESDashboardToggle.remove:active,
-.RESshortcutside.remove:active {
-  background: @endeavour;
 }
 
 .thing .md table thead tr th,
@@ -1778,24 +1497,26 @@ a[href="#s"]:hover::after {
   color: #fff
 }
 
-.arrow.down:hover::after,
-.comment .arrow.downmod:hover::after {
-  position: absolute;
-  display: block;
-  z-index: 11;
-  width: 210px;
-  padding: 10px;
-  border: 1px solid #000;
-  background-color: rgba(51, 20, 52, .75);
-  color: #fff;
-  content: "Keep this sub user-friendly - only downvote this post if it adds no value. Do not downvote based on opinion.";
-  text-align: center;
-  font-size: 12px;
-  font-weight: 400;
-  margin-left: 25px;
-  margin-top: 25px;
-  box-shadow: 3px 3px 3px #9c9b9b;
-  opacity: 1
+.arrow.down,
+.comment .arrow.downmod {
+  &:hover:after {
+    position: absolute;
+    display: block;
+    z-index: 11;
+    width: 210px;
+    padding: 10px;
+    border: 1px solid #000;
+    background-color: rgba(51, 20, 52, .75);
+    color: #fff;
+    content: "Keep this sub user-friendly - only downvote this post if it adds no value. Do not downvote based on opinion.";
+    text-align: center;
+    font-size: 12px;
+    font-weight: 400;
+    margin-left: 25px;
+    margin-top: 25px;
+    box-shadow: 3px 3px 3px #9c9b9b;
+    opacity: 1;
+  }
 }
 
 ul.res-search-tabs {

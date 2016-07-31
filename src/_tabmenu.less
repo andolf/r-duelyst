@@ -5,40 +5,33 @@
   background: #444;
 
   li {
-    margin: 0 !important;
-    height: 36px;
-    width: 102px;
-    background-color: transparent;
+    margin: 0;
+    background: none;
 
     a {
-      padding: 0 20px !important;
-      border-left: none;
-      border-right: none;
+      padding: 0 20px;
       display: inline-block;
       line-height: 48px;
       text-align: center;
       text-transform: Uppercase;
       transition: 150ms;
       -webkit-transition: 150ms;
-      font-weight: 400;
-      color: #e5e5e5 !important;
-      text-shadow: 0 1px 8px rgba(0, 0, 0, .5);
-      background-color: transparent
+      color: #e5e5e5;
+      text-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
+      background-color: transparent;
+      font-weight: 700;
     }
-  }
 
-  li.selected a,
-  li:hover a {
-    color: #fff !important;
-    font-weight: 700 !important
-  }
+    &.selected a {
+      color: #fff;
+      background-color: rgba(255, 255, 255, 0.15);
+      border: none;
+    }
 
-  li:hover a {
-    background-color: rgba(255, 255, 255, .08)
-  }
-
-  li.selected a {
-    background-color: rgba(255, 255, 255, .15);
-    border: none !important
+    &:hover a {
+      background: #fff;
+      text-shadow: none;
+      color: rgba(0, 0, 0, 0.7);
+    }
   }
 }

@@ -1,60 +1,53 @@
 // Sidebar (at the side obviously...)
 
+@side-base-margin: @base-margin;
+@side-right-margin: @base-outer-margin;
+
 .side {
-  border: 1px solid #e1e1e1;
-  border-radius: 12px;
-  padding: 0;
-  margin: 115px 16px 100px;
-  width: 300px;
-  background: #fff;
+  margin: 425px @side-right-margin 100px;
+  background: none;
 
   &:before {
     content: "";
     display: block;
     background: url(%%biglogo%%) center no-repeat;
-    padding-top: 300px;
+    border-radius: @default-border-radius * 2;
+    box-shadow: @default-box-shadow;
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 370px;
+    right: @side-right-margin;
   }
 
-  .submit-link,
-  .submit-text {
-    margin-left: 12px;
-    margin-right: 12px;
+  .titlebox,
+  .sidecontentbox {
+    background: #fff;
+    padding: @base-margin;
+    border-radius: @default-border-radius;
+    box-shadow: @default-box-shadow;
   }
 
   .titlebox {
-    text-align: center;
-    padding: 12px;
-
     .fancy-toggle-button {
-      margin: 4px auto;
       width: 100%;
-      transition: .3s;
-    }
-
-    .number,
-    .subscribers,
-    .users-online {
-      font-size: 12px;
+      transition: 0.3s;
     }
 
     .users-online,
     .subscribers {
       color: #999;
-      margin: 4px auto;
     }
 
     .users-online {
-      &:before {
-        display: none;
-      }
-
       .number {
         font-style: italic;
       }
     }
 
     .redditname {
-      font-weight: 400;
+      font-weight: 700;
+      text-transform: uppercase;
     }
 
     .bottom {
@@ -185,81 +178,46 @@
 
     > ol:last-of-type {
       display: flex;
-      padding: 10px 0 10px 100px;
+      align-items: center;
+      padding: @base-margin @base-margin * 2;
       margin: 0;
       position: absolute;
       top: 260px;
-      left: 17px;
-      width: calc(~"100% - 452px");
-      background: #12377f;
-      border-radius: 5px;
+      left: @base-outer-margin;
+      width: calc(~"100% - 390px");
+      background: @endeavour;
+      border-radius: @default-border-radius;
 
       @media (max-width: 905px) {
         display: none;
       }
 
       @media (max-width: 1280px) {
-        padding: 0 0 0 100px;
+        padding-top: 0;
+        padding-bottom: 0;
       }
 
       li {
-        transform: none;
         list-style: none;
 
         &:first-child {
-          position: absolute;
-          display: flex;
-          justify-content: center;
-          align-items: stretch;
-          flex-grow: 2;
-          left: 0;
-          width: 100px;
-          min-width: 0;
           font-size: 20px;
-          -webkit-display: flex;
-          -webkit-justify-content: center;
-          -webkit-align-items: stretch;
-          color: #eee;
+          color: #fff;
           text-transform: uppercase;
-          letter-spacing: .5px;
 
           strong {
             text-shadow: 0 0 5px rgba(255, 199, 1, .25);
-            padding: 8px;
-            transform: none;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            -webkit-display: flex;
-            -webkit-justify-content: center;
-            -webkit-align-items: center
           }
         }
 
         a {
-          min-height: 16px;
-          position: relative;
           display: block;
-          margin: 12px 8px;
-          padding-left: 12px;
-          transform: none;
-          color: #eee;
-          text-shadow: 1px 1px 0 #000;
-          font-size: 14px !important;
-          font-weight: 400;
+          padding: 12px 8px;
+          margin-left: 12px;
+          color: #fff;
+          text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
+          font-size: 14px;
           text-decoration: underline;
-
-          &:before {
-            content: "";
-            position: absolute;
-            width: 4px;
-            opacity: .85;
-            height: 26px;
-            display: block;
-            left: 0;
-            top: -4px;
-            border-radius: 83px;
-          }
         }
       }
     }
@@ -271,9 +229,9 @@
       padding-left: 0;
       position: absolute;
       top: 295px;
-      left: calc(~"100% - 317px");
       width: 300px;
-      border-radius: 5px;
+      right: @side-right-margin;
+      border-radius: @default-border-radius;
       text-align: center;
       font-size: 16px;
 
@@ -300,15 +258,6 @@
         }
       }
     }
-  }
-
-  #moderation_tools {
-    padding-left: 15px;
-    margin-bottom: 15px;
-  }
-
-  .md-container {
-    text-align: left;
   }
 
   .usertext {
@@ -346,9 +295,43 @@
     }
   }
 
-  .sidecontentbox .content {
-    border: none;
-    padding: 8px 0;
+  .sidecontentbox {
+    padding: 15px;
+
+    .title h1 {
+      color: #555;
+      font-weight: 700;
+      font-size: 14px;
+      display: inline-block;
+    }
+
+    .content {
+      border: none;
+      padding: 8px 0;
+    }
+
+    .collapse-button {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      line-height: 10px;
+      text-align: center;
+      font-size: 10px;
+      margin: 1px 8px;
+      background-color: transparent;
+      color: @royal-blue;
+      vertical-align: middle;
+      border-radius: 2px;
+      border: 1px solid @royal-blue;
+
+      &:hover {
+        background-color: transparent;
+        color: #009884;
+        vertical-align: middle;
+        border-radius: 2px;
+        border: 1px solid @endeavour;
+      }
+    }
   }
 
   #search_showmore {
@@ -359,6 +342,41 @@
     top: 260px;
     position: absolute;
     z-index: 4;
+    right: @side-right-margin;
+
+    input[type=text] {
+      border-radius: @default-border-radius;
+      padding: 9px;
+      border: 1px solid #e1e1e1;
+      text-align: center;
+      transition: 0.3s;
+
+      &:hover {
+        border: 1px solid #a0a0a0;
+      }
+
+      &:focus {
+        border-color: #aaa;
+        text-align: left;
+        outline: 0;
+        padding-left: 6px;
+        animation-name: search;
+        animation-duration: 0.4s;
+        animation-timing-function: ease;
+        animation-iteration-count: 1;
+        animation-play-state: running;
+      }
+    }
+  }
+
+  .gadget {
+    .midcol {
+      width: 20px;
+    }
+
+    .reddit-entry {
+      margin-left: 30px;
+    }
   }
 
   a[href$="#noflair-icon"] {
