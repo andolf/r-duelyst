@@ -1,4 +1,4 @@
-body.comments-page {
+.comments-page {
   div.content {
     background: none;
     border: none;
@@ -6,19 +6,11 @@ body.comments-page {
 
   .link {
     background: #fff;
-    border: none;
-    border-radius: 5px 5px 0 0;
+    border-radius: @default-border-radius @default-border-radius 0 0;
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.08);
     padding: 20px 10px;
   }
 
-  .sitetable {
-    position: relative;
-    z-index: 2;
-  }
-}
-
-.comments-page {
   .content .infobar {
     border: 0;
     background: #fff;
@@ -43,9 +35,5 @@ body.comments-page {
 
   #noresults:after {
     content: ".";
-  }
-
-  .side {
-    margin: 260px 16px 100px;
   }
 }
