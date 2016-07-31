@@ -31,26 +31,17 @@ body.res {
   }
 
   .content .RESBigEditorPop {
-    line-height: inherit;
-    font-size: 11px;
-    box-shadow: none;
+    font-size: smaller;
     color: #666;
-    border: none;
     padding: 0;
-    margin-top: 3px;
-    background-color: transparent;
-    background-image: none;
-    margin-left: -12px
+    margin: 0 0 0 10px;
+    background: none;
   }
 
   .commentarea {
     > .usertext {
-      position: relative;
-      top: -110px;
-      margin-bottom: -90px;
       margin-top: -160px;
-      padding-top: 136px;
-      clear: left
+      padding-top: 165px;
     }
 
     .thing {
@@ -111,6 +102,7 @@ body.res {
 }
 
 .RESSubscriptionButton {
+  background: @royal-blue;
   display: inline-block;
   position: relative;
   z-index: 1;
@@ -120,10 +112,19 @@ body.res {
   text-transform: uppercase;
   text-align: center;
   cursor: pointer;
-  color: #fff !important;
-  border: 0 solid #ccc !important;
+  border: 0 solid #ccc;
   border-radius: 2px;
-  transition: .25s ease
+  transition: .25s ease;
+
+  &:hover {
+    background: #6687e7;
+    color: #fff;
+  }
+
+  &:active {
+    background: @endeavour;
+    color: #fff;
+  }
 }
 
 #RESShortcutsAdd,
