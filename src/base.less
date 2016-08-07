@@ -17,7 +17,7 @@ h2 {
 button {
   white-space: nowrap;
   background: @royal-blue;
-  border-radius: 4px;
+  border-radius: @default-border-radius;
   color: #fff;
   cursor: pointer;
   line-height: 2.16;
@@ -45,6 +45,18 @@ button {
 textarea {
   border: 1px solid rgba(0, 0, 0, 0.12);
   font-family: -apple-system, San Francisco Display, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+div.content {
+  margin: 85px 335px 10px @base-outer-margin;
+  font-size: 12px;
+  background: #fff;
+  border-radius: @default-border-radius;
+  box-shadow: @default-box-shadow;
+
+  @media (max-width: 905px) {
+    margin: 15px 345px 10px @base-outer-margin;
+  }
 }
 
 .choice.primary,
@@ -89,7 +101,7 @@ textarea {
 .markdownEditor .edit-btn:not(.btn-macro) {
   background-color: transparent !important;
   border: 1px solid #c6c6c6;
-  border-radius: 3px
+  border-radius: @default-border-radius;
 }
 
 .search-expando-button-label {
@@ -204,7 +216,7 @@ img.RESImage {
     border: 1px solid;
     color: #ac3939;
     padding: 0 2px;
-    border-radius: 3px;
+    border-radius: @default-border-radius;
   }
 }
 
@@ -565,7 +577,7 @@ ul#image-preview-list {
     font-size: 9px;
     color: #fff;
     border: none;
-    border-radius: 3px;
+    border-radius: @default-border-radius;
     background: @royal-blue;
 
     &:hover {
@@ -593,7 +605,7 @@ div.sitetable.nestedlisting {
   padding: 15px 20px;
   font-size: 12px;
   line-height: 1.5em;
-  border-radius: 4px;
+  border-radius: @default-border-radius;
 
   .title {
     color: #666
@@ -633,7 +645,7 @@ div.sitetable.nestedlisting {
     font-weight: 700;
     border: none;
     padding: 20px;
-    border-radius: 4px;
+    border-radius: @default-border-radius;
     text-align: center;
     color: #000;
     background-color: #fff;
@@ -844,25 +856,13 @@ body > .content .link .rank {
   display: none
 }
 
-div.content {
-  border-radius: @default-border-radius;
-  margin: 85px 335px 10px @base-outer-margin;
-  box-shadow: @default-box-shadow;
-  background-color: #fff;
-  font-size: 12px;
-
-  @media (max-width: 905px) {
-    margin: 15px 345px 10px @base-outer-margin;
-  }
-}
-
 .midcol-spacer {
   width: 40px;
   margin: 10px 0;
 }
 
 #searchexpando {
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 @default-border-radius @default-border-radius;
   text-align: center;
   width: 280px;
   background: rgba(0, 0, 0, .85);
@@ -929,7 +929,7 @@ div.content {
   border: none;
   letter-spacing: 0;
   font-size: 14px;
-  border-radius: 4px;
+  border-radius: @default-border-radius;
   padding: 3px;
   text-transform: uppercase;
   background: #444;

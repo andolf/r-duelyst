@@ -53,7 +53,7 @@
     .md {
       h3 a,
       h4 a {
-        border-radius: 4px;
+        border-radius: @default-border-radius;
         padding: 8px 0;
         color: #fff;
         font-weight: 700;
@@ -126,7 +126,7 @@
       margin: 0;
       font-size: 13px !important;
       background: #444;
-      border-radius: 5px 5px 0 0;
+      border-radius: @default-border-radius @default-border-radius 0 0;
 
       &:after {
         top: 100%;
@@ -147,7 +147,7 @@
 
       + ul {
         list-style-position: outside;
-        border-radius: 0 0 5px 5px;
+        border-radius: 0 0 @default-border-radius @default-border-radius;
         background: #efefef;
         border-top: 0;
         padding: 10px 10px 10px 26px;
@@ -271,7 +271,7 @@
     margin-left: -220px;
     width: 400px !important;
     border: none;
-    border-radius: 2px;
+    border-radius: @default-border-radius;
     box-shadow: 0 0 16px rgba(0, 0, 0, 0.64);
 
     &:before {
@@ -317,14 +317,14 @@
       background-color: transparent;
       color: @royal-blue;
       vertical-align: middle;
-      border-radius: 2px;
+      border-radius: @default-border-radius;
       border: 1px solid @royal-blue;
 
       &:hover {
         background-color: transparent;
         color: #009884;
         vertical-align: middle;
-        border-radius: 2px;
+        border-radius: @default-border-radius;
         border: 1px solid @endeavour;
       }
     }

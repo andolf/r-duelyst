@@ -65,7 +65,7 @@ body.res {
     }
 
     .comment a.expand:hover {
-      border-radius: 4px 0 0 4px
+      border-radius: @default-border-radius 0 0 @default-border-radius;
     }
   }
 
@@ -125,7 +125,7 @@ body.res {
   text-align: center;
   cursor: pointer;
   border: 0 solid #ccc;
-  border-radius: 2px;
+  border-radius: @default-border-radius;
   transition: .25s ease;
 
   &:hover {
@@ -154,7 +154,7 @@ body.res {
 #RESPrefsDropdown {
   background-color: rgba(0, 0, 0, .85) !important;
   border: none;
-  border-radius: 6px
+  border-radius: @default-border-radius;
 }
 
 #RESMainGearOverlay {
