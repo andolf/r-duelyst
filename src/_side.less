@@ -4,21 +4,22 @@
 @side-right-margin: @base-outer-margin;
 
 .side {
-  margin: 425px @side-right-margin 100px;
+  margin-top: 55px;
+  margin-right: @side-right-margin;
   background: none;
 
-  &:before {
-    content: "";
-    display: block;
-    background: url(%%biglogo%%) center no-repeat;
-    border-radius: @default-border-radius * 2;
-    box-shadow: @default-box-shadow;
-    width: 300px;
-    height: 300px;
-    position: absolute;
-    top: 370px;
-    right: @side-right-margin;
-  }
+  //&:before {
+  //  content: "";
+  //  display: block;
+  //  background: url(%%biglogo%%) center no-repeat;
+  //  border-radius: @default-border-radius * 2;
+  //  box-shadow: @default-box-shadow;
+  //  width: 300px;
+  //  height: 300px;
+  //  position: absolute;
+  //  top: 370px;
+  //  right: @side-right-margin;
+  //}
 
   .titlebox,
   .sidecontentbox {
@@ -156,6 +157,10 @@
         li {
           margin-bottom: 10px;
           font-size: 95%;
+
+          &:last-of-type {
+            margin-bottom: 0;
+          }
         }
       }
     }
@@ -224,7 +229,7 @@
       overflow: hidden;
       padding-left: 0;
       position: absolute;
-      top: 295px;
+      top: 245px;
       width: 300px;
       right: @side-right-margin;
       border-radius: @default-border-radius;
@@ -335,10 +340,10 @@
   }
 
   #search {
-    top: 260px;
-    position: absolute;
+    //top: 260px;
+    //position: absolute;
     z-index: 4;
-    right: @side-right-margin;
+    //right: @side-right-margin;
 
     input[type=text] {
       border-radius: @default-border-radius;
