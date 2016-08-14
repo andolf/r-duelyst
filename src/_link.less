@@ -1,9 +1,8 @@
 .link {
-  padding: @base-margin;
-  display: flex;
+  //padding: @base-margin;
+  //display: flex;
   background: #fff;
-  border-radius: 0 @default-border-radius @default-border-radius 0;
-  box-shadow: @default-box-shadow;
+  margin-bottom: 1px;
 
   .tagline {
     color: #666;
@@ -51,7 +50,7 @@
   }
 
   .entry {
-    flex: 1;
+    padding: 10px;
 
     .buttons {
       .may-blank {
@@ -112,11 +111,11 @@
   }
 
   .thumbnail {
-    border-radius: @default-border-radius;
-    margin: 0 15px;
+    margin: 10px 5px 10px 0;
+    //margin: 0 15px;
     width: 75px;
-    text-align: center;
-    align-self: center;
+    //text-align: center;
+    //align-self: center;
 
     &.self,
     &.default,
@@ -126,7 +125,7 @@
       background-repeat: no-repeat;
       height: 50px;
       padding: 10px 0;
-      border-radius: @default-border-radius * 4;
+      border-radius: @default-border-radius * 2;
     }
 
     &.self {
@@ -149,6 +148,8 @@
   }
 
   .midcol {
+    margin: 10px 15px;
+
     .score {
       margin: 4px 0;
     }

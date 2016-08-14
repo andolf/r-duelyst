@@ -29,6 +29,70 @@
     overflow: visible;
   }
 
+  .md blockquote,
+  .md ul,
+  .thing .md ol,
+  .thing .md table {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 20px 10px 10px
+  }
+
+  .md blockquote {
+    padding: 10px;
+    border-left: solid 2px #666;
+    background-color: #f2f2f2;
+    color: #2f2f2f;
+    line-height: 20px;
+    font-size: 14px
+  }
+
+  .md ul,
+  .thing .md ol {
+    border-right: solid 1px #eaeaea;
+    border-left: solid 1px #eaeaea;
+    border-top: solid 1px #eaeaea;
+    line-height: 20px;
+    font-size: 14px;
+    padding: 0
+  }
+
+  .md ul li,
+  .thing .md ol li {
+    border-bottom: solid 1px #eaeaea;
+    background-color: #f8f8f8;
+    padding: 5px
+  }
+
+  .md ul:nth-child(odd),
+  .thing .md ol li:nth-child(odd) {
+    background-color: #f2f2f2
+  }
+
+  .md ul {
+    list-style: none
+  }
+
+  .thing .md ol {
+    list-style-position: inside
+  }
+
+  .thing .md table thead tr th {
+    font-weight: 400;
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #fff;
+    border: none
+  }
+
+  .thing .md table thead tr th {
+    border-bottom: solid 1px #eaeaea
+  }
+
+  .thing .md table tbody tr td {
+    padding: 10px 20px;
+    border: none
+  }
+
   .thing {
     position: relative;
     border-radius: @default-border-radius;

@@ -2,11 +2,13 @@
 
 @side-base-margin: @base-margin;
 @side-right-margin: @base-outer-margin;
+@side-width: 300px;
 
 .side {
   margin-top: 55px;
   margin-right: @side-right-margin;
   background: none;
+  width: @side-width;
 
   //&:before {
   //  content: "";
@@ -178,47 +180,39 @@
     }
 
     > ol:last-of-type {
-      display: flex;
-      align-items: center;
-      padding: @base-margin @base-margin * 2;
       margin: 0;
+      padding: 0;
       position: absolute;
-      top: 260px;
+      top: 35px;
       left: @base-outer-margin;
-      width: calc(~"100% - 390px");
-      background: @endeavour;
-      border-radius: @default-border-radius;
-
-      @media (max-width: 905px) {
-        display: none;
-      }
-
-      @media (max-width: 1280px) {
-        padding-top: 0;
-        padding-bottom: 0;
-      }
+      //width: calc(~"100% - 390px");
+      //background: @endeavour;
+      //border-radius: @default-border-radius;
+      z-index: @z-index-notice;
 
       li {
         list-style: none;
-
-        &:first-child {
-          font-size: 20px;
-          color: #fff;
-          text-transform: uppercase;
-
-          strong {
-            text-shadow: 0 0 5px rgba(255, 199, 1, .25);
-          }
-        }
+        margin-bottom: 5px;
 
         a {
-          display: block;
-          padding: 12px 8px;
-          margin-left: 12px;
-          color: #fff;
-          text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
-          font-size: 14px;
-          text-decoration: underline;
+          display: inline-block;
+          padding: 5px 5px 5px 0;
+          color: @base-font-color;
+          border: 1px solid @endeavour;
+          background: @default-transparent-white;
+
+          &:before {
+            content: "NOTICE";
+            margin: 0 5px 0 0;
+            padding: 5px;
+            background: @endeavour;
+            color: #fff;
+            font-weight: bold;
+          }
+
+          &:hover {
+            opacity: 0.85;
+          }
         }
       }
     }
@@ -229,12 +223,11 @@
       overflow: hidden;
       padding-left: 0;
       position: absolute;
-      top: 245px;
-      width: 300px;
+      top: 242px;
+      width: @side-width;
       right: @side-right-margin;
       border-radius: @default-border-radius;
       text-align: center;
-      font-size: 16px;
 
       &:hover {
         height: auto;
