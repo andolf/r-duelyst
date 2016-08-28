@@ -1,8 +1,7 @@
 .wiki-page {
   div.content {
-    border: 0;
-    background: none;
-    margin-right: 335px;
+    .template-content-margin;
+    margin-top: 7px;
   }
 
   .pageactions,
@@ -11,7 +10,7 @@
     border-radius: 5px;
     font-size: 12px;
     text-transform: uppercase;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.08);
+    box-shadow: @default-box-shadow;
   }
 
   .wikititle {
@@ -25,7 +24,7 @@
     padding: 16px;
     border-radius: @default-border-radius;
     background-color: #fff;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.08);
+    box-shadow: @default-box-shadow;
 
     .wiki {
       > .toc > ul {

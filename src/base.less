@@ -1,5 +1,5 @@
 body {
-  background: #e6e6e8;
+  background: url(%%denizens-banner%%) #e6e6e8 left top no-repeat;
   //font-family: -apple-system, "San Francisco Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
@@ -582,7 +582,7 @@ div.sitetable.nestedlisting {
 .roundfield {
   font-weight: 700;
   text-transform: uppercase;
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.08);
+  box-shadow: @default-box-shadow;
   background: #fff;
   width: auto;
   padding: 15px 20px;
@@ -632,7 +632,7 @@ div.sitetable.nestedlisting {
     text-align: center;
     color: #000;
     background-color: #fff;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.08);
+    box-shadow: @default-box-shadow;
   }
 }
 
@@ -919,7 +919,7 @@ body > .content .link .rank {
   }
 
   &:active {
-    background: #222;
+    background: @base-font-color;
   }
 
   a,
@@ -955,17 +955,6 @@ body > .content .link .rank {
   background-color: #ff9400;
   position: relative;
   top: -2px
-}
-
-.next-suggestions,
-.nextprev {
-  margin: 10px !important;
-  padding: 10px !important;
-  display: block;
-
-  a {
-    font-weight: 400 !important
-  }
 }
 
 .content {
@@ -1092,10 +1081,6 @@ form#image-upload.image-upload {
   margin-bottom: 20px;
   color: #666
 }
-
-//.debuginfo {
-//  background-color: #222;
-//}
 
 .col {
   border: none !important

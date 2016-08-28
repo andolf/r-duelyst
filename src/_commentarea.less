@@ -1,4 +1,6 @@
 .commentarea {
+  .template-content-margin;
+
   .comment {
     .flat-list li a {
       &[onclick*=reply] {
@@ -99,7 +101,7 @@
     background-color: #fff;
     margin: 0 0 8px;
     padding: 16px 16px 1px;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.08);
+    box-shadow: @default-box-shadow;
 
     &.collapsed {
       padding: 10px 15px;

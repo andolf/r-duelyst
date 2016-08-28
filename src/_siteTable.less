@@ -1,6 +1,9 @@
+@content-side-spacing: @base-outer-margin;
+@content-right-margin: @side-width + @side-right-margin + @content-side-spacing;
+
 #siteTable {
+  .template-content-margin;
   box-shadow: @default-box-shadow;
-  margin: 85px 335px 0 @base-outer-margin;
 
   .thing .md {
     blockquote,
@@ -66,5 +69,10 @@
         }
       }
     }
+  }
+
+  .nav-buttons {
+    padding: @base-margin;
+    background: #fff;
   }
 }
