@@ -8,12 +8,16 @@ body.res {
   #header-bottom-right #mail.havemail {
     top: -1px !important
   }
+  .side .RESshortcutside.remove:hover {
+    background: #6687e7;
+  }
 }
 
 .res {
   h1.redditname {
     overflow: visible;
   }
+
   .titlebox .fancy-toggle-button {
     display: inline-block;
     margin-top: 10px;
@@ -22,12 +26,21 @@ body.res {
     width: auto
   }
 
-  #RESShortcutsViewport {
-    margin-right: 70px
+  .fancy-toggle-button {
+    .add,
+    .remove {
+      font-size: 9px;
+      border: none;
+      text-transform: uppercase;
+      transition: 0.2s;
+      background-image: none;
+      padding: 5px 8px;
+      border-radius: @default-border-radius;
+    }
   }
 
-  .comments-page .side {
-    margin: 275px 16px 100px
+  #RESShortcutsViewport {
+    margin-right: 70px
   }
 
   .content .RESBigEditorPop {
@@ -48,7 +61,7 @@ body.res {
     }
 
     .comment a.expand:hover {
-      border-radius: 4px 0 0 4px
+      border-radius: @default-border-radius 0 0 @default-border-radius;
     }
   }
 
@@ -108,7 +121,7 @@ body.res {
   text-align: center;
   cursor: pointer;
   border: 0 solid #ccc;
-  border-radius: 2px;
+  border-radius: @default-border-radius;
   transition: .25s ease;
 
   &:hover {
@@ -137,7 +150,7 @@ body.res {
 #RESPrefsDropdown {
   background-color: rgba(0, 0, 0, .85) !important;
   border: none;
-  border-radius: 6px
+  border-radius: @default-border-radius;
 }
 
 #RESMainGearOverlay {
@@ -160,7 +173,42 @@ body.res {
   }
 }
 
+.RESshortcutside,
+.RESDashboardToggle {
+  font-size: 9px;
+  border: none;
+  text-transform: uppercase;
+  transition: 0.2s;
+  padding: 5px 8px;
+  border-radius: @default-border-radius;
+  background: #80d04b;
+
+  &:hover {
+    background: #a6de81;
+  }
+
+  &:active {
+    background: #599134;
+  }
+
+  &.remove {
+    background: @royal-blue;
+
+    &:hover {
+      background: #6687e7;
+    }
+
+    &:active {
+      background: @endeavour;
+    }
+  }
+}
+
 div#RESStyleSheetTipPane,
 div#RESStyleSheetTipPane-header {
   border: none !important
+}
+
+.RESDialogSmall.livePreview {
+  margin: 15px 0;
 }

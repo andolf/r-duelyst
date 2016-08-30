@@ -1,0 +1,40 @@
+.flairselector {
+  .drop-choices.active {
+    visibility: visible !important;
+    background-color: #fff;
+    border: 1px solid #d8d8d8;
+  }
+
+  h2 {
+    padding: 5px;
+    background-color: #fff;
+    border-bottom: 1px solid #e5e5e5;
+  }
+
+  ul {
+    overflow: visible;
+  }
+
+  li {
+    padding: 3px 0;
+    width: 182px;
+
+    &:hover {
+      background-color: #efefef;
+    }
+
+    &.selected {
+      background-color: #e5ebf8;
+      border: none;
+    }
+  }
+
+  form {
+    border-top: 1px solid #e5e5e5;
+
+    button {
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+  }
+}

@@ -1,3 +1,7 @@
+@dark-bg: #232321;
+@dark-content-bg: #303030;
+@dark-input-bg: #414140;
+
 html[lang=dm] {
   &::-moz-selection {
     background: #666;
@@ -5,11 +9,19 @@ html[lang=dm] {
   }
 
   body {
-    background: #222
+    background: @dark-bg;
   }
 
-  .linkinfo .shortlink input {
-    background: #444
+  .linkinfo {
+    background-color: @dark-content-bg;
+
+    .shortlink input {
+      background: @dark-input-bg;
+    }
+  }
+
+  .link {
+    border-bottom-color: @dark-input-bg;
   }
 
   #siteTable .thing .md blockquote,
@@ -123,20 +135,8 @@ html[lang=dm] {
     }
   }
 
-  .stickied a.title:link,
-  body:not(.comments-page) .stickied .entry .buttons li a,
-  body:not(.comments-page) .stickied .entry .buttons li + li,
-  body:not(.comments-page) .stickied .link .tagline,
-  body:not(.comments-page) .stickied .md p,
-  body:not(.comments-page) .stickied .tagline,
-  body:not(.comments-page) .stickied a.title:visited {
-    color: @olive !important;
-  }
-
   .over18 a.title:link,
   .over18 a.title:visited,
-  body:not(.comments-page) .over18 .entry .buttons li a,
-  body:not(.comments-page) .over18 .entry .buttons li + li,
   body:not(.comments-page) .over18 .link .tagline,
   body:not(.comments-page) .over18 .md p,
   body:not(.comments-page) .over18 .tagline {
@@ -145,7 +145,6 @@ html[lang=dm] {
 
   div.content {
     background-color: #333;
-    border: none
   }
 
   .entry .buttons li a {
@@ -159,10 +158,6 @@ html[lang=dm] {
     color: #ababab !important
   }
 
-  .thing .title {
-    color: #fff !important
-  }
-
   a.comments::after {
     color: #ccc !important
   }
@@ -172,23 +167,31 @@ html[lang=dm] {
   }
 
   .side {
-    border: #4c4c4c;
-    background: #333;
-
     .usertext-body {
       background-image: none;
       padding: 0
     }
 
-    .titlebox .md h3 a {
-      background: #444;
+    .titlebox,
+    .sidecontentbox {
+      background: @dark-content-bg;
+    }
 
-      &:hover {
-        background: #666
+    .titlebox {
+      form.toggle {
+        background: none;
       }
 
-      &:active {
-        background: #222
+      .md h3 a {
+        background: #444;
+
+        &:hover {
+          background: #666
+        }
+
+        &:active {
+          background: #222
+        }
       }
     }
 
@@ -205,10 +208,6 @@ html[lang=dm] {
     .sidecontentbox a {
       color: #ccc
     }
-  }
-
-  .titlebox form.toggle {
-    background: none;
   }
 
   .titlebox form.toggle,
@@ -247,9 +246,8 @@ html[lang=dm] {
     color: #fff !important
   }
 
-  .md hr,
-  body:not(.comments-page) div.content .entry {
-    border-bottom: 1px solid #666
+  .md hr {
+    border-bottom: 1px solid #666;
   }
 
   .content .md a {
@@ -358,7 +356,6 @@ html[lang=dm] {
   .formtabs-content .infobar,
   .generic-table,
   .link .domain a:hover,
-  .link .entry .buttons li a:hover,
   .link .tagline,
   .loadFlat:hover,
   .md del,
@@ -431,9 +428,9 @@ html[lang=dm] {
   }
 
   body:not(.search-page) #search input[type=text] {
-    background: #222 !important;
-    border: 1px solid #444;
-    color: #fff
+    background: #444;
+    border: 1px solid #666;
+    color: #fff;
   }
 
   .submit-page .content a {
@@ -443,10 +440,6 @@ html[lang=dm] {
   .gold-accent.comment-visits-box,
   .side .titlebox {
     color: #fff
-  }
-
-  .linkinfo {
-    background-color: #303030
   }
 
   .debuginfo,
@@ -517,7 +510,7 @@ html[lang=dm] {
   .markdownEditor .edit-btn:not(.btn-macro) {
     background-color: #ccc !important;
     border: none !important;
-    border-radius: 4px !important
+    border-radius: @default-border-radius;
   }
 
   .expando-button,

@@ -1,0 +1,78 @@
+@content-side-spacing: @base-outer-margin;
+@content-right-margin: @side-width + @side-right-margin + @content-side-spacing;
+
+#siteTable {
+  .template-content-margin;
+  box-shadow: @default-box-shadow;
+
+  .thing .md {
+    blockquote,
+    ol,
+    table,
+    ul {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 20px 10px 10px;
+    }
+
+    blockquote {
+      padding: 10px;
+      border-left: solid 2px #666;
+      background-color: #f2f2f2;
+      color: #2f2f2f;
+      line-height: 20px;
+      font-size: 14px
+    }
+
+    ol,
+    ul {
+      border-right: solid 1px #eaeaea;
+      border-left: solid 1px #eaeaea;
+      border-top: solid 1px #eaeaea;
+      line-height: 20px;
+      font-size: 14px;
+      padding: 0;
+
+      li {
+        border-bottom: solid 1px #eaeaea;
+        background-color: #f8f8f8;
+        padding: 5px;
+
+        &:nth-child(odd) {
+          background-color: #f2f2f2;
+        }
+      }
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    ol {
+      list-style-position: inside
+    }
+
+    table {
+      thead tr th {
+        font-weight: 400;
+        padding: 10px 20px;
+        font-size: 14px;
+        color: #fff;
+        border: none
+      }
+
+      tbody tr {
+        border-bottom: solid 1px #eaeaea;
+
+        td {
+          padding: 10px 20px;
+          border: none;
+        }
+      }
+    }
+  }
+
+  .nav-buttons {
+    padding: @base-margin;
+    background: #fff;
+  }
+}

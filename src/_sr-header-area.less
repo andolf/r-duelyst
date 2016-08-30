@@ -1,7 +1,8 @@
 // Subreddit navigation at top
 
 #sr-header-area {
-  background-color: rgba(0, 0, 0, 0.5);
+  background: linear-gradient(@tab-menu-gradient-start, @tab-menu-gradient-end);
+  opacity: @tab-menu-opacity;
   border: none;
   width: 100%;
   z-index: 9999;
@@ -21,7 +22,7 @@
   }
 
   #sr-more-link {
-    background: rgba(0, 0, 0, 0.5);
+    background: @default-transparent-black;
     color: #fff;
   }
 }
@@ -46,7 +47,7 @@
     background: rgba(0, 0, 0, .85);
     border: none;
     padding: 5px;
-    border-radius: 0 0 4px 4px;
+    border-radius: 0 0 @default-border-radius @default-border-radius;
     font-weight: 700;
     margin-top: 2px;
     color: #fff !important;

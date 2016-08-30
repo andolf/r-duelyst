@@ -1,6 +1,6 @@
 body {
-  background: #e6e6e8;
-  font-family: -apple-system, San Francisco Display, Helvetica Neue, Helvetica, Arial, sans-serif;
+  background: url(%%main-banner%%) #e6e6e8 left top no-repeat;
+  //font-family: -apple-system, "San Francisco Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 a {
@@ -17,7 +17,7 @@ h2 {
 button {
   white-space: nowrap;
   background: @royal-blue;
-  border-radius: 4px;
+  border-radius: @default-border-radius;
   color: #fff;
   cursor: pointer;
   line-height: 2.16;
@@ -34,7 +34,7 @@ button {
   }
 
   &:hover {
-    background: #6687e7;
+    background: @cornflower-blue;
   }
 
   &:active {
@@ -55,17 +55,6 @@ textarea {
 #hsts_pixel,
 .listing-page .tabmenu li a[href*="/gilded"] {
   display: none
-}
-
-.usertext {
-  .help-toggle,
-  a.reddiquette {
-    text-transform: uppercase;
-
-    &:hover {
-      font-weight: 700;
-    }
-  }
 }
 
 .deepthread {
@@ -89,7 +78,7 @@ textarea {
 .markdownEditor .edit-btn:not(.btn-macro) {
   background-color: transparent !important;
   border: 1px solid #c6c6c6;
-  border-radius: 3px
+  border-radius: @default-border-radius;
 }
 
 .search-expando-button-label {
@@ -174,10 +163,6 @@ textarea {
   border: none
 }
 
-.icon-menu a {
-  background: 0 0
-}
-
 a.madeVisible {
   margin-top: 20px
 }
@@ -208,7 +193,7 @@ img.RESImage {
     border: 1px solid;
     color: #ac3939;
     padding: 0 2px;
-    border-radius: 3px;
+    border-radius: @default-border-radius;
   }
 }
 
@@ -290,15 +275,6 @@ ul.report-reasons {
   overflow: visible;
 }
 
-.flat-list {
-  list-style-type: none;
-  display: inline;
-
-  li a.gold {
-    color: gold
-  }
-}
-
 .tabpane-content {
   border: none
 }
@@ -368,11 +344,6 @@ ul.report-reasons {
   margin-top: 35px
 }
 
-.sheets {
-  margin-right: 20px;
-  margin-bottom: 20px
-}
-
 #preview-table {
   padding-left: 20px;
 
@@ -431,15 +402,9 @@ ul#image-preview-list {
   display: none
 }
 
-.arrow.down,
-.arrow.downmod,
-.arrow.up,
-.arrow.upmod,
-.expando-button,
-.res #header-bottom-right .gearIcon,
-.stickied .thumbnail.self {
-  background: url(%%spritesheet%%) !important;
-  background-size: 50px 502px !important
+.res #header-bottom-right .gearIcon {
+  background: url(%%spritesheet%%);
+  background-size: 50px 502px;
 }
 
 #mail {
@@ -472,46 +437,6 @@ ul#image-preview-list {
   vertical-align: middle !important
 }
 
-.stickied .thumbnail.self {
-  background-position: 0 -265px !important;
-  width: 75px;
-  height: 50px;
-  background-size: 75px 753px !important;
-}
-
-.thumbnail {
-  border-radius: 5px;
-  margin-right: 15px !important;
-  position: relative;
-  top: 33px;
-  transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
-
-  &.self,
-  &.default,
-  &.nsfw {
-    background: url(%%spritesheet%%) !important;
-    width: 75px;
-    height: 50px;
-    background-size: 75px 753px !important;
-    background-repeat: no-repeat !important;
-    padding: 10px 0;
-    border-radius: 15px;
-  }
-
-  &.self {
-    background-position: 0 -345px !important;
-  }
-
-  &.default {
-    background-position: 0 -426px !important;
-  }
-
-  &.nsfw {
-    background-position: 0 -506px !important;
-  }
-}
-
 #modmail.havemail,
 #modmail.nohavemail {
   margin-bottom: 0 !important
@@ -526,61 +451,6 @@ ul#image-preview-list {
   width: 20px !important;
   height: 20px !important;
   top: 0 !important
-}
-
-.arrow {
-  &.down,
-  &.downmod,
-  &.up,
-  &.upmod {
-    background-size: 37.5px 376.5px !important;
-    height: 20px;
-    width: 20px;
-    border-radius: 20px;
-    transition: 0.2s;
-  }
-
-  &.up {
-    background-position: 3px -685px !important
-  }
-
-  &.down {
-    background-position: 3px -699px !important
-  }
-
-  &.upmod {
-    background-position: 2.3px -666px !important;
-    background-color: #ff4500 !important;
-    margin-bottom: 5px;
-  }
-
-  &.downmod {
-    background-position: 3px -716px !important;
-    background-color: #2b9bdb !important;
-    margin-top: 5px;
-  }
-}
-
-.expando-button {
-  &,
-  &.expanded,
-  &.expanded:hover,
-  &:hover {
-    background-position: 0 -482px !important;
-    width: 20px !important;
-    height: 20px !important;
-    transition: 150ms
-  }
-
-  &.expanded {
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg)
-  }
-
-  &.expanded:hover,
-  &:hover {
-    opacity: .5
-  }
 }
 
 .separator {
@@ -611,10 +481,6 @@ ul#image-preview-list {
   text-transform: none;
 }
 
-.RESDialogSmall.livePreview {
-  margin: 15px 0;
-}
-
 .new-comment .usertext-body {
   border: none !important;
 
@@ -628,35 +494,35 @@ ul#image-preview-list {
   border: 0
 }
 
-#moresearchinfo {
-  border: none;
-  background: rgba(0, 0, 0, .9);
-  border-radius: 0 0 10px 10px;
-  line-height: 1.7em;
-  padding-left: 20px;
-  padding-right: 10px;
-  padding-bottom: 10px;
-  text-align: left
-}
+//#moresearchinfo {
+//  border: none;
+//  background: rgba(0, 0, 0, .9);
+//  border-radius: 0 0 10px 10px;
+//  line-height: 1.7em;
+//  padding-left: 20px;
+//  padding-right: 10px;
+//  padding-bottom: 10px;
+//  text-align: left
+//}
 
 .searchfacet a {
   color: #434343 !important
 }
 
-#previoussearch label {
-  font-size: 12px;
-  text-transform: uppercase;
-  display: block;
-  margin: 5px 0;
-  position: absolute;
-  top: 95px;
-  font-weight: 700
-}
+//#previoussearch label {
+//  font-size: 12px;
+//  text-transform: uppercase;
+//  display: block;
+//  margin: 5px 0;
+//  position: absolute;
+//  top: 95px;
+//  font-weight: 700
+//}
 
-.search-page #search input[type=submit],
-.search-page #search input[type=submit]:hover,
-.search-page .raisedbox h4,
-.search-summary,
+//.search-page #search input[type=submit],
+//.search-page #search input[type=submit]:hover,
+//.search-page .raisedbox h4,
+//.search-summary,
 .searchpane-toggle-hide {
   display: none
 }
@@ -683,11 +549,11 @@ ul#image-preview-list {
     font-size: 9px;
     color: #fff;
     border: none;
-    border-radius: 3px;
+    border-radius: @default-border-radius;
     background: @royal-blue;
 
     &:hover {
-      background: #6687e7;
+      background: @cornflower-blue;
     }
 
     &:active {
@@ -705,13 +571,13 @@ div.sitetable.nestedlisting {
 .roundfield {
   font-weight: 700;
   text-transform: uppercase;
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.08);
+  box-shadow: @default-box-shadow;
   background: #fff;
   width: auto;
   padding: 15px 20px;
   font-size: 12px;
   line-height: 1.5em;
-  border-radius: 4px;
+  border-radius: @default-border-radius;
 
   .title {
     color: #666
@@ -751,11 +617,11 @@ div.sitetable.nestedlisting {
     font-weight: 700;
     border: none;
     padding: 20px;
-    border-radius: 4px;
+    border-radius: @default-border-radius;
     text-align: center;
     color: #000;
     background-color: #fff;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.08);
+    box-shadow: @default-box-shadow;
   }
 }
 
@@ -763,17 +629,6 @@ a.author.admin:after,
 a.author.admin:before,
 a.author.moderator:after {
   content: ""
-}
-
-body:not(.comments-page) { // TODO: Subject for removal in redesign
-  div.content .entry {
-    border-bottom: 1px solid #e1e1e1;
-    padding: 12px
-  }
-
-  .thumbnail {
-    margin: 10px 5px 10px 0 !important
-  }
 }
 
 .commentarea .entry.RES-keyNav-activeElement div.noncollapsed,
@@ -820,16 +675,45 @@ body:not(.comments-page) { // TODO: Subject for removal in redesign
   }
 }
 
-div.score {
-  font-weight: 500;
-  color: #999;
-}
-
 .md {
   h1,
   p,
   ul {
     line-height: 20px;
+  }
+}
+
+.arrow {
+  &.down,
+  &.downmod,
+  &.up,
+  &.upmod {
+    background-image: url(%%spritesheet%%);
+    background-size: 38px 382px;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    transition: @default-transition-time;
+  }
+
+  &.up {
+    background-position: 2px -312px;
+  }
+
+  &.down {
+    background-position: 2px -328px;
+  }
+
+  &.upmod {
+    background-position: 2px -294px;
+    background-color: @theme-primary;
+    margin-bottom: 5px;
+  }
+
+  &.downmod {
+    background-position: 2px -346px;
+    background-color: @theme-secondary;
+    margin-top: 5px;
   }
 }
 
@@ -840,34 +724,6 @@ span.totalvotes {
   font-weight: 500 !important;
   color: #444;
   padding: 0 16px
-}
-
-.comment {
-  .flat-list li a {
-    &:hover {
-      font-weight: 700;
-      text-decoration: none;
-      transition: 0.2s;
-    }
-
-    &[onclick*=reply] {
-      font-weight: 700;
-    }
-  }
-
-  .collapsed {
-    padding-left: 24px;
-    padding-bottom: 10px;
-    padding-top: 2px;
-  }
-
-  &.noncollapsed .midcol {
-    margin-left: 20px
-  }
-
-  .midcol {
-    width: 20px !important;
-  }
 }
 
 @keyframes godown {
@@ -922,7 +778,6 @@ span.totalvotes {
   }
 }
 
-.morelink .nub,
 .sidebox .spacer,
 .sidebox .spacer a,
 .sidebox.create,
@@ -930,24 +785,15 @@ span.totalvotes {
   display: none
 }
 
-.res .titlebox > div:first-of-type,
-.titlebox form.toggle {
-  font-weight: 400;
-  text-align: center;
-  padding-top: 5px;
-  padding-bottom: 5px
-}
-
 .fancy-toggle-button {
   .add,
   .remove {
     padding: 5px 20px;
     border-radius: 20px;
-    font-size: 9px !important;
-    border: none !important;
+    font-size: 9px;
+    border: none;
     text-transform: uppercase;
-    transition: .2s;
-    background-image: none !important;
+    transition: 0.2s;
   }
 
   .add {
@@ -975,82 +821,19 @@ span.totalvotes {
   }
 }
 
-.RESDashboardToggle,
-.RESDashboardToggle.remove,
-.RESshortcutside,
-.RESshortcutside.remove,
-.res .fancy-toggle-button .add,
-.res .fancy-toggle-button .remove {
-  font-size: 9px !important;
-  border: none !important;
-  text-transform: uppercase;
-  transition: .2s;
-  background-image: none !important
-}
-
-.RESDashboardToggle,
-.RESDashboardToggle.remove,
-.RESshortcutside,
-.RESshortcutside.remove,
-.res .fancy-toggle-button .add,
-.res .fancy-toggle-button .remove {
-  padding: 5px 8px !important;
-  border-radius: 3px !important
-}
-
 .rank-spacer,
 .users-online:before,
 body > .content .link .rank {
   display: none
 }
 
-.entry .buttons {
-  .may-blank {
-    font-weight: 700;
-    color: @royal-blue;
-  }
-
-  li {
-    a,
-    + li {
-      font-weight: 400;
-      color: #666;
-    }
-  }
-}
-
-body:not(.submit-page) .tabmenu::after { // TODO: Subject of removal
-  display: none;
-}
-
-.titlebox .users-online .number:before {
-  content: ""
-}
-
-div.content {
-  border-radius: 4px;
-  margin: 85px 335px 10px 16px;
-  border: 1px solid #e1e1e1;
-  background-color: #fff;
-  font-size: 12px;
-
-  @media (max-width: 905px) {
-    margin: 15px 335px 10px 16px;
-  }
-}
-
-.midcol-spacer,
-body > .content .link .midcol {
-  width: 40px !important
-}
-
-.midcol-spacer,
-body:not(.comments-page) > .content .link .midcol {
-  margin: 10px 0
+.midcol-spacer {
+  width: 40px;
+  margin: 10px 0;
 }
 
 #searchexpando {
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 @default-border-radius @default-border-radius;
   text-align: center;
   width: 280px;
   background: rgba(0, 0, 0, .85);
@@ -1063,32 +846,6 @@ body:not(.comments-page) > .content .link .midcol {
   font-size: 11px;
   line-height: 2.5em;
   height: auto
-}
-
-body:not(.search-page) { // TODO: Subject of removal
-  #search input[type=text] {
-    border-radius: 6px;
-    padding: 9px;
-    border: 1px solid #e1e1e1;
-    text-align: center;
-    transition: 0.3s;
-
-    &:hover {
-      border: 1px solid #a0a0a0;
-    }
-
-    &:focus {
-      border-color: #aaa;
-      text-align: left;
-      outline: 0;
-      padding-left: 6px;
-      animation-name: search;
-      animation-duration: 0.4s;
-      animation-timing-function: ease;
-      animation-iteration-count: 1;
-      animation-play-state: running;
-    }
-  }
 }
 
 @-webkit-keyframes search {
@@ -1140,31 +897,8 @@ body:not(.search-page) { // TODO: Subject of removal
 }
 
 .morelink {
-  border: none;
-  letter-spacing: 0;
-  font-size: 14px;
-  border-radius: 4px;
-  padding: 3px;
-  text-transform: uppercase;
-  background: #444;
-
-  &:hover {
-    background: #1c4aa7;
-    background: -webkit-linear-gradient(#441f45, #364282);
-    background: -o-linear-gradient(#441f45, #364282);
-    background: -moz-linear-gradient(#441f45, #364282);
-    background: linear-gradient(#441f45, #364282);
-  }
-
-  &:active {
-    background: #222;
-  }
-
-  a,
-  a:hover,
-  a:visited {
-    color: #fff;
-  }
+  .default-button;
+  padding: 5px;
 
   .nub {
     display: none;
@@ -1190,61 +924,12 @@ body:not(.search-page) { // TODO: Subject of removal
 
 .message-count {
   left: 2px;
-  background-color: #ff9400;
+  background-color: @theme-primary;
   position: relative;
   top: -2px
 }
 
-.next-suggestions,
-.nextprev {
-  margin: 10px !important;
-  padding: 10px !important;
-  display: block;
-
-  a {
-    font-weight: 400 !important
-  }
-}
-
-.score.unvoted {
-  color: #666
-}
-
-div.midcol.dislikes,
-div.midcol.likes,
-div.midcol.unvoted,
-div.reddit-entry {
-  padding: 0 10px
-}
-
-div.leavemoderator {
-  margin-left: 18px;
-  background: 0 0
-}
-
-.RESDashboardToggle,
-.RESshortcutside {
-  background: #80d04b
-}
-
-.RESDashboardToggle:hover,
-body.res .RESshortcutside:hover {
-  background: #a6de81
-}
-
-.RESDashboardToggle:active,
-body.res .RESshortcutside:active {
-  background: #599134
-}
-
-.gadget .midcol {
-  width: 20px;
-}
-
 .content {
-  margin: 96px 16px 0;
-  padding: 0;
-
   .entry .buttons li.reported-stamp,
   .over18 .entry .buttons li.reported-stamp,
   .stickied .entry .buttons li.reported-stamp {
@@ -1294,52 +979,9 @@ body.res .RESshortcutside:active {
   }
 }
 
-.footer .flat-vert .title,
-.footer .flat-vert li a,
 form#image-upload.image-upload {
   text-transform: uppercase;
   font-weight: 700
-}
-
-.flairselector {
-  .drop-choices.active {
-    visibility: visible !important;
-    background-color: #fff;
-    border: 1px solid #d8d8d8;
-  }
-
-  h2 {
-    padding: 5px;
-    background-color: #fff;
-    border-bottom: 1px solid #e5e5e5;
-  }
-
-  ul {
-    overflow: visible;
-  }
-
-  li {
-    padding: 3px 0;
-    width: 182px;
-
-    &:hover {
-      background-color: #efefef;
-    }
-
-    &.selected {
-      background-color: #e5ebf8;
-      border: none;
-    }
-  }
-
-  form {
-    border-top: 1px solid #e5e5e5;
-
-    button {
-      text-transform: uppercase;
-      font-weight: 700;
-    }
-  }
 }
 
 .flairoptionpane {
@@ -1382,28 +1024,14 @@ form#image-upload.image-upload {
   }
 }
 
-.stickied .thumbnail.self {
-  background-repeat: no-repeat !important;
-  padding: 10px 0;
-  border-radius: 15px
-}
-
 .stickied a.title:link,
-.stickied a.title:visited,
-body:not(.comments-page) .stickied .entry .buttons li a,
-body:not(.comments-page) .stickied .entry .buttons li + li,
-body:not(.comments-page) .stickied .link .tagline,
-body:not(.comments-page) .stickied .tagline {
-  color: #2b8b27 !important
+.stickied a.title:visited {
+  color: #2b8b27;
 }
 
 .over18 a.title:link,
-.over18 a.title:visited,
-body:not(.comments-page) .over18 .entry .buttons li a,
-body:not(.comments-page) .over18 .entry .buttons li + li,
-body:not(.comments-page) .over18 .link .tagline,
-body:not(.comments-page) .over18 .tagline {
-  color: #d10023 !important
+.over18 a.title:visited {
+  color: #d10023;
 }
 
 li.searchfacet {
@@ -1417,12 +1045,6 @@ li.searchfacet {
   font-weight: 700;
 }
 
-.pretty-form {
-  font-size: larger;
-  margin-left: 25px;
-  padding: 20px 0;
-}
-
 form#image-upload.image-upload {
   margin-left: 25px;
   padding: 9px;
@@ -1432,59 +1054,12 @@ form#image-upload.image-upload {
   color: #666
 }
 
-.debuginfo {
-  background-color: #222;
-}
-
-.footer-parent {
-  background-color: #222;
-  font-size: 14px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  margin-top: 300px
-}
-
-.footer {
-  border: 0;
-
-  .col {
-    margin: 10px 0 30px
-  }
-
-  .flat-vert {
-    li a {
-      font-size: 11px;
-      color: #999 !important;
-
-      &:hover {
-        text-decoration: none !important;
-        color: #fff !important
-      }
-    }
-
-    .title {
-      font-size: 16px;
-      transition: color .25s ease, background-color .25s ease;
-      color: #fff
-    }
-  }
-}
-
 .col {
   border: none !important
 }
 
 .bottommenu {
-  font-size: 10px;
-  color: #fff !important;
-  border: none !important;
-  text-transform: uppercase;
-  font-weight: 700;
-
-  a {
-    text-decoration: none;
-    color: #999
-  }
+  color: #fff;
 }
 
 #mail.havemail {
@@ -1624,20 +1199,11 @@ form#image-upload.image-upload {
   }
 }
 
-.RESDashboardToggle.remove,
-.RESshortcutside.remove,
-.commentarea .comment a.expand:hover {
-  background: @royal-blue;
-}
-
 #progressIndicator a#NERStaticLink,
 .comment .flat-list li a:hover,
-.comment .flat-list li a[onclick*=reply],
 .commentNavSortType:hover,
 .commentarea .menuarea .toggle a:hover,
 .link .domain a:hover,
-.link .entry .buttons li a:hover,
-.submit-page .roundfield a,
 .thing .title {
   color: @royal-blue;
 }
@@ -1651,101 +1217,8 @@ form#image-upload.image-upload {
   border-color: @royal-blue;
 }
 
-.RESDashboardToggle.remove:hover,
-body.res .side .RESshortcutside.remove:hover {
-  background: #6687e7;
-}
-
-.RESDashboardToggle.remove:active,
-.RESshortcutside.remove:active {
-  background: @endeavour;
-}
-
-.thing .md table thead tr th,
-.wiki-page-content .md table thead tr th {
-  background: #444
-}
-
-#siteTable .thing .md blockquote,
-#siteTable .thing .md ol,
-#siteTable .thing .md table,
-#siteTable .thing .md ul,
-.commentarea .md blockquote,
-.commentarea .md ul,
-.commentarea .thing .md ol,
-.commentarea .thing .md table,
-.wiki-page-content .md blockquote {
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 20px 10px 10px
-}
-
-#siteTable .thing .md blockquote,
-.commentarea .md blockquote,
-.wiki-page-content .md blockquote {
-  padding: 10px;
-  border-left: solid 2px #666;
-  background-color: #f2f2f2;
-  color: #2f2f2f;
-  line-height: 20px;
-  font-size: 14px
-}
-
-#siteTable .thing .md ol,
-#siteTable .thing .md ul,
-.commentarea .md ul,
-.commentarea .thing .md ol {
-  border-right: solid 1px #eaeaea;
-  border-left: solid 1px #eaeaea;
-  border-top: solid 1px #eaeaea;
-  line-height: 20px;
-  font-size: 14px;
-  padding: 0
-}
-
-#siteTable .thing .md ol li,
-#siteTable .thing .md ul li,
-.commentarea .md ul li,
-.commentarea .thing .md ol li {
-  border-bottom: solid 1px #eaeaea;
-  background-color: #f8f8f8;
-  padding: 5px
-}
-
-#siteTable .thing .md ol li:nth-child(odd),
-#siteTable .thing .md ul li:nth-child(odd),
-.commentarea .md ul:nth-child(odd),
-.commentarea .thing .md ol li:nth-child(odd) {
-  background-color: #f2f2f2
-}
-
-#siteTable .thing .md ul,
-.commentarea .md ul {
-  list-style: none
-}
-
-#siteTable .thing .md ol,
-.commentarea .thing .md ol {
-  list-style-position: inside
-}
-
-#siteTable .thing .md table thead tr th,
-.commentarea .thing .md table thead tr th {
-  font-weight: 400;
-  padding: 10px 20px;
-  font-size: 14px;
-  color: #fff;
-  border: none
-}
-
-#siteTable .thing .md table tbody tr,
-.commentarea .thing .md table thead tr th {
-  border-bottom: solid 1px #eaeaea
-}
-
-#siteTable .thing .md table tbody tr td,
-.commentarea .thing .md table tbody tr td {
-  padding: 10px 20px;
-  border: none
+.thing .md table thead tr th {
+  background: #444;
 }
 
 .md p > a[href="#s"],
@@ -1778,24 +1251,26 @@ a[href="#s"]:hover::after {
   color: #fff
 }
 
-.arrow.down:hover::after,
-.comment .arrow.downmod:hover::after {
-  position: absolute;
-  display: block;
-  z-index: 11;
-  width: 210px;
-  padding: 10px;
-  border: 1px solid #000;
-  background-color: rgba(51, 20, 52, .75);
-  color: #fff;
-  content: "Keep this sub user-friendly - only downvote this post if it adds no value. Do not downvote based on opinion.";
-  text-align: center;
-  font-size: 12px;
-  font-weight: 400;
-  margin-left: 25px;
-  margin-top: 25px;
-  box-shadow: 3px 3px 3px #9c9b9b;
-  opacity: 1
+.arrow.down,
+.comment .arrow.downmod {
+  &:hover:after {
+    position: absolute;
+    display: block;
+    z-index: 11;
+    width: 210px;
+    padding: 10px;
+    border: 1px solid #000;
+    background-color: rgba(51, 20, 52, .75);
+    color: #fff;
+    content: "Keep this sub user-friendly - only downvote this post if it adds no value. Do not downvote based on opinion.";
+    text-align: center;
+    font-size: 12px;
+    font-weight: 400;
+    margin-left: 25px;
+    margin-top: 25px;
+    box-shadow: 3px 3px 3px #9c9b9b;
+    opacity: 1;
+  }
 }
 
 ul.res-search-tabs {
