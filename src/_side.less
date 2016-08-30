@@ -66,30 +66,18 @@
       }
 
       h3 a {
-        background: #444;
-
-        &:hover {
-          background: #1c4aa7;
-          background: -webkit-linear-gradient(#441f45, #364282);
-          background: -o-linear-gradient(#441f45, #364282);
-          background: -moz-linear-gradient(#441f45, #364282);
-          background: linear-gradient(#441f45, #364282);
-        }
-
-        &:active {
-          background: @base-font-color;
-        }
+        .default-button;
       }
 
       h4 a {
-        background: @royal-blue;
+        background: @theme-primary;
 
         &:hover {
-          background: #6687e7;
+          background: lighten(@theme-primary, 10%);
         }
 
         &:active {
-          background: @endeavour;
+          background: darken(@theme-primary, 10%);
         }
       }
     }
@@ -127,25 +115,12 @@
       height: 30px;
       line-height: 30px;
       margin: 0;
-      font-size: 13px !important;
-      background: #444;
+      font-size: @base-font-size;
+      background: @base-dark-bg;
       border-radius: @default-border-radius @default-border-radius 0 0;
 
-      &:after {
-        top: 100%;
-        left: 5%;
-        border: solid transparent;
-        content: " ";
-        height: 0;
-        width: 0;
-        position: absolute;
-        pointer-events: none;
-        border-width: 7px;
-        margin-left: -7px;
-      }
-
       a {
-        color: @bahia;
+        color: lighten(@theme-primary, 20%);
       }
 
       + ul {
@@ -185,12 +160,12 @@
       padding: 0;
       position: absolute;
       top: 35px;
-      left: @base-outer-margin + 460px;
+      right: @side-right-margin;
       //width: calc(~"100% - 390px");
       //background: @endeavour;
       //border-radius: @default-border-radius;
       z-index: @z-index-notice;
-      border: 1px solid @endeavour;
+      border: 1px solid darken(@theme-primary, 10%);
 
       &:before {
         content: "Notice";
@@ -198,7 +173,7 @@
         font-weight: bold;
         color: #fff;
         display: block;
-        background: @endeavour;
+        background: darken(@theme-primary, 10%);
         padding: 5px;
       }
 
@@ -412,7 +387,7 @@
 
   a[href$="#lyonar-icon"] {
     background: @lyonar;
-    color: #444 !important;
+    color: @base-font-color !important;
   }
 
   a[href$="#songhai-icon"] {
@@ -421,7 +396,7 @@
 
   a[href$="#vanar-icon"] {
     background: @vanar;
-    color: #444 !important;
+    color: @base-font-color !important;
   }
 
   a[href$="#vetruvian-icon"] {

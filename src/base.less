@@ -1,5 +1,5 @@
 body {
-  background: url(%%denizens-banner%%) #e6e6e8 left top no-repeat;
+  background: url(%%main-banner%%) #e6e6e8 left top no-repeat;
   //font-family: -apple-system, "San Francisco Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
@@ -55,17 +55,6 @@ textarea {
 #hsts_pixel,
 .listing-page .tabmenu li a[href*="/gilded"] {
   display: none
-}
-
-.usertext {
-  .help-toggle,
-  a.reddiquette {
-    text-transform: uppercase;
-
-    &:hover {
-      font-weight: 700;
-    }
-  }
 }
 
 .deepthread {
@@ -717,13 +706,13 @@ a.author.moderator:after {
 
   &.upmod {
     background-position: 2px -294px;
-    background-color: #ff4500;
+    background-color: @theme-primary;
     margin-bottom: 5px;
   }
 
   &.downmod {
     background-position: 2px -346px;
-    background-color: #2b9bdb;
+    background-color: @theme-secondary;
     margin-top: 5px;
   }
 }
@@ -908,25 +897,8 @@ body > .content .link .rank {
 }
 
 .morelink {
-  border: none;
-  border-radius: @default-border-radius;
+  .default-button;
   padding: 5px;
-  background: #444;
-
-  &:hover { // Replace this
-    background: #1c4aa7;
-    background: linear-gradient(#441f45, #364282);
-  }
-
-  &:active {
-    background: @base-font-color;
-  }
-
-  a,
-  a:hover,
-  a:visited {
-    color: #fff;
-  }
 
   .nub {
     display: none;
@@ -952,7 +924,7 @@ body > .content .link .rank {
 
 .message-count {
   left: 2px;
-  background-color: #ff9400;
+  background-color: @theme-primary;
   position: relative;
   top: -2px
 }
@@ -1087,16 +1059,7 @@ form#image-upload.image-upload {
 }
 
 .bottommenu {
-  font-size: 10px;
-  color: #fff !important;
-  border: none !important;
-  text-transform: uppercase;
-  font-weight: 700;
-
-  a {
-    text-decoration: none;
-    color: #999
-  }
+  color: #fff;
 }
 
 #mail.havemail {

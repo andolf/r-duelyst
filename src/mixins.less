@@ -9,3 +9,23 @@
 .template-content-margin {
   margin: 0 @content-right-margin 0 @base-outer-margin;
 }
+
+.default-button {
+  border: none;
+  border-radius: @default-border-radius;
+  background: @base-dark-bg;
+
+  &:hover {
+    background: linear-gradient(@theme-secondary, @theme-primary);
+  }
+
+  &:active {
+    background: @base-font-color;
+  }
+
+  a,
+  a:hover,
+  a:visited {
+    color: #fff;
+  }
+}
