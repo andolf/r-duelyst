@@ -33,18 +33,35 @@
 
   .titlebox {
     .fancy-toggle-button {
-      width: 100%;
+      display: block;
       transition: 0.3s;
     }
 
-    .users-online,
+    .subscribers,
+    .users-online {
+      .number {
+        &:after {
+          margin-left: 5px;
+        }
+      }
+      .word {
+        display: none;
+      }
+    }
+
     .subscribers {
-      color: #999;
+      .number {
+        &:after {
+          content: "Denizens";
+        }
+      }
     }
 
     .users-online {
       .number {
-        font-style: italic;
+        &:after {
+          content: "pets battling";
+        }
       }
     }
 
@@ -161,9 +178,6 @@
       position: absolute;
       top: 35px;
       right: @side-right-margin;
-      //width: calc(~"100% - 390px");
-      //background: @endeavour;
-      //border-radius: @default-border-radius;
       z-index: @z-index-notice;
       border: 1px solid darken(@theme-primary, 10%);
 
@@ -228,14 +242,6 @@
         }
       }
     }
-  }
-
-  .usertext {
-    margin-top: 20px;
-  }
-
-  .tagline {
-    color: transparent;
   }
 
   .flairselector {
