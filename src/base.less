@@ -562,12 +562,6 @@ ul#image-preview-list {
   }
 }
 
-div.child,
-div.sitetable.nestedlisting {
-  box-shadow: none;
-  z-index: auto
-}
-
 .roundfield {
   font-weight: 700;
   text-transform: uppercase;
@@ -1006,8 +1000,8 @@ form#image-upload.image-upload {
 
   input[type=password],
   input[type=text] {
+    .border-box;
     font-size: 11px;
-    box-sizing: border-box;
     border: 1px solid #999;
     width: 258px;
   }
