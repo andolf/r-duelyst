@@ -1,9 +1,18 @@
 @content-side-spacing: @base-outer-margin;
 @content-right-margin: @side-width + @side-right-margin + @content-side-spacing;
 
-#siteTable {
+.base-site-table {
   .template-content-margin;
   box-shadow: @default-box-shadow;
+}
+
+#siteTable_organic {
+  .base-site-table;
+  margin-bottom: @base-margin;
+}
+
+#siteTable {
+  .base-site-table;
 
   .thing .md {
     blockquote,
