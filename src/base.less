@@ -4,7 +4,7 @@ body {
 
 a {
   text-decoration: none;
-  color: #666;
+  color: @base-font-color-lighter;
 }
 
 h2 {
@@ -15,7 +15,7 @@ h2 {
 
 button {
   white-space: nowrap;
-  background: @royal-blue;
+  background: @theme-primary;
   border-radius: @default-border-radius;
   color: #fff;
   cursor: pointer;
@@ -33,11 +33,11 @@ button {
   }
 
   &:hover {
-    background: @cornflower-blue;
+    background: lighten(@theme-primary, 10%);
   }
 
   &:active {
-    background: @endeavour;
+    background: darken(@theme-primary, 5%);
   }
 }
 
@@ -338,7 +338,7 @@ ul#image-preview-list {
     width: 296.5px;
     height: 100px;
     font-size: 14px;
-    color: #666;
+    color: @base-font-color-lighter;
   }
 
   .preview {
@@ -424,21 +424,6 @@ ul#image-preview-list {
 
 .gearIcon {
   background-repeat: no-repeat !important
-}
-
-#userbarToggle.userbarShow {
-  background-color: rgba(255, 255, 255, .1);
-  left: -3px !important;
-  padding-right: 20px;
-  font-size: 25px;
-  padding-left: 15px;
-  margin-left: -12px;
-  transition: .2s;
-  top: -15px !important;
-
-  &:hover {
-    background-color: rgba(255, 255, 255, 0.3);
-  }
 }
 
 .livePreview,
@@ -539,7 +524,7 @@ ul#image-preview-list {
   border-radius: @default-border-radius;
 
   .title {
-    color: #666
+    color: @base-font-color-lighter;
   }
 
   input[type=text] {
@@ -618,7 +603,7 @@ a.author.moderator:after {
 
 #progressIndicator {
   font-size: 12px !important;
-  color: #666;
+  color: @base-font-color-lighter;
 
   &,
   & h2 {
@@ -743,42 +728,6 @@ span.totalvotes {
   display: none
 }
 
-.fancy-toggle-button {
-  .add,
-  .remove {
-    padding: 5px 20px;
-    border-radius: 20px;
-    font-size: 9px;
-    border: none;
-    text-transform: uppercase;
-    transition: 0.2s;
-  }
-
-  .add {
-    background: #80d04b;
-
-    &:hover {
-      background: #a6de81;
-    }
-
-    &:active {
-      background: #599134;
-    }
-  }
-
-  .remove {
-    background: @royal-blue;
-
-    &:hover {
-      background: #6687e7;
-    }
-
-    &:active {
-      background: @endeavour;
-    }
-  }
-}
-
 .rank-spacer,
 body > .content .link .rank {
   display: none
@@ -891,7 +840,7 @@ body > .content .link .rank {
   .over18 .entry .buttons li.reported-stamp,
   .stickied .entry .buttons li.reported-stamp {
     border: none !important;
-    background: #666 !important;
+    background: @base-font-color-lighter;
     color: #fff !important;
     font-weight: 700;
     text-transform: uppercase !important;
@@ -1008,7 +957,7 @@ form#image-upload.image-upload {
   line-height: 24px;
   font-size: 10px;
   margin-bottom: 20px;
-  color: #666
+  color: @base-font-color-lighter;
 }
 
 .col {

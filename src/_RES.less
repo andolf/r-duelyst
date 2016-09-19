@@ -8,54 +8,26 @@ body.res {
   #header-bottom-right #mail.havemail {
     top: -1px !important
   }
-  .side .RESshortcutside.remove:hover {
-    background: #6687e7;
-  }
 }
 
 .res {
-  h1.redditname {
-    overflow: visible;
-  }
-
   .titlebox .fancy-toggle-button {
     display: inline-block;
-    margin-top: 10px;
-    margin-right: 5px;
-    margin-left: 0;
-    width: auto
-  }
-
-  .fancy-toggle-button {
-    .add,
-    .remove {
-      font-size: 9px;
-      border: none;
-      text-transform: uppercase;
-      transition: 0.2s;
-      background-image: none;
-      padding: 5px 8px;
-      border-radius: @default-border-radius;
-    }
   }
 
   #RESShortcutsViewport {
-    margin-right: 70px
+    margin-right: 70px;
+    color: #fff;
   }
 
   .content .RESBigEditorPop {
-    font-size: smaller;
-    color: #666;
+    color: @base-font-color-lighter;
     padding: 0;
     margin: 0 0 0 10px;
     background: none;
   }
 
   .commentarea {
-    .thing {
-      padding: 15px 15px 0 !important;
-    }
-
     .entry .flat-list {
       padding-bottom: 8px;
     }
@@ -65,32 +37,19 @@ body.res {
     }
   }
 
-  .comment.noncollapsed .midcol {
-    margin-left: 10px;
-  }
-
   #RESShortcutsEditContainer,
   #sr-more-link {
-    background: 0 0
+    background: none;
   }
 
   #userbarToggle {
-    width: 11px;
-    height: 48px;
-    background-color: transparent;
+    background: none;
     border: none;
-    line-height: 47px;
     color: #fff;
-    padding-left: 5px;
-    padding-right: 8px;
-    margin-left: -6px;
-    transition: all .2s ease 0s;
-    bottom: 2px;
-    border-radius: 0;
-    margin-bottom: -15px;
+    transition: @default-transition-time background ease-in-out;
 
     &:hover {
-      background-color: rgba(255, 255, 255, .1)
+      background: rgba(255, 255, 255, .1)
     }
   }
 
@@ -110,28 +69,25 @@ body.res {
 }
 
 .RESSubscriptionButton {
-  background: @royal-blue;
-  display: inline-block;
-  position: relative;
-  z-index: 1;
-  margin-left: 15px;
-  padding: 5px !important;
-  font-size: 9px;
+  padding: 5px;
+  font-size: 10px;
   text-transform: uppercase;
-  text-align: center;
-  cursor: pointer;
-  border: 0 solid #ccc;
   border-radius: @default-border-radius;
-  transition: .25s ease;
+  transition: @default-transition-time background ease;
+  color: @theme-primary;
+  border: 1px solid @theme-primary;
 
-  &:hover {
-    background: #6687e7;
+  &:hover,
+  &:active {
     color: #fff;
   }
 
+  &:hover {
+    background: lighten(@theme-primary, 10%);
+  }
+
   &:active {
-    background: @endeavour;
-    color: #fff;
+    background: @theme-primary;
   }
 }
 
@@ -140,11 +96,8 @@ body.res {
 #RESShortcutsRight,
 #RESShortcutsSort,
 #RESShortcutsTrash {
-  height: 25px;
-  line-height: 25px !important;
-  margin-right: 4px;
-  background: 0 0 !important;
-  color: #fff !important
+  background: none;
+  color: #fff;
 }
 
 #RESPrefsDropdown {
@@ -173,34 +126,23 @@ body.res {
   }
 }
 
+// same styling as fancy-toggle-button
 .RESshortcutside,
 .RESDashboardToggle {
-  font-size: 9px;
   border: none;
-  text-transform: uppercase;
-  transition: 0.2s;
   padding: 5px 8px;
+  font-size: 9px;
+  text-transform: uppercase;
+  transition: @default-transition-time background ease-in-out;
   border-radius: @default-border-radius;
-  background: #80d04b;
+  background: lighten(@theme-secondary, 5%);
 
   &:hover {
-    background: #a6de81;
+    background: lighten(@theme-secondary, 10%);
   }
 
   &:active {
-    background: #599134;
-  }
-
-  &.remove {
-    background: @royal-blue;
-
-    &:hover {
-      background: #6687e7;
-    }
-
-    &:active {
-      background: @endeavour;
-    }
+    background: @theme-secondary;
   }
 }
 

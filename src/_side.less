@@ -34,7 +34,40 @@
   .titlebox {
     .fancy-toggle-button {
       display: block;
-      transition: 0.3s;
+
+      .add,
+      .remove {
+        border: none;
+        padding: 5px 8px;
+        font-size: 9px;
+        text-transform: uppercase;
+        transition: @default-transition-time background ease-in-out;
+        border-radius: @default-border-radius;
+      }
+
+      .add {
+        background: lighten(@theme-secondary, 5%);
+
+        &:hover {
+          background: lighten(@theme-secondary, 10%);
+        }
+
+        &:active {
+          background: @theme-secondary;
+        }
+      }
+
+      .remove {
+        background: lighten(@theme-primary, 5%);
+
+        &:hover {
+          background: lighten(@theme-primary, 10%);
+        }
+
+        &:active {
+          background: @theme-primary;
+        }
+      }
     }
 
     .subscribers,
