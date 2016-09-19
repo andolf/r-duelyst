@@ -1,7 +1,6 @@
 .submit-page {
-  .content {
+  > .content {
     width: 700px;
-    margin: 0 auto;
   }
 
   div.content {
@@ -12,16 +11,21 @@
   }
 
   .tabmenu {
-    margin-top: 0;
     border-radius: @default-border-radius;
+    background: @default-transparent-black;
 
     li a {
       border: none;
+      font-weight: 700;
     }
 
-    .selected a {
-      background: none;
-      font-size: inherit;
+    &.formtab {
+      .selected {
+        a {
+          .tab-menu-item__selected;
+          font-size: inherit;
+        }
+      }
     }
   }
 
@@ -31,8 +35,7 @@
     width: 100%;
   }
 
-  .content h1,
-  .side {
+  .content h1 {
     display: none;
   }
 
