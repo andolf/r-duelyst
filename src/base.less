@@ -119,16 +119,7 @@ button {
   text-decoration: none !important
 }
 
-.roundfield input[type=text]:hover,
-.roundfield input[type=url]:hover,
-.roundfield textarea:hover {
-  border-bottom: 1px solid #999
-}
-
-#img-name:focus,
-.roundfield input[type=text]:focus,
-.roundfield input[type=url]:focus,
-.roundfield textarea:focus {
+#img-name:focus {
   border-bottom: 2px solid
 }
 
@@ -576,12 +567,11 @@ ul#image-preview-list {
 }
 
 .formtabs-content {
-  border-top: 0 solid !important;
+  border: none;
   width: auto;
-  margin-top: 15px;
 
   .infobar {
-    font-size: 15px;
+    font-size: @base-font-size;
     font-weight: 700;
     border: none;
     padding: 20px;
