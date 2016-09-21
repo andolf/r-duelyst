@@ -86,6 +86,13 @@
   }
 }
 
+.flair-the-bhawb {
+  .flair-mod;
+  &:before {
+    background-position: 0 -190px;
+  }
+}
+
 .generate-flair-rows(@col, @rows, @i: 0) when (@i <= @rows) {
   .flair-card-@{col}-@{i}:before {
     background-position: -(@flair-max-width * @col) -(@flair-height * @i);
