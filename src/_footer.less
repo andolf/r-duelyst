@@ -1,13 +1,14 @@
 .footer-parent {
-  background-color: @base-dark-bg;
-  font-size: 14px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  margin-top: 300px
+  background: url(%%bannerfooter%%) bottom center no-repeat;
+  margin-bottom: -25px;
+  height: 1000px;
 }
 
 .footer {
   border: 0;
+  background: @default-transparent-white;
+  box-shadow: @default-box-shadow;
+  border-radius: 0;
 
   .col {
     margin: 10px 0 30px
@@ -15,23 +16,23 @@
 
   .flat-vert {
     li a {
-      font-size: 11px;
-      color: #999 !important;
-      text-transform: uppercase;
+      font-size: 10px;
       font-weight: 700;
 
-      &:hover {
-        text-decoration: none !important;
-        color: #fff !important
+      &:not(.buygold) {
+        color: @theme-primary;
       }
     }
 
     .title {
-      font-size: 16px;
-      transition: color .25s ease, background-color .25s ease;
-      color: #fff;
+      font-size: @base-font-size;
       text-transform: uppercase;
       font-weight: 700;
     }
   }
+}
+
+.bottommenu {
+  color: @base-font-color;
+  text-shadow: 0 1px 0 @default-transparent-white;
 }
