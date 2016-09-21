@@ -1,4 +1,6 @@
 .tagline .author {
+  border-radius: 0 !important;
+
   &.admin,
   &.admin:before,
   &.moderator,
@@ -12,38 +14,35 @@
     display: inline-block;
   }
 
-  &.submitter {
-    background: @endeavour !important;
-    padding: 0 10px 0 0;
-    border-radius: 20px;
-    transition: .3s;
-
-    &:before {
-      background: @royal-blue;
-      padding: 0 7px 0 10px;
-      border-radius: 20px 0 0 20px;
-      font-size: 10px;
-      content: "OP ";
-      margin-right: 7px
-    }
-
-    &:hover {
-      background: @royal-blue !important;
-      text-decoration: none
-    }
-  }
-
   &.admin,
-  &.moderator {
-    padding: 0 10px 0 0;
-    border-radius: 20px;
-    transition: .3s;
+  &.moderator,
+  &.submitter {
+    border-radius: 20px !important; // override for RES
+    padding: 0 10px 0 0 !important; // override for RES
+    transition: @default-transition-time;
 
     &:before {
       padding: 0 7px 0 10px;
       border-radius: 20px 0 0 20px;
       font-size: 10px;
       margin-right: 7px;
+    }
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &.submitter {
+    background: @theme-primary;
+
+    &:before {
+      background: @theme-primary-lighten;
+      content: "OP ";
+    }
+
+    &:hover {
+      background: @theme-primary-darken;
     }
   }
 
@@ -57,7 +56,6 @@
 
     &:hover {
       background: #282;
-      text-decoration: none;
     }
   }
 
@@ -71,7 +69,6 @@
 
     &:hover {
       background: @wild-watermelon;
-      text-decoration: none;
     }
   }
 

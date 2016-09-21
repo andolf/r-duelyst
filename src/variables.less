@@ -5,6 +5,7 @@
 @base-font-size: 14px;
 @base-dark-bg: #121c31;
 @base-font-color: #222;
+@base-font-color-lighter: #666;
 @default-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
 @default-transition-time: 0.3s;
 @default-transparent-black: rgba(0, 0, 0, 0.5);
@@ -34,7 +35,11 @@
 
 // Denizens
 @theme-primary: #1154b0;
+@theme-primary-lighten: lighten(@theme-primary, 10%);
+@theme-primary-darken: darken(@theme-primary, 10%);
 @theme-secondary: #6740c0;
+@theme-secondary-lighten: lighten(@theme-secondary, 10%);
+@theme-secondary-darken: darken(@theme-secondary, 10%);
 
 @tab-menu-gradient-start: darken(@theme-primary, 10%);
 @tab-menu-gradient-end: darken(@theme-primary, 30%);

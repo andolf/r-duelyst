@@ -34,7 +34,40 @@
   .titlebox {
     .fancy-toggle-button {
       display: block;
-      transition: 0.3s;
+
+      .add,
+      .remove {
+        border: none;
+        padding: 5px 8px;
+        font-size: 9px;
+        text-transform: uppercase;
+        transition: @default-transition-time background ease-in-out;
+        border-radius: @default-border-radius;
+      }
+
+      .add {
+        background: lighten(@theme-secondary, 5%);
+
+        &:hover {
+          background: lighten(@theme-secondary, 10%);
+        }
+
+        &:active {
+          background: @theme-secondary;
+        }
+      }
+
+      .remove {
+        background: lighten(@theme-primary, 5%);
+
+        &:hover {
+          background: lighten(@theme-primary, 10%);
+        }
+
+        &:active {
+          background: @theme-primary;
+        }
+      }
     }
 
     .subscribers,
@@ -90,11 +123,11 @@
         background: @theme-primary;
 
         &:hover {
-          background: lighten(@theme-primary, 10%);
+          background: @theme-primary-lighten;
         }
 
         &:active {
-          background: darken(@theme-primary, 10%);
+          background: @theme-primary-darken;
         }
       }
     }
@@ -179,7 +212,7 @@
       top: 35px;
       right: @side-right-margin;
       z-index: @z-index-notice;
-      border: 1px solid darken(@theme-primary, 10%);
+      border: 1px solid @theme-primary-darken;
 
       &:before {
         content: "Notice";
@@ -187,7 +220,7 @@
         font-weight: bold;
         color: #fff;
         display: block;
-        background: darken(@theme-primary, 10%);
+        background: @theme-primary-darken;
         padding: 5px;
       }
 
