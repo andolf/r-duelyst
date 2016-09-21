@@ -33,11 +33,11 @@ button {
   }
 
   &:hover {
-    background: lighten(@theme-primary, 10%);
+    background: @theme-primary-lighten;
   }
 
   &:active {
-    background: darken(@theme-primary, 5%);
+    background: @theme-primary-darken;
   }
 }
 
@@ -367,11 +367,6 @@ ul#image-preview-list {
   display: none
 }
 
-.res #header-bottom-right .gearIcon {
-  background: url(%%spritesheet%%);
-  background-size: 50px 502px;
-}
-
 #mail {
   &.nohavemail {
     .sprite-icon;
@@ -396,12 +391,6 @@ ul#image-preview-list {
   }
 }
 
-.res #header-bottom-right .gearIcon {
-  width: 20px;
-  height: 20px;
-  vertical-align: middle !important
-}
-
 #modmail.havemail,
 #modmail.nohavemail {
   margin-bottom: 0 !important
@@ -420,10 +409,6 @@ ul#image-preview-list {
 
 .separator {
   visibility: hidden;
-}
-
-.gearIcon {
-  background-repeat: no-repeat !important
 }
 
 .livePreview,
@@ -588,9 +573,7 @@ a.author.moderator:after {
   border: 0 !important
 }
 
-#progressIndicator,
-.NERPageMarker {
-  font-size: 14px !important;
+#progressIndicator {
   font-weight: 700 !important;
   text-align: left !important;
   background-color: transparent !important;
@@ -598,10 +581,7 @@ a.author.moderator:after {
   border-radius: 0 !important;
   padding: 10px !important;
   text-transform: uppercase;
-  margin-left: 20px
-}
-
-#progressIndicator {
+  margin-left: 20px;
   font-size: 12px !important;
   color: @base-font-color-lighter;
 

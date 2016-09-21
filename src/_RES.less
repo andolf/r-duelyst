@@ -8,6 +8,15 @@ body.res {
   #header-bottom-right #mail.havemail {
     top: -1px !important
   }
+
+  #siteTable {
+    overflow: hidden;
+
+    > .sitetable {
+      margin: 0;
+      box-shadow: none;
+    }
+  }
 }
 
 .res {
@@ -57,8 +66,14 @@ body.res {
     #modmail {
       top: -4px !important;
     }
+
     .gearIcon {
-      background-position: 0 -152px !important
+      background-position: 0 -152px !important;
+      background: url(%%spritesheet%%);
+      background-size: 50px 502px;
+      width: 20px;
+      height: 20px;
+      vertical-align: middle !important
     }
   }
 
@@ -153,4 +168,33 @@ div#RESStyleSheetTipPane-header {
 
 .RESDialogSmall.livePreview {
   margin: 15px 0;
+}
+
+.NERPageMarker {
+  font-weight: 700;
+  text-align: left;
+  background: #fff;
+  border: none;
+  border-radius: 0;
+  margin: 0 0 1px 0;
+  padding: 10px 15px;
+
+  ~ & {
+    margin-bottom: 1px;
+  }
+
+  .gearIcon {
+    margin: 0;
+    padding: 1px;
+  }
+}
+
+.gearIcon {
+  background-repeat: no-repeat;
+}
+
+#NREFloat {
+  background: #fff;
+  border: 1px solid @theme-primary;
+  box-shadow: @default-box-shadow;
 }

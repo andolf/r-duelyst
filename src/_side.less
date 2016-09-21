@@ -123,11 +123,11 @@
         background: @theme-primary;
 
         &:hover {
-          background: lighten(@theme-primary, 10%);
+          background: @theme-primary-lighten;
         }
 
         &:active {
-          background: darken(@theme-primary, 10%);
+          background: @theme-primary-darken;
         }
       }
     }
@@ -212,7 +212,7 @@
       top: 35px;
       right: @side-right-margin;
       z-index: @z-index-notice;
-      border: 1px solid darken(@theme-primary, 10%);
+      border: 1px solid @theme-primary-darken;
 
       &:before {
         content: "Notice";
@@ -220,7 +220,7 @@
         font-weight: bold;
         color: #fff;
         display: block;
-        background: darken(@theme-primary, 10%);
+        background: @theme-primary-darken;
         padding: 5px;
       }
 
