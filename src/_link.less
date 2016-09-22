@@ -1,6 +1,4 @@
 .link {
-  //padding: @base-margin;
-  //display: flex;
   background: #fff;
   margin-bottom: 1px;
 
@@ -112,10 +110,7 @@
 
   .thumbnail {
     margin: 10px 5px 10px 0;
-    //margin: 0 15px;
     width: 75px;
-    //text-align: center;
-    //align-self: center;
 
     &.self,
     &.default,
@@ -152,6 +147,29 @@
 
     .score {
       margin: 4px 0;
+    }
+  }
+
+  a {
+    &[data-event-action="marknsfw"],
+    &[data-event-action="unmarknsfw"] {
+      font-size: 0;
+
+      &:before {
+        font-size: 10px;
+      }
+    }
+
+    &[data-event-action="marknsfw"] {
+      &:before {
+        content: "spoiler";
+      }
+    }
+
+    &[data-event-action="unmarknsfw"] {
+      &:before {
+        content: "un-spoiler";
+      }
     }
   }
 }
