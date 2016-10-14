@@ -1,4 +1,4 @@
-# duelyst-subreddit
+# /r/duelyst
 
 A more organized version of the stylesheet for the [Duelyst subreddit](http://reddit.com/r/duelyst/).
 
