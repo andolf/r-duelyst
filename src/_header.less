@@ -1,5 +1,8 @@
 // Main header at top
 
+@menu-top: 202px;
+@menu-margin: 20px;
+
 #header {
   background: url(%%main-banner%%) left top no-repeat;
   border: none;
@@ -8,20 +11,13 @@
 
   &:after {
     position: absolute;
-    top: 202px;
+    top: @menu-top;
     width: 100%;
     height: 48px;
-    background: linear-gradient(@tab-menu-gradient-start, @tab-menu-gradient-end);
+    background: linear-gradient(to bottom, @tab-menu-gradient-start, @tab-menu-gradient-end);
     content: " ";
     z-index: -1;
     opacity: @tab-menu-opacity;
-  }
-
-  #header-img {
-    margin-top: 182px;
-    margin-left: @base-outer-margin + 5px;
-    padding: 5px;
-    transform: scale(0.75);
   }
 
   .pagename {
@@ -30,22 +26,32 @@
     a {
       display: inline-block;
       position: absolute;
-      width: 392px;
-      height: 108px;
-      top: 55px;
-      left: 60px;
+      width: 401px;
+      height: 126px;
+      top: -153px;
+      left: 33px;
     }
   }
 
-  .tabmenu li:nth-of-type(8) {
-    display: none;
-    visibility: hidden;
+  .tabmenu {
+    margin: 0;
+
+    li:nth-of-type(8) {
+      display: none;
+      visibility: hidden;
+    }
   }
+
+  #header-bottom-left {
+    position: absolute;
+    top: @menu-top;
+    left: @menu-margin;
+ }
 
   #header-bottom-right {
     background: none;
-    top: 217px;
-    right: 20px;
+    top: @menu-top + 15px;
+    right: @menu-margin;
     padding: 0;
 
     .user,
@@ -63,4 +69,14 @@
       text-indent: -9999px;
     }
   }
+}
+
+#header-img-a {
+  display: inline-block;
+  vertical-align: top;
+}
+
+#header-img {
+  margin-top: 5px;
+  transform: scale(0.75);
 }

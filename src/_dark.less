@@ -2,177 +2,196 @@
 @dark-content-bg: #303030;
 @dark-input-bg: #414140;
 
-html[lang=dm] {
-  &::-moz-selection {
-    background: #666;
-    color: white;
-  }
+@dark-primary: #444;
+@dark-secondary: #666;
 
+@dark-font-color: #f1f1f5;
+
+html[lang=dm] {
   body {
     background: @dark-bg;
-  }
-
-  .linkinfo {
-    background-color: @dark-content-bg;
-
-    .shortlink input {
-      background: @dark-input-bg;
-    }
+    color: @dark-font-color;
   }
 
   .link {
-    border-bottom-color: @dark-input-bg;
+    background: @dark-content-bg;
   }
 
-  #siteTable .thing .md blockquote,
-  .commentarea .md blockquote,
-  .wiki-page-content .md blockquote {
-    padding: 10px;
-    border-left: 2px solid #888;
-    background-color: #2f2f2f;
-    color: white;
-    line-height: 20px;
-    font-size: 14px;
+  #header:after {
+    background: linear-gradient(to bottom, @dark-content-bg, @dark-input-bg);
   }
 
-  #siteTable .thing .md table thead tr th,
-  .wiki-page-content .md table thead tr th {
-    background: #333;
+  .thing .title {
+    color: @dark-font-color;
+
+    //&:visited {
+    //  color: #f1f1f5;
+    //}
   }
 
-  #siteTable .thing .md table tbody tr,
-  .commentarea .thing .md table tbody tr,
-  .wiki-page-content .md table tbody tr {
-    border-bottom: 1px solid #999;
+  .spoiler-stamp {
+    color: @dark-font-color;
   }
 
-  .md hr {
-    color: #888;
-    border-bottom: 1px solid #666;
-  }
+  .morelink {
+    background: @dark-primary;
 
-  #siteTable .thing .md ol li:nth-child(odd),
-  #siteTable .thing .md ul li:nth-child(odd),
-  .commentarea .md ul li:nth-child(odd),
-  .commentarea .thing .md ol li:nth-child(odd),
-  .wiki-page-content .md ol li:nth-child(odd) {
-    background-color: #333;
-  }
-
-  #siteTable .thing .md ol li,
-  #siteTable .thing .md ul li,
-  .commentarea .md ul li,
-  .commentarea .thing .md ol li,
-  .wiki-page-content .md ol li {
-    border-bottom: solid 1px #555;
-    background-color: #222;
-    padding: 5px;
-  }
-
-  #siteTable .thing .md ol,
-  #siteTable .thing .md ul,
-  .commentarea .md ul,
-  .commentarea .thing .md ol,
-  .wiki-page-content .md ol {
-    border-right: solid 1px #555;
-    border-left: solid 1px #555;
-    border-top: solid 1px #555;
-    line-height: 20px;
-    font-size: 14px;
-  }
-
-  .content .entry .buttons li.reported-stamp,
-  body .content .stickied .entry .buttons li.reported-stamp {
-    background: #222;
-    color: #d1d1d1;
-  }
-
-  .pretty-button {
-    &.positive {
-      color: @olive;
-    }
-
-    &.neutral {
-      color: #ccc;
-    }
-
-    &.negative {
-      color: @pink;
+    &:hover {
+      background: @dark-secondary;
     }
   }
 
-  .nsfw-stamp {
-    background: @pink;
-  }
+  //.linkinfo {
+  //  background-color: @dark-content-bg;
+  //
+  //  .shortlink input {
+  //    background: @dark-input-bg;
+  //  }
+  //}
+  //
+  //#siteTable .thing .md blockquote,
+  //.commentarea .md blockquote,
+  //.wiki-page-content .md blockquote {
+  //  padding: 10px;
+  //  border-left: 2px solid #888;
+  //  background-color: #2f2f2f;
+  //  color: white;
+  //  line-height: 20px;
+  //  font-size: 14px;
+  //}
+  //
+  //#siteTable .thing .md table thead tr th,
+  //.wiki-page-content .md table thead tr th {
+  //  background: #333;
+  //}
+  //
+  //#siteTable .thing .md table tbody tr,
+  //.commentarea .thing .md table tbody tr,
+  //.wiki-page-content .md table tbody tr {
+  //  border-bottom: 1px solid #999;
+  //}
+  //
+  //.md hr {
+  //  color: #888;
+  //  border-bottom: 1px solid #666;
+  //}
+  //
+  //#siteTable .thing .md ol li:nth-child(odd),
+  //#siteTable .thing .md ul li:nth-child(odd),
+  //.commentarea .md ul li:nth-child(odd),
+  //.commentarea .thing .md ol li:nth-child(odd),
+  //.wiki-page-content .md ol li:nth-child(odd) {
+  //  background-color: #333;
+  //}
+  //
+  //#siteTable .thing .md ol li,
+  //#siteTable .thing .md ul li,
+  //.commentarea .md ul li,
+  //.commentarea .thing .md ol li,
+  //.wiki-page-content .md ol li {
+  //  border-bottom: solid 1px #555;
+  //  background-color: #222;
+  //  padding: 5px;
+  //}
+  //
+  //#siteTable .thing .md ol,
+  //#siteTable .thing .md ul,
+  //.commentarea .md ul,
+  //.commentarea .thing .md ol,
+  //.wiki-page-content .md ol {
+  //  border-right: solid 1px #555;
+  //  border-left: solid 1px #555;
+  //  border-top: solid 1px #555;
+  //  line-height: 20px;
+  //  font-size: 14px;
+  //}
+  //
+  //.content .entry .buttons li.reported-stamp,
+  //body .content .stickied .entry .buttons li.reported-stamp {
+  //  background: #222;
+  //  color: #d1d1d1;
+  //}
+  //
+  //.pretty-button {
+  //  &.positive {
+  //    color: @olive;
+  //  }
+  //
+  //  &.neutral {
+  //    color: #ccc;
+  //  }
+  //
+  //  &.negative {
+  //    color: @pink;
+  //  }
+  //}
+  //
+  //.nsfw-stamp {
+  //  background: @pink;
+  //}
+  //
+  //.combined-search-page {
+  //  .search-result .search-comments,
+  //  .search-result .search-result-body,
+  //  .search-result .search-result-footer .search-link,
+  //  .search-result .search-result-header .search-title,
+  //  .search-result .search-result-meta,
+  //  .search-result .search-score,
+  //  .search-result-group .search-header-label,
+  //  .search-result-group .search-result-group-header {
+  //    color: white;
+  //  }
+  //
+  //  .search-result {
+  //    border-bottom: 1px solid #666;
+  //
+  //    .search-expando.collapsed:before {
+  //      background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, #444 100%);
+  //    }
+  //
+  //    .search-expando-button {
+  //      color: @bahia;
+  //    }
+  //  }
+  //
+  //  .search-result-group .search-result-group-header {
+  //    background: #222;
+  //    border-bottom: 1px solid #666;
+  //    border-top: 1px solid #666;
+  //  }
+  //}
+  //
+  //.over18 a.title:link,
+  //.over18 a.title:visited,
+  //body:not(.comments-page) .over18 .link .tagline,
+  //body:not(.comments-page) .over18 .md p,
+  //body:not(.comments-page) .over18 .tagline {
+  //  color: @pink;
+  //}
+  //
+  //.entry .buttons li a {
+  //  color: #ccc;
+  //}
+  //
+  //.commentNavSortType,
+  //.commentarea .menuarea .toggle a,
+  //.dropdown.lightdrop .selected,
 
-  .combined-search-page {
-    .search-result .search-comments,
-    .search-result .search-result-body,
-    .search-result .search-result-footer .search-link,
-    .search-result .search-result-header .search-title,
-    .search-result .search-result-meta,
-    .search-result .search-score,
-    .search-result-group .search-header-label,
-    .search-result-group .search-result-group-header {
-      color: white;
-    }
-
-    .search-result {
-      border-bottom: 1px solid #666;
-
-      .search-expando.collapsed:before {
-        background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, #444 100%);
-      }
-
-      .search-expando-button {
-        color: @bahia;
-      }
-    }
-
-    .search-result-group .search-result-group-header {
-      background: #222;
-      border-bottom: 1px solid #666;
-      border-top: 1px solid #666;
-    }
-  }
-
-  .over18 a.title:link,
-  .over18 a.title:visited,
-  body:not(.comments-page) .over18 .link .tagline,
-  body:not(.comments-page) .over18 .md p,
-  body:not(.comments-page) .over18 .tagline {
-    color: @pink;
-  }
-
-  div.content {
-    background-color: #333;
-  }
-
-  .entry .buttons li a {
-    color: #ccc;
-  }
-
-  .commentNavSortType,
-  .commentarea .menuarea .toggle a,
-  .dropdown.lightdrop .selected,
-  .thing .title:visited {
-    color: #ababab;
-  }
-
-  a.comments::after {
-    color: #ccc;
-  }
-
-  .flair {
-    border: none;
-    color: #e3e3e3;
-  }
-
+  //
+  //a.comments::after {
+  //  color: #ccc;
+  //}
+  //
+  //.flair {
+  //  border: none;
+  //  color: #e3e3e3;
+  //}
+  //
   .side {
-    .usertext-body {
-      background-image: none;
-      padding: 0;
-    }
+    //.usertext-body {
+    //  background-image: none;
+    //  padding: 0;
+    //}
 
     .titlebox,
     .sidecontentbox {
@@ -180,30 +199,22 @@ html[lang=dm] {
     }
 
     .titlebox {
-      form.toggle {
-        background: none;
-      }
-
       .md h3 a {
-        background: #444;
+        background: @dark-primary;
 
         &:hover {
-          background: #666;
-        }
-
-        &:active {
-          background: #222;
+          background: @dark-secondary;
         }
       }
     }
 
     .md {
-      h4 {
-        background: #323232;
-      }
-
-      h2 + ul {
+      h2 {
         background: #222;
+
+        & + ul {
+          background: #444;
+        }
       }
     }
 
@@ -213,330 +224,318 @@ html[lang=dm] {
   }
 
   .titlebox form.toggle,
-  .toggle .option.active,
-  div.leavemoderator {
-    color: #ccc;
+  .leavemoderator {
+    color: inherit;
   }
-
-  .icon-menu a {
-    color: white;
-  }
-
-  .sidecontentbox .title h1 {
-    color: white;
-    font-weight: bold;
-  }
-
-  .titlebox .users-online,
-  .titlebox span.subscribers {
-    color: white;
-  }
-
-  #sr-header-area a,
-  .sidecontentbox .collapse-button,
-  h2 {
-    color: white;
-  }
-
-  .sidecontentbox .collapse-button {
-    border: 1px solid white;
-  }
-
-  .commentarea span.score,
-  .side .md h4 a,
-  body.res #sr-header-area .sr-bar a.RESShortcutsCurrentSub {
-    color: white;
-  }
-
-  .content .md a {
-    color: @bahia;
-  }
-
-  .titlebox a {
-    color: @bahia;
-  }
-
-  .link.promotedlink.promoted {
-    background-color: #565656;
-  }
-
-  .sidecontentbox .more a,
-  span.score {
-    color: #ccc;
-  }
-
-  #progressIndicator,
-  .commentarea .panestack-title .title,
-  .commentingAs,
-  .linkinfo .date,
-  .linkinfo .shortlink,
-  .md,
-  div.score,
-  span.totalvotes {
-    color: white;
-  }
-
-  body.comments-page .link {
-    background: #323232;
-  }
-
-  .commentarea {
-    > .usertext {
-      background-color: #292929;
-    }
-
-    .child .thing.comment,
-    .child .thing.comment .comment,
-    .child .thing.comment .comment .comment,
-    .child .thing.comment .comment .comment .comment,
-    .child .thing.comment .comment .comment .comment .comment,
-    .child .thing.comment .comment .comment .comment .comment .comment,
-    .child .thing.comment .comment .comment .comment .comment .comment .comment,
-    .child .thing.comment .comment .comment .comment .comment .comment .comment .comment,
-    .child .thing.comment .comment .comment .comment .comment .comment .comment .comment .comment,
-    .child .thing.comment .comment .comment .comment .comment .comment .comment .comment .comment .comment,
-    .child .thing.comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment,
-    .thing {
-      border: 1px solid #333;
-    }
-
-    .child .thing.comment,
-    .child .thing.comment .comment .comment,
-    .child .thing.comment .comment .comment .comment .comment,
-    .child .thing.comment .comment .comment .comment .comment .comment .comment,
-    .child .thing.comment .comment .comment .comment .comment .comment .comment .comment .comment,
-    .child .thing.comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment {
-      background: #222;
-    }
-
-    .child .thing.comment .comment,
-    .child .thing.comment .comment .comment .comment,
-    .child .thing.comment .comment .comment .comment .comment .comment,
-    .child .thing.comment .comment .comment .comment .comment .comment .comment .comment,
-    .child .thing.comment .comment .comment .comment .comment .comment .comment .comment .comment .comment,
-    .thing {
-      background: #292929;
-    }
-  }
-
-  button {
-    background-color: #999;
-    color: black;
-  }
-
-  #RESShortcutsAdd,
-  #RESShortcutsLeft,
-  #RESShortcutsRight,
-  #RESShortcutsSort,
-  #RESShortcutsTrash,
-  .tagline a {
-    color: white;
-  }
-
-  .shortlink .input {
-    background-color: #222;
-    color: white;
-    border: 1px solid #666;
-  }
-
-  #preview-table > table > tbody > tr > th,
-  #previoussearch label,
-  #progressIndicator a#NERStaticLink,
-  .comment .flat-list li a:hover,
-  .comment .flat-list li a[onclick*=reply],
-  .commentNavSortType:hover,
-  .commentarea .menuarea .toggle a:hover,
-  .deepthread a,
-  .deepthread::after,
-  .dropdown.srdrop span.selected.title,
+  //
+  //.icon-menu a {
+  //  color: white;
+  //}
+  //
+  //.sidecontentbox .title h1 {
+  //  color: white;
+  //  font-weight: bold;
+  //}
+  //
+  //.titlebox .users-online,
+  //.titlebox span.subscribers {
+  //  color: white;
+  //}
+  //
+  //#sr-header-area a,
+  //.sidecontentbox .collapse-button,
+  //h2 {
+  //  color: white;
+  //}
+  //
+  //.sidecontentbox .collapse-button {
+  //  border: 1px solid white;
+  //}
+  //
+  //.commentarea span.score,
+  //.side .md h4 a,
+  //body.res #sr-header-area .sr-bar a.RESShortcutsCurrentSub {
+  //  color: white;
+  //}
+  //
+  //.link.promotedlink.promoted {
+  //  background-color: #565656;
+  //}
+  //
+  //.sidecontentbox .more a,
+  //span.score {
+  //  color: #ccc;
+  //}
+  //
+  //#progressIndicator,
+  //.commentarea .panestack-title .title,
+  //.commentingAs,
+  //.linkinfo .date,
+  //.linkinfo .shortlink,
+  //.md,
+  //div.score,
+  //span.totalvotes {
+  //  color: white;
+  //}
+  //
+  //body.comments-page .link {
+  //  background: #323232;
+  //}
+  //
+  //.commentarea {
+  //  > .usertext {
+  //    background-color: #292929;
+  //  }
+  //
+  //  .child .thing.comment,
+  //  .child .thing.comment .comment,
+  //  .child .thing.comment .comment .comment,
+  //  .child .thing.comment .comment .comment .comment,
+  //  .child .thing.comment .comment .comment .comment .comment,
+  //  .child .thing.comment .comment .comment .comment .comment .comment,
+  //  .child .thing.comment .comment .comment .comment .comment .comment .comment,
+  //  .child .thing.comment .comment .comment .comment .comment .comment .comment .comment,
+  //  .child .thing.comment .comment .comment .comment .comment .comment .comment .comment .comment,
+  //  .child .thing.comment .comment .comment .comment .comment .comment .comment .comment .comment .comment,
+  //  .child .thing.comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment,
+  //  .thing {
+  //    border: 1px solid #333;
+  //  }
+  //
+  //  .child .thing.comment,
+  //  .child .thing.comment .comment .comment,
+  //  .child .thing.comment .comment .comment .comment .comment,
+  //  .child .thing.comment .comment .comment .comment .comment .comment .comment,
+  //  .child .thing.comment .comment .comment .comment .comment .comment .comment .comment .comment,
+  //  .child .thing.comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment {
+  //    background: #222;
+  //  }
+  //
+  //  .child .thing.comment .comment,
+  //  .child .thing.comment .comment .comment .comment,
+  //  .child .thing.comment .comment .comment .comment .comment .comment,
+  //  .child .thing.comment .comment .comment .comment .comment .comment .comment .comment,
+  //  .child .thing.comment .comment .comment .comment .comment .comment .comment .comment .comment .comment,
+  //  .thing {
+  //    background: #292929;
+  //  }
+  //}
+  //
+  //button {
+  //  background-color: #999;
+  //  color: black;
+  //}
+  //
+  //#RESShortcutsAdd,
+  //#RESShortcutsLeft,
+  //#RESShortcutsRight,
+  //#RESShortcutsSort,
+  //#RESShortcutsTrash,
+  //.tagline a {
+  //  color: white;
+  //}
+  //
+  //.shortlink .input {
+  //  background-color: #222;
+  //  color: white;
+  //  border: 1px solid #666;
+  //}
+  //
+  //#preview-table > table > tbody > tr > th,
+  //#previoussearch label,
+  //#progressIndicator a#NERStaticLink,
+  //.comment .flat-list li a:hover,
+  //.comment .flat-list li a[onclick*=reply],
+  //.commentNavSortType:hover,
+  //.commentarea .menuarea .toggle a:hover,
+  //.deepthread a,
+  //.deepthread::after,
+  //.dropdown.srdrop span.selected.title,
   .entry .buttons .may-blank,
-  .error,
-  .formtabs-content .infobar,
-  .generic-table,
-  .link .domain a:hover,
-  .link .tagline,
-  .loadFlat:hover,
-  .md del,
-  .md pre code,
-  .menuarea,
-  .pretty-form,
-  .roundfield,
-  .search-page .searchfacets,
-  .searchfacet a,
-  .side .md ol,
-  .side .md p,
-  .side .titlebox .md h1,
-  .submit-page .title,
-  .titlebox h1 a,
-  .wiki-page .pageactions .wikiaction-current,
-  .wiki-page .wiki-page-content .wiki.md,
-  .wiki-page .wiki-page-content .wiki.md h2,
-  .wiki-page .wikititle,
-  .wiki-page-content .md h1,
+  //.error,
+  //.formtabs-content .infobar,
+  //.generic-table,
+  //.link .domain a:hover,
+  //.link .tagline,
+  //.loadFlat:hover,
+  //.md del,
+  //.md pre code,
+  //.menuarea,
+  //.pretty-form,
+  //.roundfield,
+  //.search-page .searchfacets,
+  //.searchfacet a,
+  //.side .md ol,
+  //.side .md p,
+  //.side .titlebox .md h1,
+  //.submit-page .title,
+  //.titlebox h1 a,
+  //.wiki-page .pageactions .wikiaction-current,
+  //.wiki-page .wiki-page-content .wiki.md,
+  //.wiki-page .wiki-page-content .wiki.md h2,
+  //.wiki-page .wikititle,
+  //.wiki-page-content .md h1,
   form#image-upload.image-upload {
-    color: white;
+    color: @dark-font-color;
   }
-
-  .search-page .searchfacets {
-    background: #555;
-  }
-
-  .formtabs-content .infobar,
-  .roundfield {
-    background-color: #333;
-  }
-
+  //
+  //.search-page .searchfacets {
+  //  background: #555;
+  //}
+  //
+  //.formtabs-content .infobar,
+  //.roundfield {
+  //  background-color: #333;
+  //}
+  //
   .md {
-    code {
-      background-color: #222;
-      border: 1px solid #666;
-    }
-
-    pre {
-      padding: 0;
-      background-color: transparent;
-      border: none;
-    }
-
-    table,
-    ul {
-      color: white;
-    }
+    color: @dark-font-color;
+    //code {
+    //  background-color: #222;
+    //  border: 1px solid #666;
+    //}
+    //
+    //pre {
+    //  padding: 0;
+    //  background-color: transparent;
+    //  border: none;
+    //}
+    //
+    //table,
+    //ul {
+    //  color: white;
+    //}
   }
-
-  .wiki-page div.content {
-    background-color: transparent;
-    border: none;
-  }
-
-  .livePreview .md p {
-    color: black;
-  }
-
-  .wiki-page .infobar {
-    background: 0 0;
-    border: none;
-  }
-
-  .content.submit .info-notice,
-  .wiki-page .pageactions,
-  .wiki-page .wiki-page-content,
-  .wiki-page .wikititle {
-    background-color: #444;
-  }
-
-  body:not(.search-page) #search input[type=text] {
-    background: #444;
-    border: 1px solid #666;
-    color: white;
-  }
-
-  .submit-page .content a {
-    color: #999;
-  }
-
-  .gold-accent.comment-visits-box,
-  .side .titlebox {
-    color: white;
-  }
-
-  .debuginfo,
-  .footer-parent {
-    background: #111;
-  }
-
-  ul#image-preview-list li {
-    background: #333;
-    border: none;
-    color: white;
-  }
-
-  .flairselector .tagline a,
-  .flairselector h2 {
-    color: black;
-  }
-
-  .wiki-page .wiki-page-content .md.wiki h4 {
-    color: white;
-  }
-
-  .comments-page .content .infobar {
-    background: #444;
-    color: white;
-  }
-
-  .commentarea textarea:not(:focus):not(:hover) {
-    color: transparent;
-    background-color: #444;
-    text-shadow: 0 0 12px black;
-  }
-
-  .commentarea textarea:hover,
-  .roundfield input[type=text]:hover,
-  .roundfield input[type=url]:hover,
-  .roundfield textarea:hover {
-    border: 1px solid #9f9f9f;
-  }
-
-  .roundfield input[type=text],
-  .roundfield input[type=url],
-  textarea {
-    background-color: #222;
-    color: white;
-    transition: 0.3s;
-    border: 1px solid #666;
-  }
-
-  .roundfield input[type=text]:focus,
-  .roundfield input[type=url]:focus,
-  .roundfield textarea:focus,
-  .usertext-edit textarea:focus {
-    border: 1px solid #666;
-    transition: 0.1s ease;
-    border-bottom: 3px solid #999;
-  }
-
-  .toc ul {
-    background: 0 0;
-  }
-
-  .commentarea .comment a.expand:hover {
-    background: #999;
-    color: #333;
-  }
-
-  .markdownEditor .edit-btn:not(.btn-macro) {
-    background-color: #ccc;
-    border: none;
-    border-radius: @default-border-radius;
-  }
-
-  .expando-button,
-  .expando-button.expanded,
-  .expando-button.expanded:hover,
-  .expando-button:hover {
-    border-radius: 20px;
-    background-color: #999;
-  }
-
-  #REScommentSubToggle {
-    background: #ccc;
-    color: black;
-  }
-
-  .tabmenu {
-    background: #333;
-  }
-
-  input[name=uh] ~ a:after {
-    display: none;
-  }
-
-  .deepthread a {
-    color: white;
-  }
-
-  .new-comment .usertext-body {
-    background-color: #444;
-  }
+  //
+  //.wiki-page div.content {
+  //  background-color: transparent;
+  //  border: none;
+  //}
+  //
+  //.livePreview .md p {
+  //  color: black;
+  //}
+  //
+  //.wiki-page .infobar {
+  //  background: 0 0;
+  //  border: none;
+  //}
+  //
+  //.content.submit .info-notice,
+  //.wiki-page .pageactions,
+  //.wiki-page .wiki-page-content,
+  //.wiki-page .wikititle {
+  //  background-color: #444;
+  //}
+  //
+  //body:not(.search-page) #search input[type=text] {
+  //  background: #444;
+  //  border: 1px solid #666;
+  //  color: white;
+  //}
+  //
+  //.submit-page .content a {
+  //  color: #999;
+  //}
+  //
+  //.gold-accent.comment-visits-box,
+  //.side .titlebox {
+  //  color: white;
+  //}
+  //
+  //.debuginfo,
+  //.footer-parent {
+  //  background: #111;
+  //}
+  //
+  //ul#image-preview-list li {
+  //  background: #333;
+  //  border: none;
+  //  color: white;
+  //}
+  //
+  //.flairselector .tagline a,
+  //.flairselector h2 {
+  //  color: black;
+  //}
+  //
+  //.wiki-page .wiki-page-content .md.wiki h4 {
+  //  color: white;
+  //}
+  //
+  //.comments-page .content .infobar {
+  //  background: #444;
+  //  color: white;
+  //}
+  //
+  //.commentarea textarea:not(:focus):not(:hover) {
+  //  color: transparent;
+  //  background-color: #444;
+  //  text-shadow: 0 0 12px black;
+  //}
+  //
+  //.commentarea textarea:hover,
+  //.roundfield input[type=text]:hover,
+  //.roundfield input[type=url]:hover,
+  //.roundfield textarea:hover {
+  //  border: 1px solid #9f9f9f;
+  //}
+  //
+  //.roundfield input[type=text],
+  //.roundfield input[type=url],
+  //textarea {
+  //  background-color: #222;
+  //  color: white;
+  //  transition: 0.3s;
+  //  border: 1px solid #666;
+  //}
+  //
+  //.roundfield input[type=text]:focus,
+  //.roundfield input[type=url]:focus,
+  //.roundfield textarea:focus,
+  //.usertext-edit textarea:focus {
+  //  border: 1px solid #666;
+  //  transition: 0.1s ease;
+  //  border-bottom: 3px solid #999;
+  //}
+  //
+  //.toc ul {
+  //  background: 0 0;
+  //}
+  //
+  //.commentarea .comment a.expand:hover {
+  //  background: #999;
+  //  color: #333;
+  //}
+  //
+  //.markdownEditor .edit-btn:not(.btn-macro) {
+  //  background-color: #ccc;
+  //  border: none;
+  //  border-radius: @default-border-radius;
+  //}
+  //
+  //.expando-button,
+  //.expando-button.expanded,
+  //.expando-button.expanded:hover,
+  //.expando-button:hover {
+  //  border-radius: 20px;
+  //  background-color: #999;
+  //}
+  //
+  //#REScommentSubToggle {
+  //  background: #ccc;
+  //  color: black;
+  //}
+  //
+  //input[name=uh] ~ a:after {
+  //  display: none;
+  //}
+  //
+  //.deepthread a {
+  //  color: white;
+  //}
+  //
+  //.new-comment .usertext-body {
+  //  background-color: #444;
+  //}
 }
