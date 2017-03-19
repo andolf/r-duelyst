@@ -5,7 +5,7 @@
 html[lang=dm] {
   &::-moz-selection {
     background: #666;
-    color: #fff
+    color: white;
   }
 
   body {
@@ -30,24 +30,25 @@ html[lang=dm] {
     padding: 10px;
     border-left: 2px solid #888;
     background-color: #2f2f2f;
-    color: #fff;
+    color: white;
     line-height: 20px;
-    font-size: 14px
+    font-size: 14px;
   }
 
   #siteTable .thing .md table thead tr th,
   .wiki-page-content .md table thead tr th {
-    background: #333
+    background: #333;
   }
 
   #siteTable .thing .md table tbody tr,
   .commentarea .thing .md table tbody tr,
   .wiki-page-content .md table tbody tr {
-    border-bottom: 1px solid #999
+    border-bottom: 1px solid #999;
   }
 
   .md hr {
-    color: #888
+    color: #888;
+    border-bottom: 1px solid #666;
   }
 
   #siteTable .thing .md ol li:nth-child(odd),
@@ -55,7 +56,7 @@ html[lang=dm] {
   .commentarea .md ul li:nth-child(odd),
   .commentarea .thing .md ol li:nth-child(odd),
   .wiki-page-content .md ol li:nth-child(odd) {
-    background-color: #333
+    background-color: #333;
   }
 
   #siteTable .thing .md ol li,
@@ -65,7 +66,7 @@ html[lang=dm] {
   .wiki-page-content .md ol li {
     border-bottom: solid 1px #555;
     background-color: #222;
-    padding: 5px
+    padding: 5px;
   }
 
   #siteTable .thing .md ol,
@@ -77,26 +78,26 @@ html[lang=dm] {
     border-left: solid 1px #555;
     border-top: solid 1px #555;
     line-height: 20px;
-    font-size: 14px
+    font-size: 14px;
   }
 
   .content .entry .buttons li.reported-stamp,
   body .content .stickied .entry .buttons li.reported-stamp {
-    background: #222 !important;
-    color: #d1d1d1 !important
+    background: #222;
+    color: #d1d1d1;
   }
 
   .pretty-button {
     &.positive {
-      color: @olive !important;
+      color: @olive;
     }
 
     &.neutral {
-      color: #ccc
+      color: #ccc;
     }
 
     &.negative {
-      color: @pink !important;
+      color: @pink;
     }
   }
 
@@ -113,14 +114,14 @@ html[lang=dm] {
     .search-result .search-score,
     .search-result-group .search-header-label,
     .search-result-group .search-result-group-header {
-      color: #fff
+      color: white;
     }
 
     .search-result {
       border-bottom: 1px solid #666;
 
       .search-expando.collapsed:before {
-        background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, #444 100%)
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, #444 100%);
       }
 
       .search-expando-button {
@@ -131,7 +132,7 @@ html[lang=dm] {
     .search-result-group .search-result-group-header {
       background: #222;
       border-bottom: 1px solid #666;
-      border-top: 1px solid #666
+      border-top: 1px solid #666;
     }
   }
 
@@ -140,7 +141,7 @@ html[lang=dm] {
   body:not(.comments-page) .over18 .link .tagline,
   body:not(.comments-page) .over18 .md p,
   body:not(.comments-page) .over18 .tagline {
-    color: @pink !important;
+    color: @pink;
   }
 
   div.content {
@@ -148,28 +149,29 @@ html[lang=dm] {
   }
 
   .entry .buttons li a {
-    color: #ccc !important
+    color: #ccc;
   }
 
   .commentNavSortType,
   .commentarea .menuarea .toggle a,
   .dropdown.lightdrop .selected,
   .thing .title:visited {
-    color: #ababab !important
+    color: #ababab;
   }
 
   a.comments::after {
-    color: #ccc !important
+    color: #ccc;
   }
 
   .flair {
-    border: none
+    border: none;
+    color: #e3e3e3;
   }
 
   .side {
     .usertext-body {
       background-image: none;
-      padding: 0
+      padding: 0;
     }
 
     .titlebox,
@@ -186,72 +188,68 @@ html[lang=dm] {
         background: #444;
 
         &:hover {
-          background: #666
+          background: #666;
         }
 
         &:active {
-          background: #222
+          background: #222;
         }
       }
     }
 
     .md {
       h4 {
-        background: #323232
+        background: #323232;
       }
 
       h2 + ul {
-        background: #222
+        background: #222;
       }
     }
 
     .sidecontentbox a {
-      color: #ccc
+      color: #ccc;
     }
   }
 
   .titlebox form.toggle,
   .toggle .option.active,
   div.leavemoderator {
-    color: #ccc
+    color: #ccc;
   }
 
   .icon-menu a {
-    color: #fff
+    color: white;
   }
 
   .sidecontentbox .title h1 {
-    color: #fff;
-    font-weight: 700
+    color: white;
+    font-weight: bold;
   }
 
   .titlebox .users-online,
   .titlebox span.subscribers {
-    color: #fff !important
+    color: white;
   }
 
   #sr-header-area a,
   .sidecontentbox .collapse-button,
   h2 {
-    color: #fff
+    color: white;
   }
 
   .sidecontentbox .collapse-button {
-    border: 1px solid #fff
+    border: 1px solid white;
   }
 
   .commentarea span.score,
   .side .md h4 a,
   body.res #sr-header-area .sr-bar a.RESShortcutsCurrentSub {
-    color: #fff !important
-  }
-
-  .md hr {
-    border-bottom: 1px solid #666;
+    color: white;
   }
 
   .content .md a {
-    color: @bahia !important;
+    color: @bahia;
   }
 
   .titlebox a {
@@ -259,12 +257,12 @@ html[lang=dm] {
   }
 
   .link.promotedlink.promoted {
-    background-color: #565656
+    background-color: #565656;
   }
 
   .sidecontentbox .more a,
   span.score {
-    color: #ccc !important
+    color: #ccc;
   }
 
   #progressIndicator,
@@ -275,16 +273,16 @@ html[lang=dm] {
   .md,
   div.score,
   span.totalvotes {
-    color: #fff !important
+    color: white;
   }
 
   body.comments-page .link {
-    background: #323232
+    background: #323232;
   }
 
   .commentarea {
     > .usertext {
-      background-color: #292929
+      background-color: #292929;
     }
 
     .child .thing.comment,
@@ -299,7 +297,7 @@ html[lang=dm] {
     .child .thing.comment .comment .comment .comment .comment .comment .comment .comment .comment .comment,
     .child .thing.comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment,
     .thing {
-      border: 1px solid #333 !important
+      border: 1px solid #333;
     }
 
     .child .thing.comment,
@@ -308,7 +306,7 @@ html[lang=dm] {
     .child .thing.comment .comment .comment .comment .comment .comment .comment,
     .child .thing.comment .comment .comment .comment .comment .comment .comment .comment .comment,
     .child .thing.comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment {
-      background: #222 !important
+      background: #222;
     }
 
     .child .thing.comment .comment,
@@ -317,13 +315,13 @@ html[lang=dm] {
     .child .thing.comment .comment .comment .comment .comment .comment .comment .comment,
     .child .thing.comment .comment .comment .comment .comment .comment .comment .comment .comment .comment,
     .thing {
-      background: #292929 !important
+      background: #292929;
     }
   }
 
   button {
     background-color: #999;
-    color: #000
+    color: black;
   }
 
   #RESShortcutsAdd,
@@ -332,13 +330,13 @@ html[lang=dm] {
   #RESShortcutsSort,
   #RESShortcutsTrash,
   .tagline a {
-    color: #fff
+    color: white;
   }
 
   .shortlink .input {
     background-color: #222;
-    color: #fff;
-    border: 1px solid #666 !important
+    color: white;
+    border: 1px solid #666;
   }
 
   #preview-table > table > tbody > tr > th,
@@ -376,117 +374,117 @@ html[lang=dm] {
   .wiki-page .wikititle,
   .wiki-page-content .md h1,
   form#image-upload.image-upload {
-    color: #fff !important
+    color: white;
   }
 
   .search-page .searchfacets {
-    background: #555
+    background: #555;
   }
 
   .formtabs-content .infobar,
   .roundfield {
-    background-color: #333
+    background-color: #333;
   }
 
   .md {
     code {
       background-color: #222;
-      border: 1px solid #666 !important
+      border: 1px solid #666;
     }
 
     pre {
       padding: 0;
-      background-color: transparent !important;
-      border: none
+      background-color: transparent;
+      border: none;
     }
 
     table,
     ul {
-      color: #fff !important
+      color: white;
     }
   }
 
   .wiki-page div.content {
     background-color: transparent;
-    border: none
+    border: none;
   }
 
   .livePreview .md p {
-    color: #000
+    color: black;
   }
 
   .wiki-page .infobar {
     background: 0 0;
-    border: none
+    border: none;
   }
 
   .content.submit .info-notice,
   .wiki-page .pageactions,
   .wiki-page .wiki-page-content,
   .wiki-page .wikititle {
-    background-color: #444 !important
+    background-color: #444;
   }
 
   body:not(.search-page) #search input[type=text] {
     background: #444;
     border: 1px solid #666;
-    color: #fff;
+    color: white;
   }
 
   .submit-page .content a {
-    color: #999 !important
+    color: #999;
   }
 
   .gold-accent.comment-visits-box,
   .side .titlebox {
-    color: #fff
+    color: white;
   }
 
   .debuginfo,
   .footer-parent {
-    background: #111
+    background: #111;
   }
 
   ul#image-preview-list li {
     background: #333;
     border: none;
-    color: #fff
+    color: white;
   }
 
   .flairselector .tagline a,
   .flairselector h2 {
-    color: #000 !important
+    color: black;
   }
 
   .wiki-page .wiki-page-content .md.wiki h4 {
-    color: #fff !important
+    color: white;
   }
 
   .comments-page .content .infobar {
     background: #444;
-    color: #fff
+    color: white;
   }
 
   .commentarea textarea:not(:focus):not(:hover) {
     color: transparent;
-    background-color: #444 !important;
-    text-shadow: 0 0 12px #000
+    background-color: #444;
+    text-shadow: 0 0 12px black;
   }
 
   .commentarea textarea:hover,
   .roundfield input[type=text]:hover,
   .roundfield input[type=url]:hover,
   .roundfield textarea:hover {
-    border: 1px solid #9f9f9f
+    border: 1px solid #9f9f9f;
   }
 
   .roundfield input[type=text],
   .roundfield input[type=url],
   textarea {
-    background-color: #222 !important;
-    color: #fff !important;
-    transition: .3s;
-    border: 1px solid #666
+    background-color: #222;
+    color: white;
+    transition: 0.3s;
+    border: 1px solid #666;
   }
 
   .roundfield input[type=text]:focus,
@@ -494,22 +492,22 @@ html[lang=dm] {
   .roundfield textarea:focus,
   .usertext-edit textarea:focus {
     border: 1px solid #666;
-    transition: .1s ease;
-    border-bottom: 3px solid #999 !important
+    transition: 0.1s ease;
+    border-bottom: 3px solid #999;
   }
 
   .toc ul {
-    background: 0 0
+    background: 0 0;
   }
 
   .commentarea .comment a.expand:hover {
     background: #999;
-    color: #333
+    color: #333;
   }
 
   .markdownEditor .edit-btn:not(.btn-macro) {
-    background-color: #ccc !important;
-    border: none !important;
+    background-color: #ccc;
+    border: none;
     border-radius: @default-border-radius;
   }
 
@@ -517,21 +515,17 @@ html[lang=dm] {
   .expando-button.expanded,
   .expando-button.expanded:hover,
   .expando-button:hover {
-    border-radius: 20px !important;
-    background-color: #999 !important
+    border-radius: 20px;
+    background-color: #999;
   }
 
   #REScommentSubToggle {
-    background: #ccc !important;
-    color: #000 !important
+    background: #ccc;
+    color: black;
   }
 
   .tabmenu {
-    background: #333
-  }
-
-  .flair {
-    color: #e3e3e3
+    background: #333;
   }
 
   input[name=uh] ~ a:after {
@@ -539,7 +533,7 @@ html[lang=dm] {
   }
 
   .deepthread a {
-    color: #fff;
+    color: white;
   }
 
   .new-comment .usertext-body {

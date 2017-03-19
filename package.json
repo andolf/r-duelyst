@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Stylesheet for the Duelyst subreddit.",
   "scripts": {
-    "css": "lessc src/main.less output/main.css --clean-css='--s1 --advanced --compatibility=ie8'"
+    "build": "lessc src/main.less dist/main.css --clean-css='--s1 --advanced --compatibility=ie9' --autoprefix",
+    "lint": "stylelint 'src/**/*.less' --syntax less",
+    "css": "npm run lint && npm run build"
   },
   "repository": {
     "type": "git",
@@ -22,6 +24,7 @@
   "devDependencies": {
     "less": "^2.7.1",
     "less-plugin-autoprefix": "^1.5.1",
-    "less-plugin-clean-css": "^1.5.1"
+    "less-plugin-clean-css": "^1.5.1",
+    "stylelint": "^7.9.0"
   }
 }
