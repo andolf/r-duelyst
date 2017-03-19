@@ -1,5 +1,5 @@
 .tagline .author {
-  border-radius: 0 !important;
+  border-radius: 0;
 
   &.admin,
   &.admin:before,
@@ -9,7 +9,7 @@
   &.submitter:before {
     font-weight: bold;
     line-height: 20px;
-    color: #fff;
+    color: white;
     font-size: 10px;
     display: inline-block;
   }
@@ -17,8 +17,8 @@
   &.admin,
   &.moderator,
   &.submitter {
-    border-radius: 20px !important; // override for RES
-    padding: 0 10px 0 0 !important; // override for RES
+    border-radius: 20px; // override for RES
+    padding: 0 10px 0 0; // override for RES
     transition: @default-transition-time;
 
     &:before {
@@ -73,14 +73,14 @@
   }
 
   .score {
-    font-weight: 700;
+    font-weight: bold;
   }
 
   .moderator:after {
-    content: "oderator - speaking officially."
+    content: "oderator - speaking officially.";
   }
 
   .admin:after {
-    content: "dmin - speaking officially"
+    content: "dmin - speaking officially";
   }
 }
