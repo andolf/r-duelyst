@@ -1,4 +1,4 @@
-![dependencies](https://david-dm.org/andolf/r-duelyst/dev-status.svg)
+[![Build Status](https://travis-ci.org/andolf/r-duelyst.svg?branch=master)](https://travis-ci.org/andolf/r-duelyst) ![dependencies](https://david-dm.org/andolf/r-duelyst/dev-status.svg)
 
 # /r/duelyst
 
