@@ -1,3 +1,5 @@
+![dependencies](https://david-dm.org/andolf/r-duelyst.svg)
+
 # /r/duelyst
 
 A more organized version of the stylesheet for the [Duelyst subreddit](http://reddit.com/r/duelyst/).
