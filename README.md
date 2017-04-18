@@ -1,4 +1,4 @@
-![dependencies](https://david-dm.org/andolf/r-duelyst.svg#info=devDependencies)
+![dependencies](https://david-dm.org/andolf/r-duelyst/dev-status.svg)
 
 # /r/duelyst
 
