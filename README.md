@@ -2,8 +2,6 @@
 
 # /r/duelyst
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/andolf/r-duelyst.svg)](https://greenkeeper.io/)
-
 A more organized version of the stylesheet for the [Duelyst subreddit](http://reddit.com/r/duelyst/).
 
 ## How to run
