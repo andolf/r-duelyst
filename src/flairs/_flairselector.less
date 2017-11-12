@@ -1,5 +1,6 @@
 .flairselector {
   border-radius: @default-border-radius;
+  box-shadow: @default-box-shadow;
 
   &:before {
     display: block;
@@ -27,7 +28,7 @@
   }
 
   h2 {
-    color: @base-font-size;
+    color: @base-font-color;
     text-transform: uppercase;
     font-weight: bold;
     font-size: @base-font-size;
@@ -50,21 +51,7 @@
 
     // (almost) same styling as fancy-toggle-button
     button {
-      margin: 0;
-      border: none;
-      font-size: 9px;
-      text-transform: uppercase;
-      transition: @default-transition-time background ease-in-out;
-      border-radius: @default-border-radius;
-      background: lighten(@theme-primary, 5%);
-
-      &:hover {
-        background: lighten(@theme-primary, 10%);
-      }
-
-      &:active {
-        background: @theme-primary;
-      }
+      .default-button;
     }
   }
 }

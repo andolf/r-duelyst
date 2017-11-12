@@ -2,11 +2,6 @@ body {
   background-color: #e6e6e8;
 }
 
-//a {
-//  text-decoration: none;
-//  color: @base-font-color-lighter;
-//}
-
 h2 {
   color: #252525;
   font-size: 18px;
@@ -14,40 +9,12 @@ h2 {
 }
 
 button {
-  white-space: nowrap;
-  background: @theme-primary;
-  border-radius: @default-border-radius;
-  color: white;
-  cursor: pointer;
-  line-height: 2.16;
-  text-align: center;
-  border: 0;
-  text-transform: uppercase;
-  transition: all 0.2s ease 0s;
-  font-size: 12px;
-  font-weight: bold;
-
-  &[disabled] {
-    display: none;
-  }
-
-  &:hover {
-    background: @theme-primary-lighten;
-  }
-
-  &:active {
-    background: @theme-primary-darken;
-  }
+  .default-button;
 }
 
 .choice.primary,
 .selected {
   font-weight: 600;
-}
-
-#hsts_pixel,
-.listing-page .tabmenu li a[href*="/gilded"] {
-  display: none;
 }
 
 .deepthread {
@@ -87,8 +54,12 @@ button {
   margin-right: 5px;
 }
 
-.thing .title:visited {
-  color: #331f6d;
+.thing .title {
+  font-size: 14px;
+
+  &:visited {
+    color: #331f6d;
+  }
 }
 
 .loadFlat {
@@ -103,10 +74,6 @@ button {
   &:hover {
     color: @royal-blue;
   }
-}
-
-.toc ul {
-  background: white;
 }
 
 .commentNavSortType:hover,
@@ -129,15 +96,6 @@ a.madeVisible {
 
 img.RESImage {
   border-radius: 12px;
-}
-
-.gold-accent {
-  background-color: transparent;
-  border: 0;
-
-  &.comment-visits-box {
-    color: black;
-  }
 }
 
 .action-form {
@@ -417,6 +375,10 @@ ul#image-preview-list {
 //  padding-bottom: 10px;
 //  text-align: left
 //}
+
+.icon-menu a {
+  background: none;
+}
 
 .searchfacet a {
   color: #434343;
@@ -747,7 +709,9 @@ body > .content .link .rank {
 
 .morelink {
   .default-button;
-  padding: 5px;
+  line-height: 1;
+  padding: @base-margin;
+  height: auto;
 
   .nub {
     display: none;
@@ -773,6 +737,9 @@ body > .content .link .rank {
 
 .reddit-infobar {
   .base-site-table;
+  margin-bottom: 10px;
+  border: 0;
+  border-radius: @default-border-radius;
 }
 
 .message-count {

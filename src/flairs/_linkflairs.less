@@ -3,26 +3,16 @@
 .linkflairlabel {
   background: @theme-primary;
   color: white;
-  font-weight: bold;
-  padding: 2px 10px;
-  border-radius: 20px;
+  padding: 0 3px;
+  border-radius: 2px;
   border: 0;
-  vertical-align: text-bottom;
-}
-
-.linkflair {
-  //&.link {
-  //  border-left: 3px solid @royal-blue;
-  //}
+  line-height: 14px;
 }
 
 .linkflair(@faction) {
   .linkflair-@{faction} {
-    //&.link {
-    //  border-left-color: @@faction;
-    //}
-
-    .linkflairlabel {
+    > .linkflairlabel,
+    .title > .linkflairlabel {
       background: @@faction;
 
       & when (@faction = lyonar) or (@faction = vanar) {
