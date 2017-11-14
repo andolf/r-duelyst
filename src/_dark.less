@@ -7,12 +7,13 @@
 @dark-primary: #565555;
 @dark-secondary: #6f6e6e;
 
-@dark-font-color: #f1f1f5;
+@dark-font-color: #e6e6e7;
 @dark-link: #369;
 @dark-link-lighter: #5b84ad;
 
 @dark-side-link: #7ddc1f;
 
+/* stylelint-disable declaration-no-important */
 html[lang=dm] {
   body {
     background: @dark-bg;
@@ -20,7 +21,7 @@ html[lang=dm] {
   }
 
   .link {
-    background: @dark-content-bg;
+    background: @dark-content-bg !important;
 
     .score {
       &.likes,
@@ -28,6 +29,10 @@ html[lang=dm] {
         color: @dark-font-color;
       }
     }
+  }
+
+  .flair {
+    color: @dark-font-color;
   }
 
   .arrow {
@@ -204,7 +209,7 @@ html[lang=dm] {
   }
 
   .commentarea .thing {
-    background: @dark-content-bg;
+    background: @dark-content-bg !important;
   }
 
   .reddit-infobar {
@@ -257,6 +262,12 @@ html[lang=dm] {
     color: @dark-font-color;
   }
 
+  .tagline {
+    .author {
+      color: @dark-font-color !important;
+    }
+  }
+
   .combined-search-page .search-result {
     background: @dark-content-bg;
 
@@ -305,4 +316,19 @@ html[lang=dm] {
       background: @dark-bg;
     }
   }
+
+  .commentarea .comment .flat-list li a[onclick*=reply] {
+    color: @dark-font-color;
+  }
+
+  .new-comment .usertext-body {
+    background-color: #555;
+  }
+
+  .res-nightmode {
+    .RES-keyNav-activeElement {
+      background: none !important;
+    }
+  }
 }
+/* stylelint-enable */

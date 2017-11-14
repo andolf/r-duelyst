@@ -1,6 +1,7 @@
 // RES = Reddit Enhancement Suite
 // https://www.reddit.com/r/enhancement
 
+/* stylelint-disable declaration-no-important */
 body.res {
   #sr-header-area .sr-bar a.RESShortcutsCurrentSub {
     color: white;
@@ -197,3 +198,12 @@ div#RESStyleSheetTipPane-header {
   border: 1px solid @theme-primary;
   box-shadow: @default-box-shadow;
 }
+
+.commentarea .entry.RES-keyNav-activeElement div.noncollapsed,
+.entry.RES-keyNav-activeElement .usertext-body,
+.entry.RES-keyNav-activeElement div.md {
+  background: 0 0;
+  outline: 0;
+  border: 0;
+}
+/* stylelint-enable */

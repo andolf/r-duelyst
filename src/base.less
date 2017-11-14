@@ -447,20 +447,6 @@ a.author.moderator:after {
   content: "";
 }
 
-.commentarea .entry.RES-keyNav-activeElement div.noncollapsed,
-.entry.RES-keyNav-activeElement,
-.entry.RES-keyNav-activeElement .usertext-body,
-.entry.RES-keyNav-activeElement div.md {
-  background: 0 0;
-}
-
-.commentarea .entry.RES-keyNav-activeElement div.noncollapsed,
-.entry.RES-keyNav-activeElement .usertext-body,
-.entry.RES-keyNav-activeElement div.md {
-  outline: 0;
-  border: 0;
-}
-
 #progressIndicator {
   font-weight: bold;
   text-align: left;
@@ -504,7 +490,6 @@ a.author.moderator:after {
     height: 20px;
     width: 20px;
     border-radius: 50%;
-    transition: @default-transition-time;
   }
 
   &.up {
@@ -518,13 +503,11 @@ a.author.moderator:after {
   &.upmod {
     background-position: 2px -294px;
     background-color: @theme-primary;
-    margin-bottom: 5px;
   }
 
   &.downmod {
     background-position: 2px -346px;
     background-color: @theme-secondary;
-    margin-top: 5px;
   }
 }
 
