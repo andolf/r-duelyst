@@ -32,11 +32,13 @@
 
     &:hover {
       text-decoration: none;
+      color: white;
     }
   }
 
   &.submitter {
     border: 1px solid @theme-primary;
+    color: @theme-primary;
 
     &:before {
       background: @theme-primary-lighten;
@@ -45,12 +47,12 @@
 
     &:hover {
       background: @theme-primary-darken;
-      color: white;
     }
   }
 
   &.moderator {
     border: 1px solid @moderator-color;
+    color: @moderator-color;
 
     &:before {
       background: lighten(@moderator-color, 10%);
@@ -59,12 +61,12 @@
 
     &:hover {
       background: darken(@moderator-color, 10%);
-      color: white;
     }
   }
 
   &.admin {
     border: 1px solid @admin-color;
+    color: @admin-color;
 
     &:before {
       background: lighten(@admin-color, 10%);
@@ -73,7 +75,6 @@
 
     &:hover {
       background: darken(@admin-color, 10%);
-      color: white;
     }
   }
 
