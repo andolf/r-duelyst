@@ -17,7 +17,7 @@
 .default-button {
   border: none;
   border-radius: @default-border-radius;
-  background: #369;
+  background: @theme-primary;
   padding: 8px;
   text-transform: uppercase;
   font-size: 12px;
@@ -29,7 +29,11 @@
   text-align: center;
 
   &:hover {
-    background: #5b84ad;
+    background: @theme-primary-lighten;
+  }
+
+  &:active {
+    background: @theme-primary-darken;
   }
 
   a,
