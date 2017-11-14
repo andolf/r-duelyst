@@ -1,10 +1,5 @@
 body {
-  background: url(%%main-banner%%) #e6e6e8 left top no-repeat;
-}
-
-a {
-  text-decoration: none;
-  color: @base-font-color-lighter;
+  background-color: #e6e6e8;
 }
 
 h2 {
@@ -14,40 +9,12 @@ h2 {
 }
 
 button {
-  white-space: nowrap;
-  background: @theme-primary;
-  border-radius: @default-border-radius;
-  color: white;
-  cursor: pointer;
-  line-height: 2.16;
-  text-align: center;
-  border: 0;
-  text-transform: uppercase;
-  transition: all 0.2s ease 0s;
-  font-size: 12px;
-  font-weight: bold;
-
-  &[disabled] {
-    display: none;
-  }
-
-  &:hover {
-    background: @theme-primary-lighten;
-  }
-
-  &:active {
-    background: @theme-primary-darken;
-  }
+  .default-button;
 }
 
 .choice.primary,
 .selected {
   font-weight: 600;
-}
-
-#hsts_pixel,
-.listing-page .tabmenu li a[href*="/gilded"] {
-  display: none;
 }
 
 .deepthread {
@@ -87,8 +54,12 @@ button {
   margin-right: 5px;
 }
 
-.thing .title:visited {
-  color: #331f6d;
+.thing .title {
+  font-size: 14px;
+
+  &:visited {
+    color: #331f6d;
+  }
 }
 
 .loadFlat {
@@ -103,10 +74,6 @@ button {
   &:hover {
     color: @royal-blue;
   }
-}
-
-.toc ul {
-  background: white;
 }
 
 .commentNavSortType:hover,
@@ -129,15 +96,6 @@ a.madeVisible {
 
 img.RESImage {
   border-radius: 12px;
-}
-
-.gold-accent {
-  background-color: transparent;
-  border: 0;
-
-  &.comment-visits-box {
-    color: black;
-  }
 }
 
 .action-form {
@@ -287,17 +245,6 @@ ul.report-reasons {
   margin-top: 35px;
 }
 
-//#preview-table {
-//  padding-left: 20px;
-//
-//  > table {
-//    border: 0.2em dashed lightgray;
-//    padding: 5px;
-//    margin: 5px 5px 5px 25px;
-//    width: 900px;
-//  }
-//}
-
 div#images {
   margin-left: 20px;
   padding-right: 20px;
@@ -407,35 +354,14 @@ ul#image-preview-list {
   border: 0;
 }
 
-//#moresearchinfo {
-//  border: none;
-//  background: rgba(0, 0, 0, .9);
-//  border-radius: 0 0 10px 10px;
-//  line-height: 1.7em;
-//  padding-left: 20px;
-//  padding-right: 10px;
-//  padding-bottom: 10px;
-//  text-align: left
-//}
+.icon-menu a {
+  background: none;
+}
 
 .searchfacet a {
   color: #434343;
 }
 
-//#previoussearch label {
-//  font-size: 12px;
-//  text-transform: uppercase;
-//  display: block;
-//  margin: 5px 0;
-//  position: absolute;
-//  top: 95px;
-//  font-weight: 700
-//}
-
-//.search-page #search input[type=submit],
-//.search-page #search input[type=submit]:hover,
-//.search-page .raisedbox h4,
-//.search-summary,
 .searchpane-toggle-hide {
   display: none;
 }
@@ -747,7 +673,9 @@ body > .content .link .rank {
 
 .morelink {
   .default-button;
-  padding: 5px;
+  line-height: 1;
+  padding: @base-margin;
+  height: auto;
 
   .nub {
     display: none;
@@ -773,6 +701,9 @@ body > .content .link .rank {
 
 .reddit-infobar {
   .base-site-table;
+  margin-bottom: 10px;
+  border: 0;
+  border-radius: @default-border-radius;
 }
 
 .message-count {
@@ -851,10 +782,6 @@ form#image-upload.image-upload {
 .over18 a.title:visited {
   color: #d10023;
 }
-
-//li.searchfacet {
-//  width: 20em;
-//}
 
 .error {
   font-size: 12px;
@@ -996,28 +923,6 @@ form#image-upload.image-upload {
   background: #444;
 }
 
-//.md p > a[href="#s"],
-//a[href="#s"] {
-//  text-decoration: none !important;
-//  cursor: default;
-//  background: black;
-//  color: white !important;
-//  display: inline-block;
-//
-//  &:after {
-//    content: attr(title);
-//    color: black;
-//    padding: 0 0.5em;
-//    visibility: visible;
-//  }
-//
-//  &:hover,
-//  &:active:after,
-//  &:hover:after {
-//    color: white;
-//  }
-//}
-
 .arrow.down,
 .comment .arrow.downmod {
   &:hover:after {
@@ -1077,4 +982,9 @@ ul.res-search-tabs {
   &:before {
     top: 50px;
   }
+}
+
+.titlebox form.toggle,
+.leavemoderator {
+  background: transparent;
 }

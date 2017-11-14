@@ -1,327 +1,141 @@
-@dark-bg: #232321;
-@dark-content-bg: #303030;
-@dark-input-bg: #414140;
+@dark-bg: #222;
+@dark-content-bg: #333;
+
+@dark-header-gradient-start: #363842;
+@dark-header-gradient-end: #414140;
+
+@dark-primary: #565555;
+@dark-secondary: #6f6e6e;
+
+@dark-font-color: #f1f1f5;
+@dark-link: #369;
+@dark-link-lighter: #5b84ad;
+
+@dark-side-link: #7ddc1f;
 
 html[lang=dm] {
-  &::-moz-selection {
-    background: #666;
-    color: white;
-  }
-
   body {
     background: @dark-bg;
-  }
-
-  .linkinfo {
-    background-color: @dark-content-bg;
-
-    .shortlink input {
-      background: @dark-input-bg;
-    }
+    color: @dark-font-color;
   }
 
   .link {
-    border-bottom-color: @dark-input-bg;
-  }
+    background: @dark-content-bg;
 
-  #siteTable .thing .md blockquote,
-  .commentarea .md blockquote,
-  .wiki-page-content .md blockquote {
-    padding: 10px;
-    border-left: 2px solid #888;
-    background-color: #2f2f2f;
-    color: white;
-    line-height: 20px;
-    font-size: 14px;
-  }
-
-  #siteTable .thing .md table thead tr th,
-  .wiki-page-content .md table thead tr th {
-    background: #333;
-  }
-
-  #siteTable .thing .md table tbody tr,
-  .commentarea .thing .md table tbody tr,
-  .wiki-page-content .md table tbody tr {
-    border-bottom: 1px solid #999;
-  }
-
-  .md hr {
-    color: #888;
-    border-bottom: 1px solid #666;
-  }
-
-  #siteTable .thing .md ol li:nth-child(odd),
-  #siteTable .thing .md ul li:nth-child(odd),
-  .commentarea .md ul li:nth-child(odd),
-  .commentarea .thing .md ol li:nth-child(odd),
-  .wiki-page-content .md ol li:nth-child(odd) {
-    background-color: #333;
-  }
-
-  #siteTable .thing .md ol li,
-  #siteTable .thing .md ul li,
-  .commentarea .md ul li,
-  .commentarea .thing .md ol li,
-  .wiki-page-content .md ol li {
-    border-bottom: solid 1px #555;
-    background-color: #222;
-    padding: 5px;
-  }
-
-  #siteTable .thing .md ol,
-  #siteTable .thing .md ul,
-  .commentarea .md ul,
-  .commentarea .thing .md ol,
-  .wiki-page-content .md ol {
-    border-right: solid 1px #555;
-    border-left: solid 1px #555;
-    border-top: solid 1px #555;
-    line-height: 20px;
-    font-size: 14px;
-  }
-
-  .content .entry .buttons li.reported-stamp,
-  body .content .stickied .entry .buttons li.reported-stamp {
-    background: #222;
-    color: #d1d1d1;
-  }
-
-  .pretty-button {
-    &.positive {
-      color: @olive;
-    }
-
-    &.neutral {
-      color: #ccc;
-    }
-
-    &.negative {
-      color: @pink;
-    }
-  }
-
-  .nsfw-stamp {
-    background: @pink;
-  }
-
-  .combined-search-page {
-    .search-result .search-comments,
-    .search-result .search-result-body,
-    .search-result .search-result-footer .search-link,
-    .search-result .search-result-header .search-title,
-    .search-result .search-result-meta,
-    .search-result .search-score,
-    .search-result-group .search-header-label,
-    .search-result-group .search-result-group-header {
-      color: white;
-    }
-
-    .search-result {
-      border-bottom: 1px solid #666;
-
-      .search-expando.collapsed:before {
-        background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, #444 100%);
-      }
-
-      .search-expando-button {
-        color: @bahia;
+    .score {
+      &.likes,
+      &.dislikes {
+        color: @dark-font-color;
       }
     }
+  }
 
-    .search-result-group .search-result-group-header {
-      background: #222;
-      border-bottom: 1px solid #666;
-      border-top: 1px solid #666;
+  .arrow {
+    &.upmod,
+    &.downmod {
+      background-color: transparent;
     }
   }
 
-  .over18 a.title:link,
-  .over18 a.title:visited,
-  body:not(.comments-page) .over18 .link .tagline,
-  body:not(.comments-page) .over18 .md p,
-  body:not(.comments-page) .over18 .tagline {
-    color: @pink;
+  #header:after {
+    background: linear-gradient(to bottom, @dark-header-gradient-start, @dark-header-gradient-end);
   }
 
-  div.content {
-    background-color: #333;
+  .thing .title {
+    color: @dark-font-color;
   }
 
-  .entry .buttons li a {
+  .spoiler-stamp {
+    color: @dark-font-color;
+  }
+
+  .morelink {
+    background: @dark-link;
+
+    &:hover {
+      background: @dark-link-lighter;
+    }
+  }
+
+  .thing.stickied.link a.title {
+    color: @dark-side-link;
+  }
+
+  #searchexpando {
+    background: @dark-content-bg;
+  }
+
+  .md .del {
     color: #ccc;
   }
 
-  .commentNavSortType,
-  .commentarea .menuarea .toggle a,
-  .dropdown.lightdrop .selected,
-  .thing .title:visited {
-    color: #ababab;
-  }
-
-  a.comments::after {
+  .link .entry .buttons li a {
     color: #ccc;
   }
 
-  .flair {
-    border: none;
-    color: #e3e3e3;
+  body:not(.comments-page) .stickied .entry .buttons li a {
+    color: @dark-side-link;
+  }
+
+  body:not(.comments-page) .stickied .tagline {
+    color: @dark-side-link;
   }
 
   .side {
-    .usertext-body {
-      background-image: none;
-      padding: 0;
-    }
-
     .titlebox,
     .sidecontentbox {
       background: @dark-content-bg;
     }
 
     .titlebox {
-      form.toggle {
-        background: none;
+      a {
+        color: #a4d11b;
       }
 
       .md h3 a {
-        background: #444;
+        background: @dark-link;
+        color: @dark-font-color;
 
         &:hover {
-          background: #666;
+          background: @dark-link-lighter;
         }
+      }
 
-        &:active {
-          background: #222;
-        }
+      .fancy-toggle-button .add {
+        background: #444;
+        color: #ccc;
+      }
+
+      .fancy-toggle-button .remove {
+        background: @dark-link;
+        color: #ccc;
       }
     }
 
     .md {
-      h4 {
-        background: #323232;
-      }
+      h2 {
+        background: @dark-bg;
 
-      h2 + ul {
-        background: #222;
+        & + ul {
+          background: #444;
+        }
       }
     }
 
-    .sidecontentbox a {
-      color: #ccc;
+    .sidecontentbox {
+      a {
+        color: #ccc;
+      }
+
+      .title h1 {
+        color: @dark-font-color;
+      }
     }
   }
 
   .titlebox form.toggle,
-  .toggle .option.active,
-  div.leavemoderator {
-    color: #ccc;
-  }
-
-  .icon-menu a {
-    color: white;
-  }
-
-  .sidecontentbox .title h1 {
-    color: white;
-    font-weight: bold;
-  }
-
-  .titlebox .users-online,
-  .titlebox span.subscribers {
-    color: white;
-  }
-
-  #sr-header-area a,
-  .sidecontentbox .collapse-button,
-  h2 {
-    color: white;
-  }
-
-  .sidecontentbox .collapse-button {
-    border: 1px solid white;
-  }
-
-  .commentarea span.score,
-  .side .md h4 a,
-  body.res #sr-header-area .sr-bar a.RESShortcutsCurrentSub {
-    color: white;
-  }
-
-  .content .md a {
-    color: @bahia;
-  }
-
-  .titlebox a {
-    color: @bahia;
-  }
-
-  .link.promotedlink.promoted {
-    background-color: #565656;
-  }
-
-  .sidecontentbox .more a,
-  span.score {
-    color: #ccc;
-  }
-
-  #progressIndicator,
-  .commentarea .panestack-title .title,
-  .commentingAs,
-  .linkinfo .date,
-  .linkinfo .shortlink,
-  .md,
-  div.score,
-  span.totalvotes {
-    color: white;
-  }
-
-  body.comments-page .link {
-    background: #323232;
-  }
-
-  .commentarea {
-    > .usertext {
-      background-color: #292929;
-    }
-
-    .child .thing.comment,
-    .child .thing.comment .comment,
-    .child .thing.comment .comment .comment,
-    .child .thing.comment .comment .comment .comment,
-    .child .thing.comment .comment .comment .comment .comment,
-    .child .thing.comment .comment .comment .comment .comment .comment,
-    .child .thing.comment .comment .comment .comment .comment .comment .comment,
-    .child .thing.comment .comment .comment .comment .comment .comment .comment .comment,
-    .child .thing.comment .comment .comment .comment .comment .comment .comment .comment .comment,
-    .child .thing.comment .comment .comment .comment .comment .comment .comment .comment .comment .comment,
-    .child .thing.comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment,
-    .thing {
-      border: 1px solid #333;
-    }
-
-    .child .thing.comment,
-    .child .thing.comment .comment .comment,
-    .child .thing.comment .comment .comment .comment .comment,
-    .child .thing.comment .comment .comment .comment .comment .comment .comment,
-    .child .thing.comment .comment .comment .comment .comment .comment .comment .comment .comment,
-    .child .thing.comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment {
-      background: #222;
-    }
-
-    .child .thing.comment .comment,
-    .child .thing.comment .comment .comment .comment,
-    .child .thing.comment .comment .comment .comment .comment .comment,
-    .child .thing.comment .comment .comment .comment .comment .comment .comment .comment,
-    .child .thing.comment .comment .comment .comment .comment .comment .comment .comment .comment .comment,
-    .thing {
-      background: #292929;
-    }
-  }
-
-  button {
-    background-color: #999;
-    color: black;
+  .leavemoderator {
+    color: inherit;
   }
 
   #RESShortcutsAdd,
@@ -330,213 +144,153 @@ html[lang=dm] {
   #RESShortcutsSort,
   #RESShortcutsTrash,
   .tagline a {
-    color: white;
+    color: @dark-font-color;
   }
 
-  .shortlink .input {
-    background-color: #222;
-    color: white;
-    border: 1px solid #666;
-  }
-
-  #preview-table > table > tbody > tr > th,
-  #previoussearch label,
-  #progressIndicator a#NERStaticLink,
-  .comment .flat-list li a:hover,
-  .comment .flat-list li a[onclick*=reply],
-  .commentNavSortType:hover,
-  .commentarea .menuarea .toggle a:hover,
-  .deepthread a,
-  .deepthread::after,
-  .dropdown.srdrop span.selected.title,
   .entry .buttons .may-blank,
-  .error,
-  .formtabs-content .infobar,
-  .generic-table,
-  .link .domain a:hover,
   .link .tagline,
-  .loadFlat:hover,
-  .md del,
-  .md pre code,
-  .menuarea,
-  .pretty-form,
-  .roundfield,
-  .search-page .searchfacets,
-  .searchfacet a,
-  .side .md ol,
-  .side .md p,
-  .side .titlebox .md h1,
-  .submit-page .title,
-  .titlebox h1 a,
-  .wiki-page .pageactions .wikiaction-current,
-  .wiki-page .wiki-page-content .wiki.md,
-  .wiki-page .wiki-page-content .wiki.md h2,
-  .wiki-page .wikititle,
-  .wiki-page-content .md h1,
   form#image-upload.image-upload {
-    color: white;
-  }
-
-  .search-page .searchfacets {
-    background: #555;
-  }
-
-  .formtabs-content .infobar,
-  .roundfield {
-    background-color: #333;
+    color: @dark-font-color;
   }
 
   .md {
-    code {
-      background-color: #222;
-      border: 1px solid #666;
-    }
-
-    pre {
-      padding: 0;
-      background-color: transparent;
-      border: none;
-    }
-
-    table,
-    ul {
-      color: white;
-    }
-  }
-
-  .wiki-page div.content {
-    background-color: transparent;
-    border: none;
-  }
-
-  .livePreview .md p {
-    color: black;
-  }
-
-  .wiki-page .infobar {
-    background: 0 0;
-    border: none;
-  }
-
-  .content.submit .info-notice,
-  .wiki-page .pageactions,
-  .wiki-page .wiki-page-content,
-  .wiki-page .wikititle {
-    background-color: #444;
+    color: @dark-font-color;
   }
 
   body:not(.search-page) #search input[type=text] {
-    background: #444;
-    border: 1px solid #666;
-    color: white;
+    background: @dark-bg;
+    border: 1px solid #444;
+    color: @dark-font-color;
   }
 
-  .submit-page .content a {
-    color: #999;
-  }
-
-  .gold-accent.comment-visits-box,
-  .side .titlebox {
-    color: white;
+  #siteTable .nav-buttons {
+    background: @dark-content-bg;
   }
 
   .debuginfo,
   .footer-parent {
-    background: #111;
+    background: black;
   }
 
-  ul#image-preview-list li {
-    background: #333;
-    border: none;
-    color: white;
+  .footer-parent {
+    margin-bottom: auto;
+    height: auto;
   }
 
-  .flairselector .tagline a,
-  .flairselector h2 {
-    color: black;
+  .footer {
+    background: none;
+    box-shadow: none;
+
+    .flat-vert {
+      .title {
+        color: @dark-font-color;
+      }
+
+      li {
+        a:not(.buygold) {
+          color: #999;
+
+          &:hover {
+            color: @dark-font-color;
+          }
+        }
+      }
+    }
   }
 
-  .wiki-page .wiki-page-content .md.wiki h4 {
-    color: white;
+  .bottommenu {
+    color: @dark-font-color;
+    text-shadow: none;
   }
 
-  .comments-page .content .infobar {
-    background: #444;
-    color: white;
+  .commentarea .thing {
+    background: @dark-content-bg;
   }
 
-  .commentarea textarea:not(:focus):not(:hover) {
-    color: transparent;
-    background-color: #444;
-    text-shadow: 0 0 12px black;
+  .reddit-infobar {
+    background: @dark-content-bg;
   }
 
-  .commentarea textarea:hover,
-  .roundfield input[type=text]:hover,
-  .roundfield input[type=url]:hover,
-  .roundfield textarea:hover {
-    border: 1px solid #9f9f9f;
+  .formtabs-content {
+    .infobar {
+      background: @dark-content-bg;
+      color: @dark-font-color;
+    }
   }
 
-  .roundfield input[type=text],
-  .roundfield input[type=url],
-  textarea {
-    background-color: #222;
-    color: white;
-    transition: 0.3s;
-    border: 1px solid #666;
+  .roundfield {
+    background: @dark-content-bg;
+
+    .title {
+      color: @dark-font-color;
+    }
+
+    input,
+    textarea {
+      background-color: @dark-bg;
+      color: @dark-font-color;
+      border: 1px solid #666;
+    }
   }
 
-  .roundfield input[type=text]:focus,
-  .roundfield input[type=url]:focus,
-  .roundfield textarea:focus,
-  .usertext-edit textarea:focus {
-    border: 1px solid #666;
-    transition: 0.1s ease;
-    border-bottom: 3px solid #999;
+  .submit-page {
+    .content {
+      a {
+        color: #999;
+      }
+    }
   }
 
-  .toc ul {
-    background: 0 0;
+  .content.submit .info-notice {
+    background: @dark-content-bg;
+
+    a {
+      color: #999;
+    }
   }
 
-  .commentarea .comment a.expand:hover {
-    background: #999;
-    color: #333;
+  #newlink-with-image-upload .image-upload-drop-target {
+    background: @dark-content-bg;
   }
 
-  .markdownEditor .edit-btn:not(.btn-macro) {
-    background-color: #ccc;
-    border: none;
-    border-radius: @default-border-radius;
+  .tagline, .search-result-meta {
+    color: @dark-font-color;
   }
 
-  .expando-button,
-  .expando-button.expanded,
-  .expando-button.expanded:hover,
-  .expando-button:hover {
-    border-radius: 20px;
-    background-color: #999;
+  .combined-search-page .search-result {
+    background: @dark-content-bg;
+
+    .search-result-header .search-title {
+      color: @dark-font-color;
+    }
+
+    a,
+    a>mark,
+    .search-result-footer .search-link,
+    .search-comments {
+      color: @dark-link-lighter;
+    }
   }
 
-  #REScommentSubToggle {
-    background: #ccc;
-    color: black;
-  }
-
-  .tabmenu {
-    background: #333;
-  }
-
-  input[name=uh] ~ a:after {
+  .flairselector:before {
     display: none;
   }
 
-  .deepthread a {
-    color: white;
-  }
+  .wiki-page .wiki-page-content {
+    .wiki.md {
+      color: @dark-font-color;
 
-  .new-comment .usertext-body {
-    background-color: #444;
+      a {
+        color: @dark-link-lighter;
+      }
+
+      h2 {
+        color: @dark-font-color;
+      }
+    }
+
+    hr {
+      background: @dark-font-color;
+    }
   }
 }
