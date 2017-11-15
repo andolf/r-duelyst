@@ -42,3 +42,19 @@
     color: white;
   }
 }
+
+.zebra-table {
+  border-right: solid 1px @almost-white;
+  border-left: solid 1px @almost-white;
+  border-top: solid 1px @almost-white;
+  padding: 0;
+
+  li {
+    border-bottom: solid 1px @almost-white;
+    padding: 5px;
+
+    &:nth-child(odd) {
+      background-color: @almost-white;
+    }
+  }
+}

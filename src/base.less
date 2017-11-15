@@ -480,12 +480,14 @@ a.author.moderator:after {
   }
 }
 
+/* stylelint-disable declaration-no-important */
+// important used here in order to work with RES
 .arrow {
   &.down,
   &.downmod,
   &.up,
   &.upmod {
-    background-image: url(%%spritesheet%%);
+    background-image: url(%%spritesheet%%) !important;
     background-size: 38px 382px;
     height: 20px;
     width: 20px;
@@ -493,23 +495,24 @@ a.author.moderator:after {
   }
 
   &.up {
-    background-position: 2px -312px;
+    background-position: 2px -312px !important;
   }
 
   &.down {
-    background-position: 2px -328px;
+    background-position: 2px -328px !important;
   }
 
   &.upmod {
-    background-position: 2px -294px;
+    background-position: 2px -294px !important;
     background-color: @theme-primary;
   }
 
   &.downmod {
-    background-position: 2px -346px;
+    background-position: 2px -346px !important;
     background-color: @theme-secondary;
   }
 }
+/* stylelint-enable */
 
 .side div.score,
 span.totalvotes {

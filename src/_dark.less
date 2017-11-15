@@ -4,7 +4,7 @@
 @dark-header-gradient-start: #363842;
 @dark-header-gradient-end: #414140;
 
-@dark-primary: #565555;
+@dark-primary: #505050;
 @dark-secondary: #6f6e6e;
 
 @dark-font-color: #e6e6e7;
@@ -14,7 +14,8 @@
 @dark-side-link: #7ddc1f;
 
 /* stylelint-disable declaration-no-important */
-html[lang=dm] {
+html[lang=dm],
+.res-nightmode {
   body {
     background: @dark-bg;
     color: @dark-font-color;
@@ -33,6 +34,7 @@ html[lang=dm] {
 
   .flair {
     color: @dark-font-color;
+    background: none;
   }
 
   .arrow {
@@ -150,6 +152,7 @@ html[lang=dm] {
   #RESShortcutsTrash,
   .tagline a {
     color: @dark-font-color;
+    background: transparent;
   }
 
   .entry .buttons .may-blank,
@@ -325,10 +328,30 @@ html[lang=dm] {
     background-color: #555;
   }
 
-  .res-nightmode {
-    .RES-keyNav-activeElement {
-      background: none !important;
+  #siteTable .thing .md {
+    ul,
+    ol {
+      border-right: solid 1px @dark-primary;
+      border-left: solid 1px @dark-primary;
+      border-top: solid 1px @dark-primary;
+      padding: 0;
+
+      li {
+        border-bottom: solid 1px @dark-primary;
+        padding: 5px;
+
+        &:nth-child(odd) {
+          background-color: @dark-primary;
+        }
+      }
     }
+  }
+
+  .RES-keyNav-activeElement {
+    background: none !important;
+  }
+  .sr-bar a {
+    color: @dark-font-color;
   }
 }
 /* stylelint-enable */
