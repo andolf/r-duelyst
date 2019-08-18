@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/andolf/duelyst-subreddit#readme",
   "devDependencies": {
-    "less": "^3.8.0",
+    "less": "^3.10.1",
     "less-plugin-autoprefix": "^1.5.1",
     "less-plugin-clean-css": "^1.5.1",
     "stylelint": "^9.3.0"
