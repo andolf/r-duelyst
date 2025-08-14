@@ -4,6 +4,8 @@
 
 A more organized version of the stylesheet for the [Duelyst subreddit](http://reddit.com/r/duelyst/).
 
+**Note:** This repository is no longer maintained and active.
+
 ## How to run
 
 **First install Node**. The are various ways to do this depending on your platform; if you're using Mac OS X then [Homebrew](http://brew.sh) is your best bet. For Windows, installing it with [their own installer](https://nodejs.org/en/download/) is the way to go.
